@@ -1,6 +1,6 @@
 # JCs-repo
 
-print("Hey, you all")
+**Hey, you all**
 
 _I'm JC.
 Currently learning basics on ML/DL without falling on my bottom._
