@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JC Munguia | CX & Operations Leader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:   #0d1b2a;
+      --blue:   #1a4f8a;
+      --accent: #2a7de1;
+      --teal:   #0fa3b1;
+      --light:  #f4f7fb;
+      --muted:  #6b7a8d;
+      --white:  #ffffff;
+      --card:   #ffffff;
+      --border: #dde3ea;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13, 27, 42, 0.97);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 40px; width: auto;
+    }
+    .nav-logo-text {
+      display: none; /* hidden when logo image is present */
+    }
+    nav ul {
+      list-style: none;
+      display: flex; gap: 32px;
+    }
+    nav ul a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      transition: color .2s;
+    }
+    nav ul a:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      display: flex; align-items: center;
+      padding: 100px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: flex; align-items: center; gap: 64px;
+      position: relative; z-index: 1;
+    }
+    .hero-photo {
+      flex-shrink: 0;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,.25);
+      overflow: hidden;
+      background: rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 8px rgba(42,125,225,.25);
+    }
+    .hero-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero-photo .placeholder-icon {
+      font-size: 4rem; color: rgba(255,255,255,.4);
+    }
+    .hero-text { flex: 1; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.9);
+      font-size: .78rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal);
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.7);
+      font-weight: 400;
+      margin-bottom: 28px;
+      letter-spacing: .02em;
+    }
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 36px;
+    }
+    .tag {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.85);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: .8rem; font-weight: 500;
+    }
+    .hero-cta {
+      display: flex; gap: 14px; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 26px;
+      border-radius: 8px;
+      font-size: .9rem; font-weight: 600;
+      text-decoration: none;
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: #1a6fd4; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,.4);
+      color: var(--white);
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,.8); transform: translateY(-1px); }
+
+    /* ── METRICS STRIP ── */
+    .metrics-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 5%;
+    }
+    .metrics-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .metric {
+      text-align: center;
+      padding: 20px;
+      border-right: 1px solid var(--border);
+    }
+    .metric:last-child { border-right: none; }
+    .metric-number {
+      font-size: 2.4rem; font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .metric-label {
+      font-size: .82rem; color: var(--muted);
+      font-weight: 500; line-height: 1.4;
+    }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 88px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: .75rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--navy);
+      margin-bottom: 48px;
+      line-height: 1.25;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid; grid-template-columns: 3fr 2fr;
+      gap: 64px; align-items: start;
+    }
+    .about-bio p {
+      font-size: 1.05rem; color: #3a4a5c;
+      margin-bottom: 20px; line-height: 1.75;
+    }
+    .about-details { display: flex; flex-direction: column; gap: 16px; }
+    .detail-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--light);
+    }
+    .detail-icon {
+      font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .detail-text { font-size: .88rem; color: var(--navy); font-weight: 500; }
+    .detail-sub { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── CAPABILITIES ── */
+    #capabilities { background: var(--light); }
+    .caps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .cap-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .cap-card:hover { box-shadow: 0 8px 32px rgba(26,79,138,.12); transform: translateY(-3px); }
+    .cap-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--teal));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .cap-title { font-weight: 700; font-size: .95rem; margin-bottom: 6px; }
+    .cap-desc { font-size: .83rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--white); }
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      position: relative;
+      padding-bottom: 48px;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 180px; top: 12px; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--border));
+      transform: translateX(-50%);
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-date {
+      text-align: right;
+      padding-right: 24px;
+      padding-top: 4px;
+    }
+    .tdate-range {
+      font-size: .8rem; font-weight: 600;
+      color: var(--accent);
+      letter-spacing: .03em;
+    }
+    .tdate-company {
+      font-size: .75rem; color: var(--muted);
+      margin-top: 4px; line-height: 1.4;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 180px; top: 12px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 2px var(--accent);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .timeline-content { padding-left: 24px; }
+    .job-header { margin-bottom: 14px; }
+    .job-title {
+      font-size: 1.1rem; font-weight: 700; color: var(--navy);
+    }
+    .job-company {
+      font-size: .85rem; color: var(--muted); margin-top: 3px;
+    }
+    .job-bullets { list-style: none; }
+    .job-bullets li {
+      font-size: .88rem; color: #3a4a5c;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .job-bullets li::before {
+      content: '';
+      position: absolute; left: 0; top: 14px;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal);
+    }
+    .job-badge {
+      display: inline-block;
+      background: #e8f0fe; color: var(--accent);
+      font-size: .72rem; font-weight: 600;
+      padding: 3px 10px; border-radius: 999px;
+      margin-right: 6px; margin-top: 10px;
+    }
+
+    /* ── DMADV / METHODOLOGY ── */
+    #methodology { background: var(--navy); }
+    #methodology .section-label { color: var(--teal); }
+    #methodology .section-title { color: var(--white); margin-bottom: 16px; }
+    .methodology-desc {
+      color: rgba(255,255,255,.7);
+      max-width: 640px; margin-bottom: 48px;
+      font-size: .95rem; line-height: 1.75;
+    }
+    .dmadv-image {
+      width: 100%;
+      max-width: 860px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.1);
+      overflow: hidden;
+      background: rgba(255,255,255,.05);
+      display: flex; align-items: center; justify-content: center;
+      min-height: 260px;
+    }
+    .dmadv-image img { width: 100%; display: block; }
+    .dmadv-placeholder {
+      color: rgba(255,255,255,.3);
+      font-size: .9rem; padding: 60px;
+      text-align: center;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    #certifications { background: var(--light); }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .cert-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .cert-badge {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .cert-name { font-size: .88rem; font-weight: 600; color: var(--navy); }
+    .cert-org { font-size: .78rem; color: var(--muted); margin-top: 3px; }
+
+    /* ── TOOLS ── */
+    #tools { background: var(--white); }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+    .tool-pill {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: .85rem; font-weight: 500;
+      color: var(--navy);
+      text-align: center;
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    }
+    #contact .section-label { color: var(--teal); }
+    #contact .section-title { color: var(--white); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: start;
+    }
+    .contact-intro {
+      font-size: 1rem; color: rgba(255,255,255,.75);
+      line-height: 1.75; margin-bottom: 32px;
+    }
+    .contact-links { display: flex; flex-direction: column; gap: 14px; }
+    .contact-link {
+      display: flex; align-items: center; gap: 14px;
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: .9rem;
+      transition: color .2s;
+    }
+    .contact-link:hover { color: var(--white); }
+    .contact-link-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .contact-card h3 {
+      color: var(--white); font-size: 1.1rem; margin-bottom: 16px;
+    }
+    .contact-card p {
+      color: rgba(255,255,255,.7); font-size: .88rem; line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      padding: 24px 5%;
+      color: rgba(255,255,255,.35);
+      font-size: .78rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { flex-direction: column; gap: 40px; text-align: center; }
+      .hero-tags { justify-content: center; }
+      .hero-cta { justify-content: center; }
+      .hero-photo { width: 160px; height: 160px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .metrics-inner { grid-template-columns: repeat(2, 1fr); }
+      .metric { border-right: none; border-bottom: 1px solid var(--border); }
+      .metric:nth-child(2n) { border-bottom: 1px solid var(--border); }
+      .metric:last-child { border-bottom: none; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .timeline-date { text-align: left; padding-right: 0; }
+      .timeline-item::before { display: none; }
+      .timeline-dot { display: none; }
+      .timeline-content { padding-left: 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      .metrics-inner { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#top">
+    <img src="LOGO JUAN CARLOS MUNGUIA.png" alt="JC Munguia Logo" />
+    <span class="nav-logo-text">JC Munguia</span>
+  </a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-photo">
+      <img src="Linkedin_profile-pic-JC.jpg" alt="JC Munguia" />
+    </div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">Available for Strategic CX Leadership</div>
+      <h1 class="hero-name">Juan Carlos<br>Munguia Salcido</h1>
+      <p class="hero-title">Customer Experience · VoC Strategy · Service Excellence</p>
+      <div class="hero-tags">
+        <span class="tag">13+ Years in CX</span>
+        <span class="tag">BPO Governance</span>
+        <span class="tag">Lean Six Sigma Black Belt</span>
+        <span class="tag">PMP®</span>
+        <span class="tag">Fintech &amp; Remittance</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Get in Touch</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/jc-munguia" target="_blank">LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<div class="metrics-strip">
+  <div class="metrics-inner">
+    <div class="metric">
+      <div class="metric-number">13+</div>
+      <div class="metric-label">Years Leading<br>CX Operations</div>
+    </div>
+    <div class="metric">
+      <div class="metric-number">500+</div>
+      <div class="metric-label">FTE Operations<br>Managed</div>
+    </div>
+    <div class="metric">
+      <div class="metric-number">9</div>
+      <div class="metric-label">LatAm Markets<br>Served</div>
+    </div>
+    <div class="metric">
+      <div class="metric-number">3×</div>
+      <div class="metric-label">Business Growth<br>in 6 Months</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <p class="section-label">About Me</p>
+    <h2 class="section-title">Customer Operations Leader<br>Built for Scale</h2>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>
+          I'm a Customer Operations leader with 13+ years driving CX strategy and service delivery
+          across banking, fintech, remittance, and BPO environments. I specialize in scaling
+          customer operations through people, process, and technology — consistently delivering
+          measurable gains in SLA performance, CSAT/NPS, and operational efficiency.
+        </p>
+        <p>
+          I've led multi-country BPO ecosystems and transformed service models through automation,
+          analytics, and Lean Six Sigma disciplines. Whether building from the ground up or
+          optimizing at scale, I create high-performing teams and systems that thrive in regulated,
+          high-growth environments.
+        </p>
+        <p>
+          Beyond the metrics, I'm a Raja Yoga Meditation teacher, a Lean Six Sigma coach, and a
+          PMP mentor — because great service starts with great people.
+        </p>
+      </div>
+      <div class="about-details">
+        <div class="detail-item">
+          <span class="detail-icon">📍</span>
+          <div>
+            <div class="detail-text">Mexico City, 03020</div>
+            <div class="detail-sub">Open to remote / hybrid roles</div>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">💼</span>
+          <div>
+            <div class="detail-text">Currently at Pangea Money Transfer</div>
+            <div class="detail-sub">CX Operations Manager · June 2024 – Present</div>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">🎓</span>
+          <div>
+            <div class="detail-text">B.A. in Business Psychology</div>
+            <div class="detail-sub">TEC Milenio · 2012–2016</div>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">🌐</span>
+          <div>
+            <div class="detail-text">Spanish (Native) · English (C1 Advanced)</div>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">📧</span>
+          <div>
+            <div class="detail-text">JuanCarlosMunguiaConsulting@outlook.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities">
+  <div class="section-inner">
+    <p class="section-label">Core Capabilities</p>
+    <h2 class="section-title">What I Bring to the Table</h2>
+    <div class="caps-grid">
+      <div class="cap-card">
+        <div class="cap-icon">🎯</div>
+        <div class="cap-title">CX Operations Strategy &amp; Scaling</div>
+        <div class="cap-desc">Designing and scaling customer operations that drive performance, efficiency, and exceptional customer experiences across channels.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon">🏢</div>
+        <div class="cap-title">BPO Governance &amp; Vendor Management</div>
+        <div class="cap-desc">Managing multi-vendor BPO ecosystems across geographies with rigorous SLA governance, QA calibration, and performance accountability.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon">📊</div>
+        <div class="cap-title">SLA / KPI Performance &amp; Root Cause Analysis</div>
+        <div class="cap-desc">Translating operational data into actionable insights, identifying root causes, and implementing corrective strategies that stick.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon">⚙️</div>
+        <div class="cap-title">Process Optimization &amp; CI</div>
+        <div class="cap-desc">Applying Lean Six Sigma and COPC frameworks to eliminate waste, reduce defects, and build continuous improvement cultures.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon">🤖</div>
+        <div class="cap-title">Automation &amp; Digital CX (AI-enabled)</div>
+        <div class="cap-desc">Accelerating self-service and automation capabilities using AI and digital tools to improve efficiency without sacrificing experience quality.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon">📣</div>
+        <div class="cap-title">Voice of Customer &amp; CX Analytics</div>
+        <div class="cap-desc">Designing VoC programs, NPS/CSAT/CES measurement, and analytics pipelines that inform strategic and operational decisions.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <p class="section-label">Professional Experience</p>
+    <h2 class="section-title">Career Timeline</h2>
+    <div class="timeline">
+
+      <!-- Pangea -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">Jun 2024 – Present</div>
+          <div class="tdate-company">Pangea Money Transfer<br>Hybrid · U.S./LatAm</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">Customer Experience Operations Manager</div>
+            <div class="job-company">Reporting to Head of Operations · 6 direct reports</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Lead Customer Experience and Voice of Customer (VoC) strategy across U.S.–LatAm remittance and fintech operations, overseeing a 50+ FTE BPO and driving SLA, incident, and CX performance.</li>
+            <li>Redesigned customer journeys and operational workflows — reducing repeat contacts by <strong>15%</strong> and improving SLA adherence by <strong>10%</strong>.</li>
+            <li>Drive cross-functional transformation with Product, Engineering, and Compliance, accelerating automation and self-service capabilities to improve efficiency, CSAT, and scalability.</li>
+          </ul>
+          <span class="job-badge">Remittance</span>
+          <span class="job-badge">Fintech</span>
+          <span class="job-badge">BPO Oversight</span>
+          <span class="job-badge">VoC</span>
+        </div>
+      </div>
+
+      <!-- Microsoft -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">May 2023 – May 2025</div>
+          <div class="tdate-company">Microsoft Office Specialist<br>Authorized Testing Center</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">Head of Customer Success and Operations</div>
+            <div class="job-company">Remote · Mexico City · Partner: ICEMexico</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Owned the full customer lifecycle from acquisition to post-service, improving conversion, adoption, and satisfaction across a digital platform.</li>
+            <li>Built and scaled service delivery model — achieving <strong>3× business growth in 6 months</strong> through process and experience optimization.</li>
+            <li>Implemented automation and data-driven improvements, increasing delivery capacity by <strong>30%</strong> without proportional headcount growth.</li>
+          </ul>
+          <span class="job-badge">Customer Success</span>
+          <span class="job-badge">Growth</span>
+          <span class="job-badge">Automation</span>
+        </div>
+      </div>
+
+      <!-- DiDi -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">Jun 2021 – Aug 2022</div>
+          <div class="tdate-company">DiDi Global<br>Mobility · Fintech · 24k Employees</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">Quality and Service Excellence Manager</div>
+            <div class="job-company">Reporting to Operations Director · 5 direct reports</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Led CX and service quality initiatives across <strong>9 LatAm markets</strong>, improving consistency across 5 BPO vendors.</li>
+            <li>Governed SLA governance, QA calibration, and corrective actions for scalable service delivery.</li>
+            <li>Partnered cross-functionally with Product, Ops, and Vendor teams to drive CSAT and operational efficiency improvements using data insights.</li>
+          </ul>
+          <span class="job-badge">Multi-Market</span>
+          <span class="job-badge">Quality</span>
+          <span class="job-badge">BPO Governance</span>
+        </div>
+      </div>
+
+      <!-- Teleperformance -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">Nov 2010 – Jun 2021</div>
+          <div class="tdate-company">Teleperformance (TP)<br>Global BPO · 420k+ Employees</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">Account Manager – Fintech Client (USA)</div>
+            <div class="job-company">Reporting to Regional Director · 5 Assistant Managers · Chime Bank</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Led and scaled a <strong>500+ FTE</strong> customer operations environment — managing multi-channel fintech programs with full ownership of performance, quality, and CSAT.</li>
+            <li>Implemented SLA governance frameworks, QA models, and CI initiatives aligned to COPC and Lean Six Sigma standards.</li>
+            <li>Managed executive stakeholder communication, delivering performance insights and operational recommendations to drive business outcomes.</li>
+          </ul>
+          <span class="job-badge">Fintech (Chime)</span>
+          <span class="job-badge">500+ FTE</span>
+          <span class="job-badge">COPC</span>
+          <span class="job-badge">Lean Six Sigma</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY / DMADV -->
+<section id="methodology">
+  <div class="section-inner">
+    <p class="section-label">Methodology</p>
+    <h2 class="section-title">Engineering the Customer Experience</h2>
+    <p class="methodology-desc">
+      I apply structured problem-solving methodologies — including DMADV (Design, Measure, Analyze,
+      Design, Verify) from Lean Six Sigma — to architect customer experiences that are intentional,
+      measurable, and scalable. I've facilitated this framework for 400+ customer service and sales
+      professionals across multiple organizations.
+    </p>
+    <div class="dmadv-image">
+      <img src="DMAIC-cycle.jpg" alt="Lean Six Sigma DMAIC – DMADV Cycle" />
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <p class="section-label">Credentials</p>
+    <h2 class="section-title">Certifications &amp; Education</h2>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-badge">📋</div>
+        <div>
+          <div class="cert-name">PMP® – Project Management Professional</div>
+          <div class="cert-org">Project Management Institute</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">⚡</div>
+        <div>
+          <div class="cert-name">Lean Six Sigma Black Belt</div>
+          <div class="cert-org">Master Black Belt in progress</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">🏆</div>
+        <div>
+          <div class="cert-name">COPC Customer Experience Standard</div>
+          <div class="cert-org">COPC Inc. (Mexico)</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">🔧</div>
+        <div>
+          <div class="cert-name">Industry 4.0</div>
+          <div class="cert-org">Mexico</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">🎓</div>
+        <div>
+          <div class="cert-name">B.A. in Business Psychology</div>
+          <div class="cert-org">TEC Milenio · Lic. 12929918 · 2012–2016</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">🌐</div>
+        <div>
+          <div class="cert-name">PMI Community Member</div>
+          <div class="cert-org">community.pmi.org/profile/jcmunguia</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses Facilitated -->
+    <div style="margin-top:48px;">
+      <p class="section-label">Courses Facilitated</p>
+      <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
+        <div class="cert-card">
+          <div class="cert-badge">🎤</div>
+          <div>
+            <div class="cert-name">"Engineering the Customer Experience"</div>
+            <div class="cert-org">Facilitated to 400+ customer service and sales representatives</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">🧠</div>
+          <div>
+            <div class="cert-name">Professional &amp; Personal Development Workshops</div>
+            <div class="cert-org">Emotional Intelligence · Time Management · Coaching &amp; Feedback · Stress Management · Meditation — facilitated to 250+ employees</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="section-inner">
+    <p class="section-label">Tech Stack</p>
+    <h2 class="section-title">CX Technology &amp; Platforms</h2>
+    <div class="tools-grid">
+      <div class="tool-pill">Zendesk</div>
+      <div class="tool-pill">Genesys</div>
+      <div class="tool-pill">NICE</div>
+      <div class="tool-pill">Five9</div>
+      <div class="tool-pill">Avaya</div>
+      <div class="tool-pill">CRM &amp; Ticketing Systems</div>
+      <div class="tool-pill">Workflow Automation</div>
+      <div class="tool-pill">AI-enabled CX (ChatGPT / Copilot)</div>
+      <div class="tool-pill">SLA/KPI Dashboards</div>
+      <div class="tool-pill">Omnichannel Support Models</div>
+      <div class="tool-pill">Routing Logic</div>
+      <div class="tool-pill">Microsoft Office Suite</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label">Let's Connect</p>
+    <h2 class="section-title">Ready to Transform<br>Your Customer Experience?</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">
+          Whether you're scaling a CX operation, building a VoC program, or looking to bring
+          rigorous process improvement to your customer teams — I'd love to connect.
+        </p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:JuanCarlosMunguiaConsulting@outlook.com">
+            <div class="contact-link-icon">✉️</div>
+            JuanCarlosMunguiaConsulting@outlook.com
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/jc-munguia" target="_blank">
+            <div class="contact-link-icon">💼</div>
+            linkedin.com/in/jc-munguia
+          </a>
+          <a class="contact-link" href="https://community.pmi.org/profile/jcmunguia" target="_blank">
+            <div class="contact-link-icon">📋</div>
+            PMI Community Profile
+          </a>
+          <a class="contact-link" href="tel:+528117985178">
+            <div class="contact-link-icon">📱</div>
+            +52 811 798 5178
+          </a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <h3>Open to Opportunities</h3>
+        <p>
+          I'm available for full-time leadership roles, consulting engagements, and advisory
+          partnerships in Customer Experience, Operations Excellence, and BPO Governance.
+          Based in Mexico City with experience working across U.S. and LatAm markets.
+        </p>
+        <a class="btn btn-primary" href="mailto:JuanCarlosMunguiaConsulting@outlook.com">
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Juan Carlos Munguia Salcido · Customer Experience, Operations &amp; Service Excellence Leader</p>
+</footer>
+
+</body>
+</html>
