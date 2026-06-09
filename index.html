@@ -36,14 +36,14 @@
       backdrop-filter: blur(8px);
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 5%;
-      height: 64px;
+      height: 88px;
     }
     .nav-logo {
       display: flex; align-items: center; gap: 12px;
       text-decoration: none;
     }
     .nav-logo img {
-      height: 40px; width: auto;
+      height: 80px; width: auto;
     }
     .nav-logo-text {
       display: none; /* hidden when logo image is present */
@@ -67,7 +67,7 @@
       min-height: 100vh;
       background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
       display: flex; align-items: center;
-      padding: 100px 5% 80px;
+      padding: 120px 5% 80px;
       position: relative;
       overflow: hidden;
     }
@@ -332,14 +332,40 @@
       margin-right: 6px; margin-top: 10px;
     }
 
-    /* ── DMADV / METHODOLOGY ── */
+    /* ── METHODOLOGY ── */
     #methodology { background: var(--navy); }
     #methodology .section-label { color: var(--teal); }
     #methodology .section-title { color: var(--white); margin-bottom: 16px; }
     .methodology-desc {
       color: rgba(255,255,255,.7);
-      max-width: 640px; margin-bottom: 48px;
+      max-width: 680px; margin-bottom: 44px;
       font-size: .95rem; line-height: 1.75;
+    }
+    .method-skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 44px;
+    }
+    .method-group {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      padding: 22px;
+    }
+    .method-group-title {
+      font-size: .82rem; font-weight: 700;
+      color: var(--teal);
+      letter-spacing: .04em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .method-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .method-tag {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.85);
+      padding: 5px 12px; border-radius: 999px;
+      font-size: .8rem; font-weight: 500;
     }
     .dmadv-image {
       width: 100%;
@@ -352,11 +378,19 @@
       min-height: 260px;
     }
     .dmadv-image img { width: 100%; display: block; }
-    .dmadv-placeholder {
-      color: rgba(255,255,255,.3);
-      font-size: .9rem; padding: 60px;
-      text-align: center;
+    .pdf-download-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,.1);
+      border: 1.5px solid rgba(255,255,255,.35);
+      color: var(--white);
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-size: .9rem; font-weight: 600;
+      text-decoration: none;
+      transition: all .2s;
+      margin-bottom: 40px;
     }
+    .pdf-download-btn:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.7); transform: translateY(-1px); }
 
     /* ── CERTIFICATIONS ── */
     #certifications { background: var(--light); }
@@ -505,7 +539,7 @@
       <h1 class="hero-name">Juan Carlos<br>Munguia Salcido</h1>
       <p class="hero-title">Customer Experience · VoC Strategy · Service Excellence</p>
       <div class="hero-tags">
-        <span class="tag">13+ Years in CX</span>
+        <span class="tag">10+ Years in CX</span>
         <span class="tag">BPO Governance</span>
         <span class="tag">Lean Six Sigma Black Belt</span>
         <span class="tag">PMP®</span>
@@ -523,20 +557,20 @@
 <div class="metrics-strip">
   <div class="metrics-inner">
     <div class="metric">
-      <div class="metric-number">13+</div>
+      <div class="metric-number">10+</div>
       <div class="metric-label">Years Leading<br>CX Operations</div>
     </div>
     <div class="metric">
-      <div class="metric-number">500+</div>
+      <div class="metric-number">2,500+</div>
       <div class="metric-label">FTE Operations<br>Managed</div>
     </div>
     <div class="metric">
-      <div class="metric-number">9</div>
-      <div class="metric-label">LatAm Markets<br>Served</div>
+      <div class="metric-number" style="font-size:1.5rem;">US, CA &amp; LatAm</div>
+      <div class="metric-label">US, Canada &amp; 9 LatAm<br>Markets Served</div>
     </div>
     <div class="metric">
       <div class="metric-number">3×</div>
-      <div class="metric-label">Business Growth<br>in 6 Months</div>
+      <div class="metric-label">Business Growth in<br>6 Months &amp; CSAT Improvements</div>
     </div>
   </div>
 </div>
@@ -549,7 +583,7 @@
     <div class="about-grid">
       <div class="about-bio">
         <p>
-          I'm a Customer Operations leader with 13+ years driving CX strategy and service delivery
+          I'm a Customer Operations leader with 10+ years driving CX strategy and service delivery
           across banking, fintech, remittance, and BPO environments. I specialize in scaling
           customer operations through people, process, and technology — consistently delivering
           measurable gains in SLA performance, CSAT/NPS, and operational efficiency.
@@ -665,6 +699,7 @@
           </div>
           <ul class="job-bullets">
             <li>Lead Customer Experience and Voice of Customer (VoC) strategy across U.S.–LatAm remittance and fintech operations, overseeing a 50+ FTE BPO and driving SLA, incident, and CX performance.</li>
+            <li>Achieved <strong>BBB Accreditation</strong> through end-to-end CX process improvements and customer complaint resolution frameworks.</li>
             <li>Redesigned customer journeys and operational workflows — reducing repeat contacts by <strong>15%</strong> and improving SLA adherence by <strong>10%</strong>.</li>
             <li>Drive cross-functional transformation with Product, Engineering, and Compliance, accelerating automation and self-service capabilities to improve efficiency, CSAT, and scalability.</li>
           </ul>
@@ -675,7 +710,7 @@
         </div>
       </div>
 
-      <!-- Microsoft -->
+      <!-- Microsoft Testing Center -->
       <div class="timeline-item">
         <div class="timeline-date">
           <div class="tdate-range">May 2023 – May 2025</div>
@@ -698,26 +733,71 @@
         </div>
       </div>
 
-      <!-- DiDi -->
+      <!-- Microsoft Corporate -->
       <div class="timeline-item">
         <div class="timeline-date">
-          <div class="tdate-range">Jun 2021 – Aug 2022</div>
+          <div class="tdate-range">Sep 2022 – Apr 2023</div>
+          <div class="tdate-company">Microsoft<br>Global Technology · 220k+ Employees</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">HR Services Manager, Quality &amp; Process Excellence</div>
+            <div class="job-company">Remote · Global HR Shared Services</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Led quality and process excellence initiatives within Microsoft's Global HR Services organization, ensuring consistent service delivery and operational standards.</li>
+            <li>Applied Lean Six Sigma and continuous improvement methodologies to streamline HR service workflows, reduce error rates, and improve employee experience metrics.</li>
+            <li>Partnered with global HR Operations stakeholders to design and implement quality frameworks and performance measurement systems.</li>
+          </ul>
+          <span class="job-badge">HR Operations</span>
+          <span class="job-badge">Process Excellence</span>
+          <span class="job-badge">Lean Six Sigma</span>
+        </div>
+      </div>
+
+      <!-- DiDi Role 2 -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">Jan 2022 – Aug 2022</div>
           <div class="tdate-company">DiDi Global<br>Mobility · Fintech · 24k Employees</div>
         </div>
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <div class="job-header">
-            <div class="job-title">Quality and Service Excellence Manager</div>
+            <div class="job-title">CX Training, Quality &amp; Service Excellence Manager, LatAm</div>
             <div class="job-company">Reporting to Operations Director · 5 direct reports</div>
           </div>
           <ul class="job-bullets">
-            <li>Led CX and service quality initiatives across <strong>9 LatAm markets</strong>, improving consistency across 5 BPO vendors.</li>
-            <li>Governed SLA governance, QA calibration, and corrective actions for scalable service delivery.</li>
-            <li>Partnered cross-functionally with Product, Ops, and Vendor teams to drive CSAT and operational efficiency improvements using data insights.</li>
+            <li>Expanded scope to include CX Training strategy across 9 LatAm markets, designing onboarding and capability-building programs for BPO partners.</li>
+            <li>Led end-to-end quality governance, calibration cycles, and corrective action plans to ensure consistent service standards across vendors.</li>
+            <li>Partnered cross-functionally with Product, Ops, and Vendor teams to drive CSAT improvements through training-informed process redesign.</li>
           </ul>
-          <span class="job-badge">Multi-Market</span>
+          <span class="job-badge">Training</span>
           <span class="job-badge">Quality</span>
+          <span class="job-badge">Multi-Market</span>
+        </div>
+      </div>
+
+      <!-- DiDi Role 1 -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">Jun 2021 – Dec 2021</div>
+          <div class="tdate-company">DiDi Global<br>Mobility · Fintech · 24k Employees</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">CX Quality &amp; Service Excellence Manager, LatAm</div>
+            <div class="job-company">Reporting to Operations Director</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Led CX quality and service excellence across <strong>9 LatAm markets</strong>, overseeing 5+ BPO vendors and establishing QA calibration and SLA governance models.</li>
+            <li>Drove regional consistency in customer service delivery through structured performance management and data-driven insights.</li>
+          </ul>
+          <span class="job-badge">Quality Excellence</span>
           <span class="job-badge">BPO Governance</span>
+          <span class="job-badge">9 LatAm Markets</span>
         </div>
       </div>
 
@@ -725,13 +805,13 @@
       <div class="timeline-item">
         <div class="timeline-date">
           <div class="tdate-range">Nov 2010 – Jun 2021</div>
-          <div class="tdate-company">Teleperformance (TP)<br>Global BPO · 420k+ Employees</div>
+          <div class="tdate-company">Teleperformance (TP)<br>Global BPO · 420k+ Employees<br>10 yrs 8 mos</div>
         </div>
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <div class="job-header">
             <div class="job-title">Account Manager – Fintech Client (USA)</div>
-            <div class="job-company">Reporting to Regional Director · 5 Assistant Managers · Chime Bank</div>
+            <div class="job-company">Reporting to Regional Director · 5 Assistant Managers · Chime Bank · Jul 2019 – Jun 2021</div>
           </div>
           <ul class="job-bullets">
             <li>Led and scaled a <strong>500+ FTE</strong> customer operations environment — managing multi-channel fintech programs with full ownership of performance, quality, and CSAT.</li>
@@ -741,7 +821,75 @@
           <span class="job-badge">Fintech (Chime)</span>
           <span class="job-badge">500+ FTE</span>
           <span class="job-badge">COPC</span>
-          <span class="job-badge">Lean Six Sigma</span>
+          <div style="margin-top:20px; padding:16px; background:var(--light); border-radius:10px; border:1px solid var(--border);">
+            <div style="font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">Career Progression at Teleperformance</div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
+                <span>Quality Assurance Project Manager</span>
+                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">May – Jun 2019</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
+                <span>Training Coordinator</span>
+                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Apr 2017 – Apr 2019</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
+                <span>Quality Control Coordinator</span>
+                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Apr 2015 – Mar 2017</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
+                <span>Lead Trainer</span>
+                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Jan 2012 – Mar 2015</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
+                <span>Quality Assurance Analyst</span>
+                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Apr – Dec 2011</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
+                <span>Customer Service Representative</span>
+                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Nov 2010 – Mar 2011</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Freelance Translator -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">2005 – 2017</div>
+          <div class="tdate-company">Freelance</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">Freelance Translator</div>
+            <div class="job-company">English ↔ Spanish · Legal, Business &amp; Technical</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Provided professional English–Spanish translation services for legal, business, and technical documents across a 12-year parallel career.</li>
+          </ul>
+          <span class="job-badge">EN–ES Translation</span>
+          <span class="job-badge">Legal</span>
+        </div>
+      </div>
+
+      <!-- City of Angels -->
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="tdate-range">Oct 2007 – Oct 2008</div>
+          <div class="tdate-company">City of Angels Insurance,<br>Tax &amp; Translation Services</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="job-header">
+            <div class="job-title">Project Manager</div>
+            <div class="job-company">Los Angeles, CA</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Managed client-facing translation, insurance, and tax service operations, coordinating project delivery and customer satisfaction for a bilingual community services firm.</li>
+          </ul>
+          <span class="job-badge">Project Management</span>
+          <span class="job-badge">Bilingual Services</span>
         </div>
       </div>
 
@@ -749,17 +897,41 @@
   </div>
 </section>
 
-<!-- METHODOLOGY / DMADV -->
+<!-- METHODOLOGY -->
 <section id="methodology">
   <div class="section-inner">
     <p class="section-label">Methodology</p>
-    <h2 class="section-title">Engineering the Customer Experience</h2>
+    <h2 class="section-title">Ingeniería de la Experiencia al Cliente</h2>
     <p class="methodology-desc">
-      I apply structured problem-solving methodologies — including DMADV (Design, Measure, Analyze,
-      Design, Verify) from Lean Six Sigma — to architect customer experiences that are intentional,
-      measurable, and scalable. I've facilitated this framework for 400+ customer service and sales
-      professionals across multiple organizations.
+      My original consulting framework — <em>Engineering the Customer Experience</em> — reduces customer effort through 7 core skills organized across three dimensions. Developed and facilitated to <strong style="color:var(--teal);">400+ customer service and sales representatives</strong> across multiple organizations and markets, this model builds the mindset and behaviors that create effortless, memorable service interactions.
     </p>
+    <div class="method-skills">
+      <div class="method-group">
+        <div class="method-group-title">🎧 What I Listen From the Customer</div>
+        <div class="method-tags">
+          <span class="method-tag">Active Listening</span>
+          <span class="method-tag">Purposeful Small Talk</span>
+        </div>
+      </div>
+      <div class="method-group">
+        <div class="method-group-title">💬 How I Respond to the Customer</div>
+        <div class="method-tags">
+          <span class="method-tag">Positive Language</span>
+          <span class="method-tag">Advocacy</span>
+          <span class="method-tag">Alternative Positioning</span>
+        </div>
+      </div>
+      <div class="method-group">
+        <div class="method-group-title">🧠 Self-Awareness &amp; Adaptability</div>
+        <div class="method-tags">
+          <span class="method-tag">Understanding Personality Style</span>
+          <span class="method-tag">Flexing to Others' Personalities</span>
+        </div>
+      </div>
+    </div>
+    <a class="pdf-download-btn" href="CX Engineering_JC Munguia Consulting_Dec-2024.pdf" target="_blank">
+      📄 Download Sample Facilitation Deck (PDF)
+    </a>
     <div class="dmadv-image">
       <img src="DMAIC-cycle.jpg" alt="Lean Six Sigma DMAIC – DMADV Cycle" />
     </div>
@@ -808,6 +980,13 @@
         </div>
       </div>
       <div class="cert-card">
+        <div class="cert-badge">📜</div>
+        <div>
+          <div class="cert-name">Certificate in Legal Interpretation &amp; Translation</div>
+          <div class="cert-org">California State University, Los Angeles · 2008–2010</div>
+        </div>
+      </div>
+      <div class="cert-card">
         <div class="cert-badge">🌐</div>
         <div>
           <div class="cert-name">PMI Community Member</div>
@@ -852,11 +1031,15 @@
       <div class="tool-pill">Avaya</div>
       <div class="tool-pill">CRM &amp; Ticketing Systems</div>
       <div class="tool-pill">Workflow Automation</div>
-      <div class="tool-pill">AI-enabled CX (ChatGPT / Copilot)</div>
       <div class="tool-pill">SLA/KPI Dashboards</div>
       <div class="tool-pill">Omnichannel Support Models</div>
       <div class="tool-pill">Routing Logic</div>
       <div class="tool-pill">Microsoft Office Suite</div>
+      <div class="tool-pill">Claude Workflows</div>
+      <div class="tool-pill">Gemini GEMs</div>
+      <div class="tool-pill">Copilot (Microsoft)</div>
+      <div class="tool-pill">Vibe Coding</div>
+      <div class="tool-pill">GitHub</div>
     </div>
   </div>
 </section>
