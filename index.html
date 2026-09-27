@@ -345,6 +345,19 @@
     .brandband { display: block; width: 100%; line-height: 0; background: #0a1a2f; }
     .brandband img { width: 100%; height: auto; display: block; }
     @media (max-width: 760px) { .brandband { display: none; } }
+    .brandband--top { margin-top: 88px; }
+    .brandband--top + .hero { padding-top: 72px; min-height: auto; }
+    @media (max-width: 760px) { .brandband--top + .hero { padding-top: 120px; } }
+    .svc-card--yb .svc-card__top { background: #e8b54a; color: var(--navy); }
+    .svc-card--yb .svc-card__m { color: var(--navy); }
+    .svc-card--gb .svc-card__top { background: #2e8b57; }
+    .svc-card--bb .svc-card__top { background: #0d1b2a; }
+    .svc-card:nth-child(2).svc-card--gb .svc-card__top { background: #2e8b57; }
+    .svc-card__belt { display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+      border:1px solid currentColor; border-radius:20px; padding:2px 10px; margin-top:10px; opacity:.9; }
+    .svc-led { display:flex; align-items:center; gap:10px; font-size:.9rem; color:var(--navy); font-weight:600; margin:-18px 0 30px; }
+    .svc-led span { display:inline-block; width:34px; height:6px; border-radius:3px;
+      background:linear-gradient(90deg,#e8b54a 0 33%,#2e8b57 33% 66%,#0d1b2a 66%); }
 
     /* ── SERVICES ── */
     #services { background: var(--light); }
@@ -669,6 +682,11 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+
+<!-- BRAND BAND -->
+<div class="brandband brandband--top">
+  <img src="banner_linkedin_A_busqueda.png" alt="Service operations that work. Because the people running them do. Juan Carlos Munguia, Customer Service and CX Operations." />
+</div>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -1074,63 +1092,68 @@
   </div>
 </section>
 
-<!-- BRAND BAND -->
-<div class="brandband">
-  <img src="banner_linkedin_A_busqueda.png" alt="Service operations that work. Because the people running them do. Juan Carlos Munguia, Customer Service and CX Operations." />
-</div>
-
 <!-- SERVICES -->
 <section id="services">
   <div class="section-inner">
     <p class="section-label">Consulting</p>
     <h2 class="section-title">When the team already has the metrics,<br>but not the results</h2>
     <p class="svc-lead">
-      Fifteen years running service operations in fintech, mobility and large-scale BPO. I work with
-      your team, not above it: the point is that the operation keeps working after I'm gone.
+      Fifteen years running service operations in fintech, mobility and large-scale BPO. Three levels of
+      support, sized to your team: each one applies Lean Six Sigma and COPC-aligned best practices to your
+      real operation and certifies your people internally, so the operation keeps improving after I'm gone.
     </p>
+    <p class="svc-led"><span></span>Every program is led by a Lean Six Sigma Master Black Belt (PMP).</p>
 
     <div class="svc-grid">
-      <article class="svc-card">
+      <article class="svc-card svc-card--yb">
         <div class="svc-card__top">
-          <div class="svc-card__m">2 months</div>
-          <div class="svc-card__t">Diagnosis &amp; roadmap</div>
+          <div class="svc-card__m">2 months · teams up to 30</div>
+          <div class="svc-card__t">Yellow Belt program</div>
+          <div class="svc-card__belt">Diagnosis &amp; roadmap</div>
         </div>
-        <p class="svc-card__who">Teams up to 30 people. One contained problem: one KPI, one channel, one process.</p>
+        <p class="svc-card__who">One team, one contained problem: one KPI, one channel or one process.</p>
         <ul>
-          <li>Diagnosis using your own data, plus interviews with the team</li>
-          <li>Process map and root cause</li>
-          <li>Prioritized 90-day plan, with owners</li>
+          <li>Diagnosis with your own data, plus interviews with the team</li>
+          <li>Process map, Pareto and root cause, applied to your KPI</li>
+          <li>Prioritized 90-day plan with owners, and one quick win delivered</li>
+          <li>Yellow Belt training for team leads and analysts, with AI study guides</li>
+          <li>Internal Yellow Belt certification: exam, charter review and certificate</li>
           <li>One weekly session with you</li>
         </ul>
       </article>
 
-      <article class="svc-card">
+      <article class="svc-card svc-card--gb">
         <div class="svc-card__top">
-          <div class="svc-card__m">4 months</div>
-          <div class="svc-card__t">Implementation</div>
+          <div class="svc-card__m">4 months · 30 to 150 people</div>
+          <div class="svc-card__t">Green Belt program</div>
+          <div class="svc-card__belt">Implementation</div>
         </div>
-        <p class="svc-card__who">Teams of 30 to 150 people. One or two processes, or a new channel.</p>
+        <p class="svc-card__who">A department, line of business or client program. One or two processes, or a new channel.</p>
         <ul>
-          <li>Everything in the 2-month package</li>
-          <li>Quality framework aligned to COPC / ISO 9001</li>
-          <li>Metrics dashboard and review routine</li>
-          <li>Training for the team and its leaders</li>
+          <li>Everything in the Yellow Belt program</li>
+          <li>Quality framework aligned to COPC and ISO 9001 practices</li>
+          <li>Measurement you can trust: QA calibration, capability and control charts</li>
+          <li>Metrics dashboard and a daily and weekly review routine</li>
+          <li>Green Belt training, with each participant leading a DMAIC project</li>
+          <li>Internal Green Belt certification: exam, project rubric, Finance-validated benefits</li>
           <li>Fortnightly support through execution</li>
         </ul>
       </article>
 
-      <article class="svc-card">
+      <article class="svc-card svc-card--bb">
         <div class="svc-card__top">
-          <div class="svc-card__m">6 months</div>
-          <div class="svc-card__t">Transformation</div>
+          <div class="svc-card__m">6 months · more than 150 people</div>
+          <div class="svc-card__t">Black Belt program</div>
+          <div class="svc-card__belt">Transformation</div>
         </div>
-        <p class="svc-card__who">More than 150 people. Multi-channel operation, or service delivered by a BPO.</p>
+        <p class="svc-card__who">Full accounts, sites or regions. Multi-channel operations, shared-services towers or service delivered by a BPO.</p>
         <ul>
           <li>Everything above</li>
-          <li>End-to-end operating model</li>
-          <li>QA with speech analytics and automation</li>
-          <li>Building the manager layer</li>
-          <li>Documented handover and close</li>
+          <li>Strategy deployment (X-matrix) linking goals to a portfolio of projects</li>
+          <li>End-to-end operating model; QA with speech analytics and automation</li>
+          <li>Building the manager layer and your own Green Belt coaches</li>
+          <li>Black Belt training for improvement leads; internal Black Belt certification</li>
+          <li>Documented handover, benefits tracking and close</li>
         </ul>
         <p class="svc-note">If the system you already have has been running for more than 6 months, the engagement is not extended. If a new tool or vendor is needed, the contract can extend to 12 months to cover procurement and implementation.</p>
       </article>
@@ -1157,6 +1180,11 @@
       week on site per month; travel outside Mexico City at the client's request and expense.
       Confidentiality in writing: your operation's data doesn't leave and isn't used as an example
       without your permission. I work in Spanish and English.
+    </p>
+    <p class="svc-terms" style="font-size:.78rem;color:var(--muted)">
+      Certifications are internal: they certify competence inside your organization and are not accredited
+      third-party certifications. COPC® is a registered trademark of COPC Inc.; these programs follow
+      practices aligned with its published CX Standard and do not grant COPC certification.
     </p>
 
     <div class="svc-case">
