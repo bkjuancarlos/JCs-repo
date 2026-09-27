@@ -399,6 +399,14 @@
       content: ''; position: absolute; left: 0; top: 9px;
       width: 6px; height: 6px; border-radius: 50%; background: var(--teal);
     }
+    .svc-kit { display:block; margin:0 24px 14px; border:1px solid var(--border); border-radius:10px; overflow:hidden; background:#f4f6fa; text-decoration:none; }
+    .svc-kit img { width:100%; height:auto; display:block; transition:transform .25s; }
+    .svc-kit:hover img { transform:scale(1.03); }
+    .svc-kit span { display:block; font-size:.72rem; color:var(--muted); padding:6px 10px; text-align:center; }
+    .svc-card__btn { margin:auto 24px 22px; display:block; text-align:center; font-size:.85rem; font-weight:700; text-decoration:none;
+      color:var(--navy); border:1.5px solid var(--navy); border-radius:8px; padding:10px 12px; transition:background .2s,color .2s; }
+    .svc-card__btn:hover { background:var(--navy); color:var(--white); }
+    .svc-cta { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
     .svc-note {
       font-size: .78rem; line-height: 1.55; color: var(--muted);
       border-left: 3px solid var(--gold); padding-left: 12px;
@@ -1120,6 +1128,8 @@
           <li>Internal Yellow Belt certification: exam, charter review and certificate</li>
           <li>One weekly session with you</li>
         </ul>
+        <a class="svc-kit" href="LSS_Yellow_Belt_Toolkit.png" target="_blank" rel="noopener" title="Open the Yellow Belt toolkit one-pager"><img src="LSS_Yellow_Belt_Toolkit.png" alt="Yellow Belt toolkit: training manual, AI study companion, exam, answer key, project rubric and certificate" loading="lazy" /><span>What your team receives · click to enlarge</span></a>
+        <a class="svc-card__btn" href="LSS_Yellow_Belt_FREE_PREVIEW_EN.pdf" target="_blank" rel="noopener">&#128196; Yellow Belt free preview (PDF)</a>
       </article>
 
       <article class="svc-card svc-card--gb">
@@ -1138,6 +1148,8 @@
           <li>Internal Green Belt certification: exam, project rubric, Finance-validated benefits</li>
           <li>Fortnightly support through execution</li>
         </ul>
+        <a class="svc-kit" href="LSS_Green_Belt_Toolkit.png" target="_blank" rel="noopener" title="Open the Green Belt toolkit one-pager"><img src="LSS_Green_Belt_Toolkit.png" alt="Green Belt toolkit: training manual, AI study companion, exam, answer key, project rubric and certificate" loading="lazy" /><span>What your team receives · click to enlarge</span></a>
+        <a class="svc-card__btn" href="LSS_Green_Belt_FREE_PREVIEW_EN.pdf" target="_blank" rel="noopener">&#128196; Green Belt free preview (PDF)</a>
       </article>
 
       <article class="svc-card svc-card--bb">
@@ -1156,6 +1168,8 @@
           <li>Documented handover, benefits tracking and close</li>
         </ul>
         <p class="svc-note">If the system you already have has been running for more than 6 months, the engagement is not extended. If a new tool or vendor is needed, the contract can extend to 12 months to cover procurement and implementation.</p>
+        <a class="svc-kit" href="LSS_Black_Belt_Toolkit.png" target="_blank" rel="noopener" title="Open the Black Belt toolkit one-pager"><img src="LSS_Black_Belt_Toolkit.png" alt="Black Belt toolkit: training manual, AI study companion, exam, answer key, project rubric and certificate" loading="lazy" /><span>What your team receives · click to enlarge</span></a>
+        <a class="svc-card__btn" href="LSS_Black_Belt_FREE_PREVIEW_EN.pdf" target="_blank" rel="noopener">&#128196; Black Belt free preview (PDF)</a>
       </article>
     </div>
 
@@ -1187,32 +1201,8 @@
       practices aligned with its published CX Standard and do not grant COPC certification.
     </p>
 
-    <div class="svc-case">
-      <h3>Twelve months of coaching didn't move CSAT.<br>One measurement change did.</h3>
-      <p>
-        A 200-person division had missed its 78% satisfaction target for a full year. The problem
-        was not the people. It was what was being measured, and when.
-      </p>
-      <div class="svc-nums">
-        <div class="svc-num">
-          <b>0.93 <i>vs</i> 0.49</b>
-          <span>Correlation to CSAT: service level versus quality-monitoring score</span>
-        </div>
-        <div class="svc-num">
-          <b>24 to 48 h</b>
-          <span>Delay between the interaction and the survey being sent</span>
-        </div>
-        <div class="svc-num">
-          <b>70% <i>to</i> 90%</b>
-          <span>Twelve-month mean, sustained within a month of the change</span>
-        </div>
-      </div>
-      <div class="svc-btns">
-        <a class="btn btn-gold" href="JC_Munguia_Case_Study_CSAT_EN.pdf" target="_blank" rel="noopener">Read the full case (PDF)</a>
-        <a class="btn btn-outline" href="JC_Munguia_Services_Menu_EN.pdf" target="_blank" rel="noopener">Services menu (PDF)</a>
-        <a class="btn btn-outline" href="mailto:JuanCarlosMunguiaConsulting@outlook.com?subject=Service%20operations%20consulting">Tell me the problem</a>
-      </div>
-      <p class="svc-fine">Client, industry and location withheld by agreement. Figures are as reported by the operation at the time.</p>
+    <div class="svc-cta">
+      <a class="btn btn-gold" href="mailto:JuanCarlosMunguiaConsulting@outlook.com?subject=Service%20operations%20consulting">Tell me the problem: book a free 30-minute call</a>
     </div>
   </div>
 </section>
@@ -1221,7 +1211,7 @@
 <section id="methodology">
   <div class="section-inner">
     <p class="section-label">Methodology</p>
-    <h2 class="section-title">Ingeniería de la Experiencia al Cliente</h2>
+    <h2 class="section-title">Engineering the Customer Experience</h2>
     <p class="methodology-desc">
       My original consulting framework — <em>Engineering the Customer Experience</em> — reduces customer effort through 7 core skills organized in four parts. Developed and facilitated to <strong style="color:var(--teal);">400+ customer service and sales representatives</strong> across multiple organizations and markets, this model builds the mindset and behaviors that create effortless, memorable service interactions.
     </p>
@@ -1243,12 +1233,8 @@
           <li style="--dot:#1B8A8F"><span><strong>Develop self-awareness:</strong> 6. Understanding My Dominant Style. Know your strengths and your stress response.</span></li>
           <li style="--dot:#6A3D9A"><span><strong>Maintain self-awareness:</strong> 7. Flexing to Others' Personalities. Adapt so the skills hold up under pressure.</span></li>
         </ul>
-        <a class="pdf-download-btn" href="CXE_Participant_Manual_FREE_PREVIEW.pdf" target="_blank" rel="noopener">
-          &#128196; Download the free preview (PDF)
-        </a>
       </div>
     </div>
-    <p class="cxe-note">Free preview of the 2026 Participant Manual: full structure, Module 1 and a first look at the agent and leader tracks.</p>
 
     <div class="cxe-why">
       <h3>Why adopt it as your high-performing team standard</h3>
@@ -1296,6 +1282,7 @@
         <a class="btn btn-gold" href="mailto:JuanCarlosMunguiaConsulting@outlook.com?subject=Customer%20Experience%20Engineering%20-%20free%20consultation">Book a free 30-minute consultation</a>
         <a class="pdf-download-btn" href="CXE_Participant_Manual_FREE_PREVIEW.pdf" target="_blank" rel="noopener">&#128196; Free preview (PDF)</a>
       </div>
+      <p class="cxe-note" style="margin-top:14px">Free preview of the 2026 Participant Manual: full structure, Module 1 and a first look at the agent and leader tracks.</p>
     </div>
   </div>
 </section>
