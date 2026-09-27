@@ -468,17 +468,56 @@
       padding: 5px 12px; border-radius: 999px;
       font-size: .8rem; font-weight: 500;
     }
-    .dmadv-image {
-      width: 100%;
-      max-width: 860px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.1);
-      overflow: hidden;
-      background: rgba(255,255,255,.05);
-      display: flex; align-items: center; justify-content: center;
-      min-height: 260px;
+    /* Methodology: framework wheel + why + CTA */
+    .cxe-framework {
+      display: grid; grid-template-columns: minmax(260px, 420px) 1fr;
+      gap: 40px; align-items: center; margin-bottom: 36px;
     }
-    .dmadv-image img { width: 100%; display: block; }
+    .cxe-wheel img { width: 100%; height: auto; display: block; }
+    .cxe-framework-kicker { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .cxe-framework h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--white); line-height: 1.25; margin-bottom: 10px; }
+    .cxe-framework-sub { color: rgba(255,255,255,.72); font-size: .95rem; line-height: 1.7; margin-bottom: 18px; }
+    .cxe-parts { list-style: none; display: grid; gap: 10px; margin-bottom: 22px; }
+    .cxe-parts li {
+      display: grid; grid-template-columns: 14px 1fr; gap: 12px; align-items: start;
+      color: rgba(255,255,255,.85); font-size: .9rem; line-height: 1.55;
+    }
+    .cxe-parts li::before { content: ""; width: 12px; height: 12px; border-radius: 3px; margin-top: 5px; background: var(--dot); }
+    .cxe-parts strong { color: var(--white); }
+    .cxe-note { font-size: .78rem; color: rgba(255,255,255,.5); margin-top: -8px; margin-bottom: 36px; }
+
+    .cxe-why { margin: 20px 0 44px; }
+    .cxe-why h3 { font-size: 1.25rem; color: var(--white); margin-bottom: 6px; }
+    .cxe-why-intro { color: rgba(255,255,255,.7); font-size: .93rem; max-width: 760px; margin-bottom: 22px; line-height: 1.7; }
+    .cxe-why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .cxe-why-card {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px; padding: 24px;
+    }
+    .cxe-why-card h4 { font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+    .cxe-why-card ul { list-style: none; display: grid; gap: 12px; }
+    .cxe-why-card li { color: rgba(255,255,255,.82); font-size: .88rem; line-height: 1.55; padding-left: 18px; position: relative; }
+    .cxe-why-card li::before { content: "\2192"; position: absolute; left: 0; color: var(--gold); }
+    .cxe-why-card li b { color: var(--white); }
+    .cxe-sources { font-size: .72rem; color: rgba(255,255,255,.45); margin-top: 14px; line-height: 1.6; }
+    .cxe-sources a { color: rgba(255,255,255,.6); }
+
+    .cxe-cta {
+      border-radius: 18px; padding: 36px 32px; text-align: center;
+      background: linear-gradient(135deg, rgba(15,163,177,.22), rgba(42,125,225,.18));
+      border: 1px solid rgba(255,255,255,.16);
+    }
+    .cxe-cta .cxe-slogan { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--white); line-height: 1.2; margin-bottom: 10px; }
+    .cxe-cta .cxe-slogan span { color: var(--gold); }
+    .cxe-cta p { color: rgba(255,255,255,.75); font-size: .95rem; max-width: 620px; margin: 0 auto 22px; line-height: 1.7; }
+    .cxe-cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .cxe-cta .pdf-download-btn { margin-bottom: 0; }
+
+    @media (max-width: 860px) {
+      .cxe-framework { grid-template-columns: 1fr; }
+      .cxe-wheel { max-width: 360px; margin: 0 auto; }
+      .cxe-cta .cxe-slogan { font-size: 1.6rem; }
+    }
     .pdf-download-btn {
       display: inline-flex; align-items: center; gap: 10px;
       background: rgba(255,255,255,.1);
@@ -1156,37 +1195,79 @@
     <p class="section-label">Methodology</p>
     <h2 class="section-title">Ingeniería de la Experiencia al Cliente</h2>
     <p class="methodology-desc">
-      My original consulting framework — <em>Engineering the Customer Experience</em> — reduces customer effort through 7 core skills organized across three dimensions. Developed and facilitated to <strong style="color:var(--teal);">400+ customer service and sales representatives</strong> across multiple organizations and markets, this model builds the mindset and behaviors that create effortless, memorable service interactions.
+      My original consulting framework — <em>Engineering the Customer Experience</em> — reduces customer effort through 7 core skills organized in four parts. Developed and facilitated to <strong style="color:var(--teal);">400+ customer service and sales representatives</strong> across multiple organizations and markets, this model builds the mindset and behaviors that create effortless, memorable service interactions.
     </p>
-    <div class="method-skills">
-      <div class="method-group">
-        <div class="method-group-title">🎧 What I Listen From the Customer</div>
-        <div class="method-tags">
-          <span class="method-tag">Active Listening</span>
-          <span class="method-tag">Purposeful Small Talk</span>
-        </div>
+    <div class="cxe-framework">
+      <div class="cxe-wheel">
+        <img src="cxe-framework-wheel.png" alt="Customer Experience Engineering framework: four parts and seven skills around one goal, lower effort for customers and agents" loading="lazy" />
       </div>
-      <div class="method-group">
-        <div class="method-group-title">💬 How I Respond to the Customer</div>
-        <div class="method-tags">
-          <span class="method-tag">Positive Language</span>
-          <span class="method-tag">Advocacy</span>
-          <span class="method-tag">Alternative Positioning</span>
-        </div>
-      </div>
-      <div class="method-group">
-        <div class="method-group-title">🧠 Self-Awareness &amp; Adaptability</div>
-        <div class="method-tags">
-          <span class="method-tag">Understanding Personality Style</span>
-          <span class="method-tag">Flexing to Others' Personalities</span>
-        </div>
+      <div>
+        <p class="cxe-framework-kicker">The framework: four parts, seven skills, one goal</p>
+        <h3>Lower effort, for the customer and for the agent</h3>
+        <p class="cxe-framework-sub">
+          Most disloyalty is created by effort, not by a lack of courtesy. The framework gives frontline teams and their leaders
+          a shared, trainable way to guide every interaction so customers do less work and feel more in control,
+          and so agents spend less energy negotiating and more time solving.
+        </p>
+        <ul class="cxe-parts">
+          <li style="--dot:#2F6FB0"><span><strong>What I hear:</strong> 1. Active Listening &middot; 2. Purposeful Small Talk. Capture what is said and uncover what is not.</span></li>
+          <li style="--dot:#4f7fc0"><span><strong>How I respond:</strong> 3. Positive Language &middot; 4. Advocacy &middot; 5. Alternative Positioning. Frame solutions in the best possible light.</span></li>
+          <li style="--dot:#1B8A8F"><span><strong>Develop self-awareness:</strong> 6. Understanding My Dominant Style. Know your strengths and your stress response.</span></li>
+          <li style="--dot:#6A3D9A"><span><strong>Maintain self-awareness:</strong> 7. Flexing to Others' Personalities. Adapt so the skills hold up under pressure.</span></li>
+        </ul>
+        <a class="pdf-download-btn" href="CXE_Participant_Manual_FREE_PREVIEW.pdf" target="_blank" rel="noopener">
+          &#128196; Download the free preview (PDF)
+        </a>
       </div>
     </div>
-    <a class="pdf-download-btn" href="CX Engineering_JC Munguia Consulting_Dec-2024.pdf" target="_blank">
-      📄 Download Sample Facilitation Deck (PDF)
-    </a>
-    <div class="dmadv-image">
-      <img src="DMAIC-cycle.jpg" alt="Lean Six Sigma DMAIC – DMADV Cycle" />
+    <p class="cxe-note">Free preview of the 2026 Participant Manual: full structure, Module 1 and a first look at the agent and leader tracks.</p>
+
+    <div class="cxe-why">
+      <h3>Why adopt it as your high-performing team standard</h3>
+      <p class="cxe-why-intro">
+        One standard, used at two levels. Agents use it with customers. Leaders use the same seven skills with their agents,
+        because agents tend to treat customers the way they are treated. Certification is internal and practical:
+        theory, role plays and observed live interactions, aligned with the COPC CX Standard R8.0 (2026).
+      </p>
+      <div class="cxe-why-grid">
+        <div class="cxe-why-card">
+          <h4>&#127919; For your operation</h4>
+          <ul>
+            <li><b>Effort predicts disloyalty.</b> 96% of customers with a high-effort experience become more disloyal, versus 9% after a low-effort one.</li>
+            <li><b>Resolution pays back.</b> Every 1-point gain in first-contact resolution lifts interaction NPS by about 1.4 points.</li>
+            <li><b>Humans now get the hardest contacts.</b> Only 14% of service issues are fully solved in self-service, so the human conversation is where loyalty is won or lost.</li>
+            <li><b>Measurable, not motivational.</b> Scorecards track CES, FCR, repeat contacts, transfers and critical errors before and after.</li>
+          </ul>
+        </div>
+        <div class="cxe-why-card">
+          <h4>&#129517; For your leadership team</h4>
+          <ul>
+            <li><b>Leaders design half the effort.</b> The organization, not the agent, causes 49% of repeat calls: policy, tools and knowledge are leadership levers.</li>
+            <li><b>Managers set the tone.</b> Global manager engagement is 22%, and managers account for about 70% of the variance in team engagement.</li>
+            <li><b>Coaching that sticks.</b> A 5-step coaching conversation, quarterly calibration and monitoring rules aligned with COPC R8.0.</li>
+            <li><b>A culture, not a course.</b> Daily effort huddles, a monthly "effort hunt" on repeat-contact drivers, and leaders certified on the same standard.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cxe-sources">
+        Sources: CEB/Gartner Customer Loyalty Survey (n=54,166), <i>The Effortless Experience</i> (2013);
+        <a href="https://www.sqmgroup.com/resources/library/blog/call-center-fcr-benchmark-2024-results-by-industry" target="_blank" rel="noopener">SQM Group FCR Benchmark (Feb 2025)</a>;
+        <a href="https://www.gartner.com/en/newsroom/press-releases/2024-08-19-gartner-survey-finds-only-14-percent-of-customer-service-issues-are-fully-resolved-in-self-service" target="_blank" rel="noopener">Gartner (Aug 2024)</a>;
+        <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">Gallup State of the Global Workplace (2026)</a>;
+        COPC CX Standard for Contact Centers R8.0 (Jan 2026).
+      </p>
+    </div>
+
+    <div class="cxe-cta">
+      <p class="cxe-slogan">Lower the effort. <span>Raise the standard.</span></p>
+      <p>
+        Let's look at where effort hides in your operation and what it would take to certify your agents and leaders
+        on one standard. The first conversation is free: 30 minutes, no slides, just your numbers and your questions.
+      </p>
+      <div class="cxe-cta-buttons">
+        <a class="btn btn-gold" href="mailto:JuanCarlosMunguiaConsulting@outlook.com?subject=Customer%20Experience%20Engineering%20-%20free%20consultation">Book a free 30-minute consultation</a>
+        <a class="pdf-download-btn" href="CXE_Participant_Manual_FREE_PREVIEW.pdf" target="_blank" rel="noopener">&#128196; Free preview (PDF)</a>
+      </div>
     </div>
   </div>
 </section>
