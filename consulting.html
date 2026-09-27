@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulting: Service Operations That Get Results | JC Munguia</title>
+  <meta name="description" content="When the team already has the metrics, but not the results. Yellow, Green and Black Belt programs sized to your team, with internal certification. Free 30-minute call." />
+  <link rel="canonical" href="https://bkjuancarlos.github.io/JCs-repo/consulting.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Your team has the metrics. Not the results. | JC Munguia" />
+  <meta property="og:description" content="Three programs sized to your team: Yellow (2 months, up to 30), Green (4 months, 30–150), Black (6 months, 150+). Real process fixes with your data, and your people certified internally." />
+  <meta property="og:image" content="https://bkjuancarlos.github.io/JCs-repo/og-consulting.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta property="og:image:alt" content="Yellow, Green and Black Belt consulting programs by JC Munguia, sized to team size" />
+  <meta property="og:url" content="https://bkjuancarlos.github.io/JCs-repo/consulting.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://bkjuancarlos.github.io/JCs-repo/og-consulting.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1b2a; --blue: #1a4f8a; --accent: #2a7de1; --teal: #0fa3b1;
+      --gold: #e8b54a; --green: #2e8b57; --light: #f4f7fb; --muted: #6b7a8d; --white: #ffffff; --border: #dde3ea;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--navy); line-height: 1.6; }
+    a { color: inherit; }
+    header {
+      background: var(--navy); padding: 10px 5%;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    header img { height: 64px; width: auto; display: block; }
+    header nav a { color: rgba(255,255,255,.8); text-decoration: none; font-size: .9rem; font-weight: 500; }
+    header nav a:hover { color: var(--white); }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #16406b 100%); color: var(--white);
+      padding: 64px 5% 72px;
+    }
+    .label { font-size: .8rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.1rem, 5vw, 3.3rem); line-height: 1.1; margin: 12px 0 18px; max-width: 760px; }
+    .lead { font-size: 1.1rem; color: rgba(255,255,255,.85); max-width: 680px; margin-bottom: 30px; }
+    .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-block; padding: 13px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: .95rem; }
+    .btn-gold { background: var(--gold); color: var(--navy); }
+    .btn-gold:hover { filter: brightness(1.06); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.6); color: var(--white); }
+    .btn-ghost:hover { background: rgba(255,255,255,.1); }
+    section { padding: 64px 5%; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.4vw, 2.2rem); line-height: 1.2; margin-bottom: 14px; }
+    .led { color: var(--muted); margin-bottom: 30px; }
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .plan { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+    .plan .top { padding: 18px 22px; }
+    .plan .top small { display: block; font-size: .8rem; font-weight: 600; letter-spacing: .04em; opacity: .85; }
+    .plan .top b { font-size: 1.3rem; }
+    .plan.y .top { background: var(--gold); color: var(--navy); }
+    .plan.g .top { background: var(--green); color: var(--white); }
+    .plan.b .top { background: var(--navy); color: var(--white); }
+    .plan .body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+    .plan .fit { font-weight: 600; margin-bottom: 12px; }
+    .plan ul { list-style: none; display: grid; gap: 8px; font-size: .92rem; color: #334155; margin-bottom: 20px; }
+    .plan li { padding-left: 18px; position: relative; }
+    .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+    .plan .pdf { margin-top: auto; text-align: center; border: 1.5px solid var(--navy); border-radius: 8px; padding: 10px; text-decoration: none; font-weight: 600; font-size: .9rem; }
+    .plan .pdf:hover { background: var(--navy); color: var(--white); }
+    .steps { background: var(--white); }
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+    .step { border-top: 3px solid var(--navy); padding-top: 14px; }
+    .step b { display: block; margin-bottom: 4px; }
+    .step p { color: var(--muted); font-size: .95rem; }
+    .terms { margin-top: 32px; font-size: .9rem; color: #334155; background: var(--light); border-radius: 12px; padding: 18px 22px; }
+    .fine { margin-top: 14px; font-size: .78rem; color: var(--muted); }
+    .cta { background: var(--navy); color: var(--white); text-align: center; }
+    .cta p { color: rgba(255,255,255,.82); max-width: 620px; margin: 0 auto 26px; }
+    .cta .btns { justify-content: center; }
+    footer { text-align: center; font-size: .85rem; color: var(--muted); padding: 28px 5%; }
+    footer a { color: var(--blue); }
+    @media (max-width: 900px) {
+      .plans, .step-grid { grid-template-columns: 1fr; }
+      header img { height: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html"><img src="LOGO JUAN CARLOS MUNGUIA.png" alt="JC Munguia" /></a>
+  <nav><a href="index.html#services">Full portfolio &rarr;</a></nav>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="label">Consulting</p>
+    <h1>When the team already has the metrics, but not the results</h1>
+    <p class="lead">Fifteen years running service operations in fintech, mobility and large-scale BPO. Three levels of support, sized to your team. Each one fixes a real process with your own data and certifies your people internally, so the operation keeps improving after I'm gone.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="mailto:JuanCarlosMunguiaConsulting@outlook.com?subject=Service%20operations%20consulting">Tell me the problem: free 30-minute call</a>
+      <a class="btn btn-ghost" href="#programs">See the three programs</a>
+    </div>
+  </div>
+</div>
+
+<section id="programs">
+  <div class="wrap">
+    <h2>Three programs, sized to your team</h2>
+    <p class="led">Every program is led by a Lean Six Sigma Master Black Belt (PMP).</p>
+    <div class="plans">
+      <div class="plan y">
+        <div class="top"><small>2 MONTHS · TEAMS UP TO 30</small><b>Yellow Belt</b></div>
+        <div class="body">
+          <p class="fit">Diagnosis & roadmap. One team, one contained problem: one KPI, one channel or one process.</p>
+          <ul>
+            <li>Diagnosis with your own data and team interviews</li>
+            <li>Process map, Pareto and root cause on your KPI</li>
+            <li>Prioritized 90-day plan and one quick win delivered</li>
+            <li>Internal Yellow Belt certification</li>
+          </ul>
+          <a class="pdf" href="LSS_Yellow_Belt_FREE_PREVIEW_EN.pdf">📄 Free preview (PDF)</a>
+        </div>
+      </div>
+      <div class="plan g">
+        <div class="top"><small>4 MONTHS · 30 TO 150 PEOPLE</small><b>Green Belt</b></div>
+        <div class="body">
+          <p class="fit">Implementation. A department, line of business or client program.</p>
+          <ul>
+            <li>Everything in Yellow Belt</li>
+            <li>Quality framework aligned to COPC and ISO 9001 practices</li>
+            <li>QA calibration, control charts, dashboard and review routine</li>
+            <li>Each participant leads a DMAIC project; internal Green Belt certification</li>
+          </ul>
+          <a class="pdf" href="LSS_Green_Belt_FREE_PREVIEW_EN.pdf">📄 Free preview (PDF)</a>
+        </div>
+      </div>
+      <div class="plan b">
+        <div class="top"><small>6 MONTHS · MORE THAN 150 PEOPLE</small><b>Black Belt</b></div>
+        <div class="body">
+          <p class="fit">Transformation. Full accounts, sites, regions, shared services or BPO-delivered operations.</p>
+          <ul>
+            <li>Everything above</li>
+            <li>Strategy deployment (X-matrix) linking goals to projects</li>
+            <li>End-to-end operating model; QA with speech analytics and automation</li>
+            <li>Your own Green Belt coaches; documented handover</li>
+          </ul>
+          <a class="pdf" href="LSS_Black_Belt_FREE_PREVIEW_EN.pdf">📄 Free preview (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>How we start</h2>
+    <div class="step-grid">
+      <div class="step"><b>1. A 30-minute call</b><p>At no cost, to understand the problem.</p></div>
+      <div class="step"><b>2. Proposal in 5 business days</b><p>Scope, deliverables, schedule and investment.</p></div>
+      <div class="step"><b>3. We start</b><p>With the data and tools you already have.</p></div>
+    </div>
+    <div class="terms"><b>Terms.</b> Two-month renewable contracts, twelve months maximum per client. If after a year you still need me, I didn't do my job. Remote, with in-person sessions in Mexico City. Confidentiality in writing. Spanish and English.</div>
+    <p class="fine">Certifications are internal: they certify competence inside your organization and are not accredited third-party certifications. COPC® is a registered trademark of COPC Inc.; these programs follow practices aligned with its published CX Standard and do not grant COPC certification.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Tell me the KPI that won't move</h2>
+    <p>I'll tell you in 30 minutes whether it's a process, a measurement or a people problem, and which program fits.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="mailto:JuanCarlosMunguiaConsulting@outlook.com?subject=Service%20operations%20consulting">Book a free 30-minute call</a>
+      <a class="btn btn-ghost" href="cxe.html">See the CX methodology</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Juan Carlos Munguia Salcido · Lean Six Sigma Master Black Belt · PMP ·
+  <a href="https://www.linkedin.com/in/jc-munguia">LinkedIn</a> · <a href="index.html">Portfolio</a>
+</footer>
+
+</body>
+</html>
