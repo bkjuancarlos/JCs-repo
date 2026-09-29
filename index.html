@@ -754,6 +754,27 @@
     #business .svc-lead { margin-top: 0; }
     @media (max-width: 900px) { .std-grid { grid-template-columns: 1fr; } }
     @media (max-width: 520px) { .guarantee { flex-direction: column; align-items: flex-start; } }
+
+    /* ── HERO STATS (replaces the metrics strip) ── */
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 4px 0 30px; max-width: 820px; }
+    .hero-stat { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 12px; padding: 14px 16px; }
+    .hero-stat b { display: block; font-size: 1.7rem; font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -.01em; }
+    .hero-stat:nth-child(3) b { font-size: 1.15rem; line-height: 1.5; }
+    .hero-stat span { display: block; font-size: .78rem; line-height: 1.4; color: rgba(255,255,255,.72); margin-top: 6px; }
+    @media (max-width: 900px) { .hero-stats { grid-template-columns: repeat(2, 1fr); margin-left: auto; margin-right: auto; text-align: left; } }
+
+    /* ── CLIENT WORK: case study cards ── */
+    .cw-lead { font-size: 1rem; line-height: 1.7; color: #3a4a5c; max-width: 820px; margin: -28px 0 8px; }
+    .cw-card { display: flex; flex-direction: column; }
+    .cw-card--bb { border-top-color: #0d1b2a; }
+    .cw-img { display: block; margin: -4px 0 16px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #f4f6fa; text-decoration: none; }
+    .cw-img img { width: 100%; height: auto; display: block; transition: transform .25s; }
+    .cw-img:hover img { transform: scale(1.03); }
+    .cw-img span { display: block; font-size: .72rem; color: var(--muted); padding: 6px 10px; text-align: center; }
+    .cw-res { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 2px 0 14px; }
+    .cw-res div { background: var(--navy); border-radius: 10px; padding: 10px 10px 9px; }
+    .cw-res b { display: block; color: var(--gold); font-size: 1.05rem; font-weight: 800; line-height: 1.2; }
+    .cw-res span { display: block; color: rgba(255,255,255,.78); font-size: .72rem; line-height: 1.35; margin-top: 3px; }
 </style>
 </head>
 <body>
@@ -789,15 +810,13 @@
     </div>
     <div class="hero-text">
       <div class="hero-eyebrow">Open to CX leadership roles &amp; consulting</div>
-      <h1 class="hero-name">Juan Carlos<br>Munguia Salcido</h1>
-      <p class="hero-title">Customer Service &amp; CX Operations · Quality Systems · Service Excellence</p>
-      <div class="hero-tags">
-        <span class="tag">15 Years in CX</span>
-        <span class="tag">BPO Governance</span>
-        <span class="tag">Lean Six Sigma Master Black Belt</span>
-        <span class="tag">PMP®</span>
-        <span class="tag">Organizational Psychologist</span>
-        <span class="tag">Fintech &amp; Remittance</span>
+      <h1 class="hero-name">Juan Carlos Munguia Salcido</h1>
+      <p class="hero-title">CX &amp; Operations Leader · Fintech, BPO &amp; Shared Services · Mexico City</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>15</b><span>years leading CX operations</span></div>
+        <div class="hero-stat"><b>2,500+</b><span>FTE operations managed</span></div>
+        <div class="hero-stat"><b>US, CA &amp; LatAm</b><span>US, Canada and 9 LatAm markets served</span></div>
+        <div class="hero-stat"><b>3&times;</b><span>business growth in 6 months, plus CSAT gains</span></div>
       </div>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#contact">Get in Touch</a>
@@ -807,28 +826,6 @@
     </div>
   </div>
 </section>
-
-<!-- METRICS -->
-<div class="metrics-strip">
-  <div class="metrics-inner">
-    <div class="metric">
-      <div class="metric-number">15</div>
-      <div class="metric-label">Years Leading<br>CX Operations</div>
-    </div>
-    <div class="metric">
-      <div class="metric-number">2,500+</div>
-      <div class="metric-label">FTE Operations<br>Managed</div>
-    </div>
-    <div class="metric">
-      <div class="metric-number" style="font-size:1.5rem;">US, CA &amp; LatAm</div>
-      <div class="metric-label">US, Canada &amp; 9 LatAm<br>Markets Served</div>
-    </div>
-    <div class="metric">
-      <div class="metric-number">3×</div>
-      <div class="metric-label">Business Growth in<br>6 Months &amp; CSAT Improvements</div>
-    </div>
-  </div>
-</div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -957,17 +954,19 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <div class="job-header">
-            <div class="job-title">Independent Consultant – Service Operations, Quality &amp; Training</div>
+            <div class="job-title">Independent Consultant · People, Customer &amp; Business Experience</div>
             <div class="job-company">Selected engagements alongside full-time roles</div>
           </div>
           <ul class="job-bullets">
-            <li>Diagnose where a service operation loses time, quality or customers, and rebuild the process with Lean Six Sigma (DMAIC / DMADV), Kano and root-cause analysis.</li>
-            <li>Design and run training programs for contact-center staff using LMS platforms and Bloom's taxonomy, including adoption of AI-enabled tools.</li>
-            <li>Set up quality frameworks aligned to COPC and ISO 9001, and the reporting that keeps them honest.</li>
+            <li>I bring three standards to service and contact-center teams, in the order I apply them.</li>
+            <li><b>People · Engineering the Employee Experience:</b> values, agent and leadership competencies, career paths and reviews with evidence. Managers certified internally as assessors.</li>
+            <li><b>Customers · Engineering the Customer Experience:</b> 7 trainable skills that lower customer effort, certified at agent and leader level with role plays and live observation. Delivered to 400+ representatives.</li>
+            <li><b>Business · Engineering the Business Experience:</b> Lean Six Sigma (DMAIC / DMADV) and COPC-aligned Yellow, Green and Black Belt programs, sized to the team: 2, 4 or 6 months.</li>
           </ul>
-          <span class="job-badge">Consulting</span>
-          <span class="job-badge">Quality Systems</span>
-          <span class="job-badge">Training</span>
+          <span class="job-badge">Talent Development</span>
+          <span class="job-badge">Customer Experience</span>
+          <span class="job-badge">Lean Six Sigma</span>
+          <span class="job-badge">Training &amp; Certification</span>
         </div>
       </div>
 
@@ -1595,26 +1594,43 @@
   <div class="section-inner">
     <p class="section-label">Client Work</p>
     <h2 class="section-title">Selected Engagements</h2>
+    <p class="cw-lead">Three engagements, one per belt level. Each image shows the full case: the challenge, what we did, the kit delivered and the results.</p>
     <div class="cw-grid">
       <article class="cw-card cw-card--yb">
-        <p class="cw-tag">Management consulting &middot; Yellow Belt level &middot; 2023</p>
-        <h3>Family-owned SME, Mexico</h3>
+        <a class="cw-img" href="Case_Yellow_Belt_SME.png" target="_blank" rel="noopener" title="Open the full case study"><img src="Case_Yellow_Belt_SME.png" width="3200" height="1640" alt="Case study: 3x sales in a family-owned services SME, Yellow Belt level, 4 months" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
+        <p class="cw-tag">Business &middot; Yellow Belt level &middot; 4 months &middot; 2023</p>
+        <h3>3&times; sales in a family-owned services SME, Mexico</h3>
+        <div class="cw-res"><div><b>3&times;</b><span>sales vs. same months prior year</span></div><div><b>&minus;20%</b><span>staff attrition</span></div><div><b>2026</b><span>plan carried a leadership succession</span></div></div>
         <ul>
-          <li>Assessment of sales and operations since the company&rsquo;s start</li>
-          <li>OKRs, KPIs and a balanced scorecard for a sales improvement project</li>
-          <li>Leadership training: performance measurement, and hiring best practices (virtual recruiting, competency-based selection, continuous training)</li>
+          <li>30-person team, working with the CEO and COO</li>
+          <li>Four monthly sessions, each followed by a month of practice: data analysis, OKRs and KPIs, competency-based hiring, and a contingency plan</li>
+          <li>Kit: sales baseline, KPI dashboard, balanced scorecard, interview scorecard, risk matrix, Yellow Belt certificate</li>
         </ul>
       </article>
       <article class="cw-card cw-card--gb">
-        <p class="cw-tag">Engineering the Customer Experience &middot; Green and Black Belt level</p>
-        <h3>Contact-center and shared-services operations</h3>
+        <a class="cw-img" href="Case_Green_Belt_CSAT.png" target="_blank" rel="noopener" title="Open the full case study"><img src="Case_Green_Belt_CSAT.png" width="3200" height="1640" alt="Case study: CSAT turnaround in a 200-person contact-center division, Green Belt level with Black Belt methods, 2 months" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
+        <p class="cw-tag">Customers &middot; Green Belt level, Black Belt methods &middot; 2 months &middot; 2019</p>
+        <h3>CSAT turnaround for a US retail energy account</h3>
+        <div class="cw-res"><div><b>73%&rarr;90%</b><span>CSAT vs. 78% target</span></div><div><b>12+ mo</b><span>above the new 85% goal</span></div><div><b>2&times;</b><span>survey response rate</span></div></div>
         <ul>
-          <li>Documented deliverables and practices, with scheduled project follow-ups</li>
-          <li>A planned, documented transition out of each project, so the team keeps the results</li>
+          <li>200-person contact-center division at a global BPO, Chihuahua</li>
+          <li>Regression found the real driver: service level (r = 0.93), not QA scores (r = 0.49)</li>
+          <li>Fixed the survey trigger, added a control KPI against gaming, and ran a PDCA plan across Training, Quality and Operations</li>
         </ul>
-        <p class="cw-note">Client names withheld under confidentiality agreements. References available on request.</p>
+      </article>
+      <article class="cw-card cw-card--bb">
+        <a class="cw-img" href="Case_Black_Belt_QA.png" target="_blank" rel="noopener" title="Open the full case study"><img src="Case_Black_Belt_QA.png" width="3200" height="1640" alt="Case study: one QA standard across five BPO partners in nine countries, Black Belt level, 15 months" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
+        <p class="cw-tag">Business &amp; Customers &middot; Black Belt level &middot; 15 months &middot; 2021&ndash;2022</p>
+        <h3>One QA standard across five BPO partners, LatAm</h3>
+        <div class="cw-res"><div><b>90%+</b><span>quality index, from low 70s</span></div><div><b>10%&rarr;90%</b><span>QA coverage</span></div><div><b>+5&ndash;7 pts</b><span>CSAT, 3 verticals</span></div></div>
+        <ul>
+          <li>DiDi Global, CX Quality &amp; Service Excellence: Rides, Food and Financial services, 9 countries, 1,500&ndash;2,000 agents</li>
+          <li>QA strategy and policies benchmarked to COPC and ISO 9001, plus Smart QA with interaction analytics and RPA</li>
+          <li>Training built on Bloom's taxonomy and evaluated with Kirkpatrick; vendor SOWs with performance commitments</li>
+        </ul>
       </article>
     </div>
+    <p class="cw-note">Client names and proprietary details withheld under confidentiality agreements; kit pages in the images are illustrative. References available on request.</p>
     <!-- CLIENT REVIEWS: paste real reviews here once received (e.g., from LinkedIn recommendations), then remove the comment markers.
     <div class="rv-grid">
       <figure class="rv">
@@ -1658,8 +1674,8 @@
       <div class="cert-card">
         <div class="cert-badge">🏆</div>
         <div>
-          <div class="cert-name">COPC Customer Experience Standard</div>
-          <div class="cert-org">COPC Inc. (Mexico)</div>
+          <div class="cert-name">COPC CX Standard &ndash; Certification Training</div>
+          <div class="cert-org">Internal program, Teleperformance (Mexico)</div>
         </div>
       </div>
       <div class="cert-card">
