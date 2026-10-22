@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Auditoría Completa de IA | JC Munguía</title>
+<meta name="description" content="Una revisión de 20 minutos, al estilo de un auditor, de la preparación de tu IA en 7 disciplinas, con plan a 30, 60 y 90 días y reporte en PDF.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jcmunguia.com/es/auditoria-ia/">
+<link rel="alternate" hreflang="en" href="https://jcmunguia.com/ai-audit/">
+<link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/auditoria-ia/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Auditoría Completa de IA | JC Munguía">
+<meta property="og:description" content="Una revisión de 20 minutos, al estilo de un auditor, de la preparación de tu IA en 7 disciplinas, con plan a 30, 60 y 90 días y reporte en PDF.">
+<meta property="og:url" content="https://jcmunguia.com/es/auditoria-ia/">
+<meta property="og:image" content="https://jcmunguia.com/LinkedIn_Banner_ES.png">
+<style>html{-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: audit worksheet — profile, 7 discipline sections of rated items with the R8.0 reference in the margin, then the report */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --surface-2:#e9eef5; --line:#d3dbe6;
+  --fg:#0d1b2a; --muted:#53657a; --accent:#b8861f; --accent-soft:#f6ecd5;
+  --teal:#1f8f8d; --good:#1f8f8d; --mid:#b8861f; --low:#c2564a; --on-accent:#0d1b2a;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1b2a; --surface:#13263a; --surface-2:#1a3249; --line:#26425e;
+  --fg:#eef3f8; --muted:#a8bacd; --accent:#e8b54a; --accent-soft:#3a3220;
+  --teal:#2bb3b1; --good:#2bb3b1; --mid:#e8b54a; --low:#e86e62; --on-accent:#0d1b2a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1b2a; --surface:#13263a; --surface-2:#1a3249; --line:#26425e;
+  --fg:#eef3f8; --muted:#a8bacd; --accent:#e8b54a; --accent-soft:#3a3220;
+  --teal:#2bb3b1; --good:#2bb3b1; --mid:#e8b54a; --low:#e86e62; --on-accent:#0d1b2a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px;display:grid;gap:20px}
+header{display:grid;gap:8px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+h1{font-family:var(--display);font-size:clamp(30px,6vw,44px);line-height:1.1;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:0;max-width:64ch}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--muted);font:600 13px var(--body);padding:6px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.scale{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;font-size:14px}
+.scale div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.scale b{font-family:var(--mono);color:var(--accent);margin-right:6px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:12px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+label.f{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+select{font:500 15px var(--body);padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);min-width:0}
+.progress{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.meter{flex:1;height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.progress b{font-variant-numeric:tabular-nums}
+.progress span{color:var(--muted);font-size:14px}
+section.disc{display:grid;gap:10px}
+section.disc>h2{margin:8px 0 0;font-size:21px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+section.disc>h2 .n{font-family:var(--mono);font-size:13px;color:var(--teal)}
+section.disc>h2 .pts{margin-left:auto;font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:10px;margin:0}
+.item legend{padding:0;font-weight:600;display:contents}
+.item .head{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.item .head p{margin:0;font-weight:600;min-width:0}
+.ref{font-family:var(--mono);font-size:12px;color:var(--teal);white-space:nowrap;flex:none}
+.ev{font-size:14px;color:var(--muted);margin:0}
+.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.seg label{display:grid;place-items:center;text-align:center;gap:2px;padding:8px 4px;border:1px solid var(--line);border-radius:8px;cursor:pointer;font-size:14px;line-height:1.2}
+.seg label b{font-family:var(--mono);font-size:13px}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label:has(input:checked){background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.seg label:has(input:focus-visible){outline:3px solid var(--teal);outline-offset:2px}
+.btn{font:700 16px var(--body);border-radius:8px;padding:12px 18px;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:var(--on-accent)}
+.btn.ghost{background:none;color:var(--fg);border-color:var(--line)}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.btn:focus-visible,.lang button:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+#results{display:grid;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+.big{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.big .num{font-family:var(--display);font-size:64px;line-height:1;font-variant-numeric:tabular-nums}
+.pill{font:700 13px var(--body);padding:4px 10px;border-radius:99px;color:var(--on-accent)}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:minmax(0,11rem) 1fr 3rem;gap:10px;align-items:center;font-size:15px}
+.bar .t{height:12px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:99px}
+.bar b{font-variant-numeric:tabular-nums;text-align:right;font-weight:600}
+h3{margin:0;font-size:18px}
+.plan{display:grid;gap:12px}
+.phase{border-left:3px solid var(--accent);padding-left:12px;display:grid;gap:6px}
+.phase h4{margin:0;font-size:16px}
+.phase ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.phase .none{color:var(--muted);font-size:15px}
+.tag{font-family:var(--mono);font-size:12px;color:var(--teal)}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.cta{background:var(--surface-2);border-radius:10px;padding:16px;display:grid;gap:8px}
+.note{font-size:13px;color:var(--muted)}
+.toast{min-height:1.2em;font-size:14px;color:var(--teal)}
+a{color:var(--teal)}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px}
+@media (prefers-reduced-motion: reduce){.meter i{transition:none}}
+@media (max-width:480px){.bar{grid-template-columns:minmax(0,7.5rem) 1fr 2.8rem}.seg label{font-size:12px}.big .num{font-size:52px}.item .head{flex-direction:column;gap:4px}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="top">
+      <span class="kicker" data-t="kicker"></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="lang-en" type="button" aria-pressed="true">EN</button>
+        <button id="lang-es" type="button" aria-pressed="false">ES</button>
+      </div>
+    </div>
+    <h1 data-t="title"></h1>
+    <p class="sub" data-t="sub"></p>
+  </header>
+
+  <div>
+    <h3 style="margin-bottom:8px" data-t="scaleTitle"></h3>
+    <div class="scale" id="scale"></div>
+  </div>
+
+  <div class="panel">
+    <h3 data-t="profTitle"></h3>
+    <p class="note" style="margin:0" data-t="profText"></p>
+    <div class="row">
+      <label class="f"><span data-t="industry"></span><select id="industry"></select></label>
+      <label class="f"><span data-t="size"></span><select id="size"></select></label>
+      <label class="f"><span data-t="stage"></span><select id="stage"></select></label>
+      <label class="f"><span data-t="region"></span><select id="region"></select></label>
+    </div>
+  </div>
+
+  <div class="progress" aria-live="polite">
+    <div class="meter"><i id="meter"></i></div>
+    <b id="count">0/28</b><span data-t="answered"></span>
+  </div>
+
+  <div id="sections" style="display:grid;gap:22px"></div>
+
+  <div class="actions">
+    <button class="btn" id="see" type="button"></button>
+    <button class="btn ghost" id="reset" type="button"></button>
+    <span class="note" id="missing"></span>
+  </div>
+
+  <section id="results" hidden aria-labelledby="res-h">
+    <div>
+      <h2 id="res-h" style="margin:0 0 6px;font-size:18px" data-t="resTitle"></h2>
+      <div class="big"><span class="num" id="total">0%</span><span class="pill" id="level"></span></div>
+      <p class="note" id="levelText" style="margin:6px 0 0"></p>
+    </div>
+    <div class="bars" id="bars"></div>
+    <div class="plan"><h3 data-t="planTitle"></h3><p class="note" style="margin:0" data-t="planText"></p><div id="plan" class="plan"></div></div>
+    <div class="plan"><h3 data-t="evTitle"></h3><p class="note" style="margin:0" data-t="evText"></p><div class="tablewrap"><table id="evTable"></table></div></div>
+    <div class="actions">
+      <button class="btn" id="download" type="button" hidden></button>
+      <button class="btn ghost" id="copy" type="button"></button>
+      <button class="btn ghost" id="bench" type="button"></button>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <div class="cta">
+      <h3 data-t="ctaTitle"></h3>
+      <p style="margin:0" data-t="ctaText"></p>
+      <p style="margin:0"><a id="call" href="https://jcmunguia.com/#consulting" target="_blank" rel="noopener"></a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span data-t="privacy"></span>
+    <span data-t="disclaimer"></span>
+    <span><span data-t="by"></span> <a id="site" href="https://jcmunguia.com" target="_blank" rel="noopener">jcmunguia.com</a></span>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script>
+/* Benchmark: paste the Google Form "Get pre-filled link" URL parts here once the form exists. */
+const BENCHMARK = { formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdsmQU-bZTIrCKehvqpdJO8KJzI7KEa3scjkG_h6yainolnuQ/viewform", fields: { tool:"entry.2025995289", lang:"entry.638941958", industry:"entry.731073695", size:"entry.124548128", stage:"entry.166712380", region:"entry.941307806", scores:"entry.1177376561", total:"entry.1239110888" } };
+
+const T = {
+ en:{kicker:"CX Hub Excellence Insights #27",title:"AI Readiness Deep Audit",
+  sub:"28 questions across 7 disciplines, about 20 minutes. Rate each one the way an auditor would: is it written down, is it done every time, and can you prove it? Based on the COPC CX Standard, Release 8.0, in priority order.",
+  scaleTitle:"How to rate each question",
+  scale:[["0","Not in place"],["1","Defined: written down"],["2","Deployed: done consistently"],["3","Proven: evidence, reviewed"]],
+  short:["Not in place","Defined","Deployed","Proven"],
+  profTitle:"About your operation (optional)",profText:"Only used if you add your result to the anonymous benchmark. Nothing here identifies you or your company.",
+  industry:"Industry",size:"Team size",stage:"Where is your AI today?",region:"Region",pick:"Choose…",
+  answered:"answered",see:"See my audit report",reset:"Start over",missingN:n=>`${n} questions left. Unanswered questions count as 0.`,
+  resTitle:"Your AI readiness audit",
+  planTitle:"Your 30/60/90-day plan",planText:"Built from your answers: define what is missing, roll out what is written down, then prove what is already running.",
+  p30:"First 30 days: define",p60:"Days 31–60: roll out",p90:"Days 61–90: prove",
+  v30:"Write down and approve:",v60:"Make this happen every time:",v90:"Collect this evidence and review it:",
+  none:"Nothing here. Good.",evTitle:"What an auditor would ask to see",evText:"For every item you rated below 3.",
+  thD:"Discipline",thI:"Item",thR:"R8.0",thE:"Evidence",
+  download:"Download my report (PDF)",downloaded:"Saved to your device.",declined:"Download cancelled.",
+  copy:"Copy my results",copied:"Copied to your clipboard.",copyFail:"Couldn't copy. Select the text in your report instead.",
+  bench:"Add my result anonymously",benchSoon:"Benchmark opens this week",opened:"Thanks. The form opened in a new tab.",
+  ctaTitle:"Want help closing the gaps?",ctaText:"I help service teams put these practices in place with Lean Six Sigma and COPC-aligned programs. The first 30-minute call is free.",
+  call:"Book a free 30-minute call",
+  privacy:"Your answers stay in this page. Nothing is saved or sent unless you choose to add your result to the benchmark.",
+  disclaimer:"An independent tool based on the published COPC CX Standard, Release 8.0. Not affiliated with or endorsed by COPC Inc. It measures readiness, not certification or compliance. Item numbers refer to the Standard for Customer Operations; they may differ slightly in other editions.",
+  by:"Built by Juan Carlos Munguia ·",
+  levels:[["Starting out","Most of the oversight you give your agents is not yet in place for your AI."],["Building","The foundations exist on paper. Rolling them out is where results will move."],["Managed","Your AI is managed much like a team member. Evidence is what turns this into audit-ready."],["Strong","You hold your AI to the same standard as your people, and you can prove it."]]},
+ es:{kicker:"CX Hub Excellence Insights #27",title:"Auditoría Completa de IA",
+  sub:"28 preguntas en 7 disciplinas, unos 20 minutos. Califica cada una como lo haría un auditor: ¿está por escrito?, ¿se hace siempre?, ¿lo puedes demostrar? Basado en el Estándar CX de COPC, Release 8.0, en orden de prioridad.",
+  scaleTitle:"Cómo calificar cada pregunta",
+  scale:[["0","No existe"],["1","Definido: por escrito"],["2","Implementado: se hace siempre"],["3","Demostrado: con evidencia y revisado"]],
+  short:["No existe","Definido","Implementado","Demostrado"],
+  profTitle:"Sobre tu operación (opcional)",profText:"Solo se usa si agregas tu resultado al benchmark anónimo. Nada de esto te identifica a ti ni a tu empresa.",
+  industry:"Industria",size:"Tamaño del equipo",stage:"¿Dónde está hoy tu IA?",region:"Región",pick:"Elige…",
+  answered:"respondidas",see:"Ver mi reporte de auditoría",reset:"Empezar de nuevo",missingN:n=>`Faltan ${n} preguntas. Las que no respondas cuentan como 0.`,
+  resTitle:"La auditoría de preparación de tu IA",
+  planTitle:"Tu plan a 30, 60 y 90 días",planText:"Hecho con tus respuestas: define lo que falta, implementa lo que ya está por escrito y demuestra lo que ya funciona.",
+  p30:"Primeros 30 días: definir",p60:"Días 31 a 60: implementar",p90:"Días 61 a 90: demostrar",
+  v30:"Escribe y aprueba:",v60:"Haz que ocurra siempre:",v90:"Reúne esta evidencia y revísala:",
+  none:"Nada aquí. Bien.",evTitle:"Lo que un auditor te pediría ver",evText:"Para cada punto que calificaste por debajo de 3.",
+  thD:"Disciplina",thI:"Punto",thR:"R8.0",thE:"Evidencia",
+  download:"Descargar mi reporte (PDF)",downloaded:"Guardado en tu dispositivo.",declined:"Descarga cancelada.",
+  copy:"Copiar mis resultados",copied:"Copiado al portapapeles.",copyFail:"No se pudo copiar. Selecciona el texto de tu reporte.",
+  bench:"Agregar mi resultado anónimo",benchSoon:"El benchmark abre esta semana",opened:"Gracias. El formulario se abrió en otra pestaña.",
+  ctaTitle:"¿Quieres ayuda para cerrar las brechas?",ctaText:"Ayudo a equipos de servicio a implementar estas prácticas con programas de Lean Six Sigma alineados con COPC. La primera llamada de 30 minutos es gratis.",
+  call:"Agenda una llamada gratuita de 30 minutos",
+  privacy:"Tus respuestas se quedan en esta página. No se guarda ni se envía nada, a menos que decidas agregar tu resultado al benchmark.",
+  disclaimer:"Herramienta independiente basada en la versión publicada del Estándar CX de COPC, Release 8.0. No está afiliada ni respaldada por COPC Inc. Mide preparación, no certificación ni cumplimiento. Los números de ítem corresponden al Estándar para Operaciones con Clientes; pueden variar un poco en otras ediciones.",
+  by:"Creado por Juan Carlos Munguía ·",
+  levels:[["Empezando","La mayor parte de la supervisión que das a tus agentes aún no existe para tu IA."],["En construcción","Las bases existen en papel. Implementarlas es lo que moverá los resultados."],["Gestionada","Tu IA se gestiona casi como un integrante del equipo. La evidencia es lo que la deja lista para una auditoría."],["Sólida","Le exiges a tu IA el mismo estándar que a tu gente, y lo puedes demostrar."]]}
+};
+
+/* Each item: question, short label (for the plan), R8.0 reference, evidence an auditor asks for */
+const D = [
+ {en:"Core metrics",es:"Métricas clave",items:[
+  {r:"2.1.2 · Exh. 1",en:["Satisfaction and dissatisfaction are measured for AI conversations, by channel, at least monthly.","CSAT and DSAT for AI conversations","Monthly CSAT/DSAT report showing AI conversations separately"],
+                       es:["La satisfacción y la insatisfacción se miden para las conversaciones con IA, por canal, al menos cada mes.","CSAT y DSAT de las conversaciones con IA","Reporte mensual de CSAT/DSAT con las conversaciones de IA por separado"]},
+  {r:"2.1.2a · Exh. 1",en:["Satisfaction with the whole service journey, AI steps included, is measured monthly and analyzed quarterly.","Journey satisfaction or effort, AI steps included","Journey satisfaction or effort results with a quarterly analysis"],
+                        es:["La satisfacción con el recorrido completo del cliente, incluidos los pasos con IA, se mide cada mes y se analiza cada trimestre.","Satisfacción o esfuerzo del recorrido, incluidos los pasos con IA","Resultados de satisfacción o esfuerzo del recorrido con análisis trimestral"]},
+  {r:"4.3 · Exh. 2",en:["Resolution is measured for AI-first journeys, not only containment (for example, repeat contact within a set window).","A resolution measure for AI-first journeys","Written resolution definition and monthly results for AI journeys"],
+                     es:["Se mide la resolución en los recorridos que inician con IA, no solo la contención (por ejemplo, recontacto en un periodo definido).","Una medida de resolución para recorridos con IA","Definición escrita de resolución y resultados mensuales de los recorridos con IA"]},
+  {r:"1.3 · 1.4.2",en:["AI metrics have high-performance targets, are reviewed quarterly, and trigger actions when below target.","Targets and a quarterly review for AI metrics","Target list, quarterly review notes and an action log"],
+                    es:["Las métricas de IA tienen metas de alto desempeño, se revisan cada trimestre y generan acciones cuando están por debajo.","Metas y revisión trimestral de las métricas de IA","Lista de metas, notas de revisión trimestral y registro de acciones"]}]},
+ {en:"Governance",es:"Gobernanza",items:[
+  {r:"1.2.3d",en:["A documented ethics policy covers how AI is designed, implemented and used for customers and employees.","An ethics policy that covers AI","Approved ethics or AI policy with an owner and a review date"],
+               es:["Una política de ética documentada cubre cómo se diseña, implementa y usa la IA con clientes y colaboradores.","Una política de ética que cubra la IA","Política de ética o de IA aprobada, con responsable y fecha de revisión"]},
+  {r:"1.2.3a–c",en:["Compliance, privacy and data-security rules explicitly cover what data the AI can access and use.","Data-access and privacy rules for the AI","Data-access rules and a privacy review of the AI"],
+                 es:["Las reglas de cumplimiento, privacidad y seguridad de datos cubren de forma explícita qué datos puede consultar y usar la IA.","Reglas de acceso a datos y privacidad para la IA","Reglas de acceso a datos y revisión de privacidad de la IA"]},
+  {r:"Exh. 2",en:["Compliance errors, policy violations and bias or fairness are checked for AI conversations every month.","Monthly compliance and bias checks on AI","Monthly compliance accuracy, policy-violation count and bias checks"],
+               es:["Cada mes se revisan en las conversaciones con IA los errores de cumplimiento, las violaciones de política y el sesgo o la equidad.","Revisión mensual de cumplimiento y sesgo en la IA","Precisión de cumplimiento mensual, conteo de violaciones y revisiones de sesgo"]},
+  {r:"1.4.3",en:["You verify that AI compliance and ethics procedures are implemented as designed and are effective.","A check that AI controls work in practice","Internal review or audit report with findings and fixes"],
+              es:["Verificas que los procedimientos de cumplimiento y ética de la IA se aplican como se diseñaron y son efectivos.","Una verificación de que los controles de IA funcionan","Reporte de revisión o auditoría interna con hallazgos y correcciones"]}]},
+ {en:"Quality assurance",es:"Aseguramiento de calidad",items:[
+  {r:"3.4.1",en:["AI conversations are monitored on an ongoing basis, for every type of interaction the AI handles.","Ongoing monitoring of every AI interaction type","Monitoring plan listing AI interaction types and frequency"],
+              es:["Las conversaciones con IA se monitorean de forma continua, para cada tipo de interacción que atiende la IA.","Monitoreo continuo de cada tipo de interacción con IA","Plan de monitoreo con los tipos de interacción de IA y su frecuencia"]},
+  {r:"3.8.1c",en:["Customer, business and compliance critical errors are assessed separately, with the same quality form used for agents.","One quality form with three critical-error types","Quality form used for both AI and agents, with the three critical-error categories"],
+               es:["Los errores críticos de cliente, de negocio y de cumplimiento se evalúan por separado, con el mismo formulario de calidad de los agentes.","Un solo formulario con tres tipos de error crítico","Formulario de calidad usado para IA y agentes, con las tres categorías de error crítico"]},
+  {r:"3.8.1a–b",en:["The AI's defect rate is measured monthly, from an unbiased sample sized with statistics in mind, or from full coverage.","A monthly AI defect rate from a sound sample","Sample-size rationale and the monthly AI defect rate"],
+                 es:["La tasa de defectos de la IA se mide cada mes, con una muestra sin sesgo y de tamaño estadísticamente sustentado, o con cobertura total.","Tasa mensual de defectos de la IA con una muestra sólida","Justificación del tamaño de muestra y tasa mensual de defectos de la IA"]},
+  {r:"3.8.2–3",en:["People or systems that score the AI are calibrated, and frequent errors are analyzed for root cause.","Calibration and root-cause analysis of AI errors","Calibration results and a Pareto of the top AI errors"],
+                es:["Las personas o sistemas que evalúan a la IA están calibrados, y los errores frecuentes se analizan hasta su causa raíz.","Calibración y análisis de causa raíz de los errores de IA","Resultados de calibración y Pareto de los principales errores de la IA"]}]},
+ {en:"Escalation",es:"Escalamiento",items:[
+  {r:"2.3.2a–b",en:["Customers can recover from input errors and reach a person seamlessly from any AI channel.","A seamless path to a person from every AI channel","Journey map showing every exit point to a person"],
+                 es:["El cliente puede corregir errores de captura y llegar a una persona sin fricción desde cualquier canal con IA.","Una ruta sin fricción a una persona desde cada canal con IA","Mapa del recorrido con cada punto de salida a una persona"]},
+  {r:"2.2.1d",en:["Customer context passes to the agent at handoff, so customers don't repeat themselves.","Context passed at every handoff","Handoff screen or a sample of transferred conversations"],
+               es:["El contexto del cliente pasa al agente en la transferencia, así no repite su caso.","Contexto que pasa en cada transferencia","Pantalla de transferencia o muestra de conversaciones transferidas"]},
+  {r:"2.3.2b.i",en:["A reason is recorded for every AI-to-human transfer.","Transfer reasons recorded for every handoff","Transfer reason codes and monthly counts"],
+                 es:["Se registra un motivo para cada transferencia de la IA a una persona.","Motivos registrados en cada transferencia","Códigos de motivo de transferencia y conteos mensuales"]},
+  {r:"2.3.2b.i",en:["Transfer reasons are analyzed and acted on at least quarterly.","A quarterly review of transfer reasons","Quarterly analysis with actions and owners"],
+                 es:["Los motivos de transferencia se analizan y se atienden al menos cada trimestre.","Revisión trimestral de motivos de transferencia","Análisis trimestral con acciones y responsables"]}]},
+ {en:"Supervision",es:"Supervisión",items:[
+  {r:"2.3.2c",en:["Every decision the AI makes on its own is logged and accessible for review.","Logs of every autonomous AI decision","Decision logs that can be searched, with a retention period"],
+               es:["Cada decisión que la IA toma por sí sola queda registrada y disponible para revisión.","Registro de cada decisión autónoma de la IA","Registros de decisiones que se pueden buscar, con periodo de conservación"]},
+  {r:"2.3.2b.ii",en:["A structured approach finds and fixes undesired outcomes from the AI, such as unintended profiling.","A procedure to catch unintended AI outcomes","Procedure plus examples of issues found and fixed"],
+                  es:["Un enfoque estructurado detecta y corrige resultados no deseados de la IA, como perfilamiento no intencional.","Un procedimiento para detectar resultados no deseados","Procedimiento y ejemplos de problemas detectados y corregidos"]},
+  {r:"2.3.2 · COPC guide",en:["People review high-risk, sensitive or low-confidence AI cases, with clear rules for when they step in.","Rules for human review of risky AI cases","Human-review rules and a review log"],
+                           es:["Personas revisan los casos de IA de alto riesgo, sensibles o en los que la IA tiene baja certeza en su respuesta, con reglas claras de cuándo intervenir.","Reglas de revisión humana de casos riesgosos","Reglas de revisión humana y registro de revisiones"]},
+  {r:"1.4.1 · 1.4.2",en:["A named owner is accountable for the AI's daily performance and acts when results drift.","A named owner for the AI's daily performance","Responsibility chart (RACI) and a record of drift alerts and actions"],
+                      es:["Un responsable designado rinde cuentas del desempeño diario de la IA y actúa cuando los resultados se desvían.","Un responsable designado del desempeño diario","Matriz de responsabilidades (RACI) y registro de alertas y acciones"]}]},
+ {en:"Onboarding",es:"Inducción",items:[
+  {r:"2.4.1",en:["The tasks and knowledge the AI needs are clearly defined before it handles customers.","A written scope of what the AI handles","Scope document with intents owned and an out-of-scope list"],
+              es:["Las tareas y el conocimiento que necesita la IA están definidos con claridad antes de atender clientes.","Un alcance escrito de lo que atiende la IA","Documento de alcance con intenciones atendidas y lista de lo que queda fuera"]},
+  {r:"3.3.1–2",en:["Before go-live, the AI is verified against objective pass/fail thresholds.","Pass/fail testing before go-live","Test set, thresholds, results and go-live approval"],
+                es:["Antes de salir en vivo, la IA se verifica contra umbrales objetivos de aprobado/reprobado.","Pruebas de aprobado/reprobado antes de salir en vivo","Conjunto de pruebas, umbrales, resultados y aprobación de salida en vivo"]},
+  {r:"2.5.2g",en:["The launch followed a structured change plan, with an early audit after go-live.","A change plan with an early post-launch audit","Implementation plan and the early-audit report"],
+               es:["El lanzamiento siguió un plan de cambio estructurado, con una auditoría temprana después de salir en vivo.","Un plan de cambio con auditoría temprana","Plan de implementación y reporte de la auditoría temprana"]},
+  {r:"3.3.3",en:["The AI is re-verified after changes to programs, procedures or systems.","Re-testing after every major change","Re-test records linked to the change log"],
+              es:["La IA se vuelve a verificar después de cambios en programas, procedimientos o sistemas.","Volver a probar tras cada cambio importante","Registros de nuevas pruebas ligados al registro de cambios"]}]},
+ {en:"Coaching",es:"Coaching",items:[
+  {r:"3.8.2 · 3.13",en:["Failed or low-scoring AI conversations are reviewed regularly to find their causes.","A regular review of failed AI conversations","Review schedule and a findings log"],
+                     es:["Las conversaciones con IA fallidas o con baja calificación se revisan con regularidad para encontrar sus causas.","Revisión regular de conversaciones fallidas","Calendario de revisión y registro de hallazgos"]},
+  {r:"3.10 · Exh. 3",en:["The content the AI uses has an owner and is current and accurate, with on-time and accuracy metrics.","Owned, measured content for the AI","Content accuracy and on-time update metrics"],
+                      es:["El contenido que usa la IA tiene responsable y está vigente y correcto, con métricas de puntualidad y precisión.","Contenido con responsable y medido para la IA","Métricas de precisión del contenido y de actualizaciones a tiempo"]},
+  {r:"3.2.3",en:["The AI is formally retrained or updated when requirements change.","Formal updates when requirements change","Retraining or update records linked to requirement changes"],
+              es:["La IA se reentrena o actualiza formalmente cuando cambian los requisitos.","Actualizaciones formales cuando cambian los requisitos","Registros de reentrenamiento ligados a cambios de requisitos"]},
+  {r:"3.2.4",en:["At least yearly, you review whether training or updates worked where results missed expectations, and act on it.","A yearly review of whether updates worked","Annual effectiveness review with actions"],
+              es:["Al menos una vez al año revisas si el entrenamiento o las actualizaciones funcionaron donde los resultados no se cumplieron, y actúas.","Revisión anual de si las actualizaciones funcionaron","Revisión anual de efectividad con acciones"]}]}
+];
+const OPTS = {
+ industry:{en:["Fintech & banking","Insurance","Telecom","Retail & e-commerce","Travel & hospitality","Healthcare","Technology & SaaS","BPO / outsourcing","Public sector","Other"],
+           es:["Fintech y banca","Seguros","Telecomunicaciones","Retail y e-commerce","Viajes y hospitalidad","Salud","Tecnología y SaaS","BPO / outsourcing","Sector público","Otra"]},
+ size:{en:["Up to 30 people","31 to 150","151 to 500","More than 500"],es:["Hasta 30 personas","31 a 150","151 a 500","Más de 500"]},
+ stage:{en:["No AI yet","Piloting","Live, internal only (agent assist, QA)","Live, customer-facing","Both internal and customer-facing"],
+        es:["Aún sin IA","En piloto","En vivo, solo interna (asistencia, calidad)","En vivo, de cara al cliente","Ambas: interna y de cara al cliente"]},
+ region:{en:["Mexico","Central America & Caribbean","South America","US & Canada","Europe","Middle East & Africa","Asia-Pacific","Other"],es:["México","Centroamérica y el Caribe","Sudamérica","EE. UU. y Canadá","Europa","Medio Oriente y África","Asia-Pacífico","Otra"]}
+};
+const CODES = {industry:["fintech","insurance","telecom","retail","travel","health","tech","bpo","public","other"],size:["s30","s150","s500","s500p"],
+  stage:["none","pilot","internal","customer","both"],region:["mx","cam","sam","usca","eu","mea","apac","other"]};
+const N = D.reduce((a, d) => a + d.items.length, 0);
+
+let lang = "en";
+const $ = s => document.querySelector(s);
+const val = (i, j) => { const x = document.querySelector(`input[name="d${i}q${j}"]:checked`); return x ? +x.value : null; };
+const vals = () => D.map((d, i) => d.items.map((_, j) => val(i, j)));
+const discPct = v => v.map(a => Math.round(a.reduce((s, x) => s + (x || 0), 0) / (a.length * 3) * 100));
+const totalPct = v => Math.round(v.flat().reduce((s, x) => s + (x || 0), 0) / (N * 3) * 100);
+const lvl = p => p < 40 ? 0 : p < 70 ? 1 : p < 90 ? 2 : 3;
+const color = p => p < 40 ? "var(--low)" : p < 70 ? "var(--mid)" : "var(--good)";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function buildSections(){
+  const saved = document.querySelectorAll("#sections input").length ? vals() : null, t = T[lang];
+  $("#sections").innerHTML = D.map((d, i) => `
+    <section class="disc" aria-labelledby="h${i}">
+      <h2 id="h${i}"><span class="n">${i + 1}</span>${d[lang]}<span class="pts" id="p${i}">0%</span></h2>
+      ${d.items.map((it, j) => `
+      <fieldset class="item">
+        <legend><span class="head"><p>${it[lang][0]}</p><span class="ref">R8.0 ${it.r}</span></span></legend>
+        <p class="ev">${lang === "es" ? "Evidencia" : "Evidence"}: ${it[lang][2]}</p>
+        <div class="seg">${[0,1,2,3].map(k => `
+          <label for="d${i}q${j}v${k}"><input type="radio" id="d${i}q${j}v${k}" name="d${i}q${j}" value="${k}"${saved && saved[i][j] === k ? " checked" : ""}><b>${k}</b>${t.short[k]}</label>`).join("")}
+        </div>
+      </fieldset>`).join("")}
+    </section>`).join("");
+  update();
+}
+function fillSelect(id){
+  const el = $("#" + id), v = el.value;
+  el.innerHTML = `<option value="">${T[lang].pick}</option>` + OPTS[id][lang].map((o, k) => `<option value="${CODES[id][k]}">${o}</option>`).join("");
+  el.value = v;
+}
+function update(){
+  const v = vals(), done = v.flat().filter(x => x !== null).length, dp = discPct(v);
+  $("#count").textContent = `${done}/${N}`; $("#meter").style.width = Math.round(done / N * 100) + "%";
+  dp.forEach((p, i) => { const e = $("#p" + i); if (e) e.textContent = p + "%"; });
+  $("#missing").textContent = done < N ? T[lang].missingN(N - done) : "";
+  if (!$("#results").hidden) renderResults();
+}
+function planData(){
+  const v = vals(), out = {30:[], 60:[], 90:[]};
+  D.forEach((d, i) => d.items.forEach((it, j) => {
+    const x = v[i][j] || 0;
+    const row = {d:d[lang], short:it[lang][1], ev:it[lang][2], r:it.r};
+    if (x === 0) out[30].push(row); else if (x === 1) out[60].push(row); else if (x === 2) out[90].push(row);
+  }));
+  return out;
+}
+function renderResults(){
+  const t = T[lang], v = vals(), dp = discPct(v), p = totalPct(v), L = lvl(p), plan = planData();
+  $("#total").textContent = p + "%"; $("#level").textContent = t.levels[L][0]; $("#level").style.background = color(p);
+  $("#levelText").textContent = t.levels[L][1];
+  $("#bars").innerHTML = D.map((d, i) => `<div class="bar"><span>${i + 1}. ${d[lang]}</span><span class="t"><i style="width:${dp[i]}%;background:${color(dp[i])}"></i></span><b>${dp[i]}%</b></div>`).join("");
+  $("#plan").innerHTML = [[30, t.p30, t.v30], [60, t.p60, t.v60], [90, t.p90, t.v90]].map(([k, h, verb]) => `
+    <div class="phase"><h4>${h}</h4>${plan[k].length ? `<span class="note">${verb}</span><ul>${plan[k].map(r => `<li>${esc(r.short)} <span class="tag">${esc(r.d)}</span></li>`).join("")}</ul>` : `<span class="none">${t.none}</span>`}</div>`).join("");
+  const rows = [...plan[30], ...plan[60], ...plan[90]];
+  $("#evTable").innerHTML = rows.length ? `<thead><tr><th>${t.thD}</th><th>${t.thI}</th><th>${t.thR}</th><th>${t.thE}</th></tr></thead><tbody>${rows.map(r => `<tr><td>${esc(r.d)}</td><td>${esc(r.short)}</td><td class="tag">${esc(r.r)}</td><td>${esc(r.ev)}</td></tr>`).join("")}</tbody>` : `<tbody><tr><td>${t.none}</td></tr></tbody>`;
+  const b = $("#bench"); if (BENCHMARK.formUrl){ b.disabled = false; b.textContent = t.bench; } else { b.disabled = true; b.textContent = t.benchSoon; }
+}
+function summary(){
+  const t = T[lang], v = vals(), dp = discPct(v), p = totalPct(v);
+  return `${t.title} · ${p}% (${t.levels[lvl(p)][0]})\n` + D.map((d, i) => `${i + 1}. ${d[lang]}: ${dp[i]}%`).join("\n") + `\n${$("#site").href}`;
+}
+function reportHtml(){
+  const t = T[lang], v = vals(), dp = discPct(v), p = totalPct(v), plan = planData(), date = new Date().toISOString().slice(0, 10);
+  const li = a => a.length ? `<ul>${a.map(r => `<li>${esc(r.short)} <em>(${esc(r.d)})</em></li>`).join("")}</ul>` : `<p>${t.none}</p>`;
+  const rows = [...plan[30], ...plan[60], ...plan[90]];
+  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><title>${esc(t.title)} · ${date}</title>
+<style>body{font:15px/1.5 Georgia,serif;color:#0d1b2a;max-width:760px;margin:32px auto;padding:0 16px}h1{margin:0}h2{margin-top:28px;border-bottom:2px solid #b8861f}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ccc;padding:6px;text-align:left;vertical-align:top}.big{font-size:48px;font-weight:700}small{color:#53657a}</style></head><body>
+<small>CX Hub Excellence Insights #27 · ${date}</small><h1>${esc(t.title)}</h1><p class="big">${p}% · ${esc(t.levels[lvl(p)][0])}</p><p>${esc(t.levels[lvl(p)][1])}</p>
+<h2>${esc(lang === "es" ? "Resultado por disciplina" : "Score by discipline")}</h2><table>${D.map((d, i) => `<tr><td>${i + 1}. ${esc(d[lang])}</td><td>${dp[i]}%</td></tr>`).join("")}</table>
+<h2>${esc(t.planTitle)}</h2><h3>${esc(t.p30)}</h3>${li(plan[30])}<h3>${esc(t.p60)}</h3>${li(plan[60])}<h3>${esc(t.p90)}</h3>${li(plan[90])}
+<h2>${esc(t.evTitle)}</h2><table><tr><th>${t.thD}</th><th>${t.thI}</th><th>${t.thR}</th><th>${t.thE}</th></tr>${rows.map(r => `<tr><td>${esc(r.d)}</td><td>${esc(r.short)}</td><td>${esc(r.r)}</td><td>${esc(r.ev)}</td></tr>`).join("")}</table>
+<p><small>${esc(t.disclaimer)}</small></p><p><small>${esc(t.by)} ${lang === "es" ? "jcmunguia.com/es" : "jcmunguia.com"}</small></p></body></html>`;
+}
+function reportPdf(){
+  const t = T[lang], v = vals(), dp = discPct(v), p = totalPct(v), plan = planData(), date = new Date().toISOString().slice(0, 10);
+  const doc = new window.jspdf.jsPDF({unit: "pt", format: "letter"});
+  const W = doc.internal.pageSize.getWidth(), M = 48, navy = [13, 27, 42], gold = [184, 134, 31], muted = [83, 101, 122];
+  let y = 56;
+  const ensure = h => { if (y + h > doc.internal.pageSize.getHeight() - 56) { doc.addPage(); y = 56; } };
+  const para = (txt, size, color, style) => { doc.setFont("helvetica", style || "normal"); doc.setFontSize(size); doc.setTextColor(...(color || navy));
+    doc.splitTextToSize(txt, W - 2 * M).forEach(l => { ensure(size * 1.4); doc.text(l, M, y); y += size * 1.4; }); };
+  para("CX Hub Excellence Insights #27  ·  " + date, 9, muted);
+  y += 14; para(t.title, 22, navy, "bold");
+  y += 6; para(p + "%  ·  " + t.levels[lvl(p)][0], 28, gold, "bold");
+  para(t.levels[lvl(p)][1], 11, navy);
+  y += 10;
+  const table = (head, body) => { doc.autoTable({startY: y, head: [head], body, margin: {left: M, right: M}, styles: {font: "helvetica", fontSize: 9, cellPadding: 5, textColor: navy},
+    headStyles: {fillColor: navy, textColor: [255, 255, 255]}, alternateRowStyles: {fillColor: [244, 246, 249]}}); y = doc.lastAutoTable.finalY + 18; };
+  para(lang === "es" ? "Resultado por disciplina" : "Score by discipline", 14, navy, "bold"); y += 2;
+  table([t.thD, "%"], D.map((d, i) => [(i + 1) + ". " + d[lang], dp[i] + "%"]));
+  ensure(60); para(t.planTitle, 14, navy, "bold");
+  [[30, t.p30, t.v30], [60, t.p60, t.v60], [90, t.p90, t.v90]].forEach(([k, h, verb]) => {
+    y += 4; para(h, 11, gold, "bold");
+    if (!plan[k].length) para(t.none, 10, muted);
+    else { para(verb, 10, muted); plan[k].forEach(r => para("•  " + r.short + "  (" + r.d + ")", 10, navy)); }
+  });
+  y += 10;
+  const rows = [...plan[30], ...plan[60], ...plan[90]];
+  if (rows.length) { ensure(60); para(t.evTitle, 14, navy, "bold"); y += 2; table([t.thD, t.thI, t.thR, t.thE], rows.map(r => [r.d, r.short, r.r, r.ev])); }
+  ensure(60); para(t.disclaimer, 8, muted); y += 4;
+  para(t.by + " " + (lang === "es" ? "jcmunguia.com/es" : "jcmunguia.com"), 8, muted);
+  return doc.output("arraybuffer");
+}
+function setLang(l){
+  lang = l; document.documentElement.lang = l; const t = T[l];
+  $("#lang-en").setAttribute("aria-pressed", l === "en"); $("#lang-es").setAttribute("aria-pressed", l === "es");
+  document.querySelectorAll("[data-t]").forEach(e => e.textContent = t[e.dataset.t]);
+  $("#scale").innerHTML = t.scale.map(([k, s]) => `<div><b>${k}</b>${s}</div>`).join("");
+  $("#see").textContent = t.see; $("#reset").textContent = t.reset; $("#copy").textContent = t.copy; $("#download").textContent = t.download;
+  $("#call").textContent = t.call; $("#call").href = l === "es" ? "https://jcmunguia.com/es/#consulting" : "https://jcmunguia.com/#consulting";
+  $("#site").href = l === "es" ? "https://jcmunguia.com/es/" : "https://jcmunguia.com"; $("#site").textContent = l === "es" ? "jcmunguia.com/es" : "jcmunguia.com";
+  buildSections(); ["industry", "size", "stage", "region"].forEach(fillSelect);
+}
+$("#sections").addEventListener("change", update);
+$("#see").addEventListener("click", () => { $("#results").hidden = false; renderResults(); $("#results").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); });
+$("#reset").addEventListener("click", () => { document.querySelectorAll("#sections input").forEach(x => x.checked = false); $("#results").hidden = true; update(); window.scrollTo(0, 0); });
+$("#lang-en").addEventListener("click", () => setLang("en"));
+$("#lang-es").addEventListener("click", () => setLang("es"));
+$("#copy").addEventListener("click", () => {
+  navigator.clipboard.writeText(summary()).then(() => $("#toast").textContent = T[lang].copied).catch(() => $("#toast").textContent = T[lang].copyFail);
+});
+$("#bench").addEventListener("click", () => {
+  if (!BENCHMARK.formUrl) return;
+  const f = BENCHMARK.fields, v = vals(), q = new URLSearchParams({usp: "pp_url"});
+  const put = (k, x) => { if (f[k]) q.set(f[k], x); };
+  put("tool", "audit"); put("lang", lang);
+  ["industry", "size", "stage", "region"].forEach(k => put(k, $("#" + k).value || "na"));
+  put("scores", discPct(v).join(",")); put("total", totalPct(v));
+  const a = document.createElement("a"); a.href = BENCHMARK.formUrl + "?" + q.toString(); a.target = "_blank"; a.rel = "noopener"; a.click();
+  $("#toast").textContent = T[lang].opened;
+});
+const downloads = { save: ({filename, data}) => { const u = URL.createObjectURL(new Blob([data], {type: "application/pdf"})); const a = document.createElement("a"); a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 5000); return Promise.resolve({status: "saved"}); } };
+if (window.jspdf) $("#download").hidden = false;
+$("#download").addEventListener("click", async () => {
+  if (!downloads) return;
+  try {
+    await downloads.save({filename: (lang === "es" ? "auditoria-ia-" : "ai-readiness-audit-") + new Date().toISOString().slice(0, 10) + ".pdf", data: reportPdf()});
+    $("#toast").textContent = T[lang].downloaded;
+  } catch (e) {
+    if (e && e.code === "declined") $("#toast").textContent = T[lang].declined;
+    else { $("#download").hidden = true; }
+  }
+});
+const h = location.hash.replace("#", ""); const start = (h === "es" || h === "en") ? h : (document.documentElement.lang === "es" ? "es" : "en");
+setLang(start);
+</script>
+
+<!-- Intercom Messenger (JC Munguia Consulting) -->
+<script>
+  window.intercomSettings = {
+    api_base: "https://api-iam.intercom.io",
+    app_id: "dt4w2azd"
+  };
+</script>
+<script>
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dt4w2azd';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+</body>
+</html>

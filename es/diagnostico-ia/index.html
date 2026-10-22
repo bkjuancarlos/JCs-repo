@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diagnóstico Rápido de IA | JC Munguía</title>
+<meta name="description" content="Un diagnóstico gratuito de 3 minutos sobre qué tan bien gestiona tu equipo su IA en 7 disciplinas, basado en el Estándar CX de COPC, Release 8.0.">
+<link rel="canonical" href="https://jcmunguia.com/es/diagnostico-ia/">
+<link rel="alternate" hreflang="en" href="https://jcmunguia.com/ai-scan/">
+<link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/diagnostico-ia/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diagnóstico Rápido de IA | JC Munguía">
+<meta property="og:description" content="Un diagnóstico gratuito de 3 minutos sobre qué tan bien gestiona tu equipo su IA en 7 disciplinas, basado en el Estándar CX de COPC, Release 8.0.">
+<meta property="og:url" content="https://jcmunguia.com/es/diagnostico-ia/">
+<meta property="og:image" content="https://jcmunguia.com/LinkedIn_Banner_ES.png">
+<style>html{-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of discipline cards, a sticky score bar, results revealed below */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --surface-2:#e9eef5; --line:#d3dbe6;
+  --fg:#0d1b2a; --muted:#53657a; --accent:#b8861f; --accent-soft:#f6ecd5;
+  --teal:#1f8f8d; --good:#1f8f8d; --mid:#b8861f; --low:#c2564a; --on-accent:#0d1b2a;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1b2a; --surface:#13263a; --surface-2:#1a3249; --line:#26425e;
+  --fg:#eef3f8; --muted:#a8bacd; --accent:#e8b54a; --accent-soft:#3a3220;
+  --teal:#2bb3b1; --good:#2bb3b1; --mid:#e8b54a; --low:#e86e62; --on-accent:#0d1b2a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1b2a; --surface:#13263a; --surface-2:#1a3249; --line:#26425e;
+  --fg:#eef3f8; --muted:#a8bacd; --accent:#e8b54a; --accent-soft:#3a3220;
+  --teal:#2bb3b1; --good:#2bb3b1; --mid:#e8b54a; --low:#e86e62; --on-accent:#0d1b2a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px;display:grid;gap:20px}
+header{display:grid;gap:8px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+h1{font-family:var(--display);font-size:clamp(30px,6vw,44px);line-height:1.1;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:0;max-width:62ch}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--muted);font:600 13px var(--body);padding:6px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.scorebar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.meter{flex:1;height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.scorebar b{font-variant-numeric:tabular-nums;min-width:3.5ch;text-align:right}
+.scorebar span{color:var(--muted);font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 14px;display:grid;gap:10px}
+.card h2{margin:0;font-size:19px;display:flex;gap:10px;align-items:baseline}
+.card h2 .n{font-family:var(--mono);font-size:13px;color:var(--teal)}
+.card h2 .pts{margin-left:auto;font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.card p.q{margin:0;color:var(--muted);font-size:15px}
+.opts{display:grid;gap:6px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:8px;cursor:pointer;border:1px solid transparent}
+.opt:hover{background:var(--surface-2)}
+.opt input{margin-top:4px;width:18px;height:18px;accent-color:var(--accent);flex:none}
+.opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.btn{font:700 16px var(--body);border-radius:8px;padding:12px 18px;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:var(--on-accent)}
+.btn.ghost{background:none;color:var(--fg);border-color:var(--line)}
+.btn:focus-visible,.opt:focus-within,.lang button:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+#results{display:grid;gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+.big{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.big .num{font-family:var(--display);font-size:64px;line-height:1;font-variant-numeric:tabular-nums}
+.pill{font:700 13px var(--body);padding:4px 10px;border-radius:99px;color:var(--on-accent)}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:minmax(0,11rem) 1fr 3rem;gap:10px;align-items:center;font-size:15px}
+.bar .t{height:12px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:99px}
+.bar b{font-variant-numeric:tabular-nums;text-align:right;font-weight:600}
+.next{display:grid;gap:10px}
+#nextList>div{border-left:3px solid var(--accent);padding:4px 0 4px 12px}
+#nextList strong{display:block}
+h3{margin:0;font-size:17px}
+.cta{background:var(--surface-2);border-radius:10px;padding:16px;display:grid;gap:8px}
+.cta .kw{font-family:var(--mono);background:var(--accent);color:var(--on-accent);padding:1px 7px;border-radius:5px}
+.bench{display:grid;gap:10px}
+.bench .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+label.f{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+select{font:500 15px var(--body);padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
+.note{font-size:13px;color:var(--muted)}
+a{color:var(--teal)}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px}
+.toast{min-height:1.2em;font-size:14px;color:var(--teal)}
+@media (prefers-reduced-motion: reduce){.meter i{transition:none}}
+@media (max-width:480px){.bar{grid-template-columns:minmax(0,7.5rem) 1fr 2.8rem}.big .num{font-size:52px}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="top">
+      <span class="kicker" data-t="kicker"></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="lang-en" type="button" aria-pressed="true">EN</button>
+        <button id="lang-es" type="button" aria-pressed="false">ES</button>
+      </div>
+    </div>
+    <h1 data-t="title"></h1>
+    <p class="sub" data-t="sub"></p>
+  </header>
+
+  <div class="scorebar" aria-live="polite">
+    <div class="meter"><i id="meter"></i></div>
+    <b id="live">0%</b><span data-t="ofPoints"></span>
+  </div>
+
+  <div id="cards" style="display:grid;gap:14px"></div>
+
+  <div class="actions">
+    <button class="btn" id="see" type="button"></button>
+    <button class="btn ghost" id="reset" type="button"></button>
+  </div>
+
+  <section id="results" hidden aria-labelledby="res-h">
+    <div>
+      <h2 id="res-h" style="margin:0 0 6px;font-size:18px" data-t="resTitle"></h2>
+      <div class="big"><span class="num" id="total">0%</span><span class="pill" id="level"></span></div>
+      <p class="note" id="levelText" style="margin:6px 0 0"></p>
+    </div>
+    <div class="bars" id="bars"></div>
+    <div class="next"><h3 data-t="nextTitle"></h3><div id="nextList" class="next"></div></div>
+    <div class="cta">
+      <h3 data-t="ctaTitle"></h3>
+      <p style="margin:0" id="ctaText"></p>
+    </div>
+    <div class="bench">
+      <h3 data-t="benchTitle"></h3>
+      <p class="note" style="margin:0" data-t="benchText"></p>
+      <div class="row">
+        <label class="f"><span data-t="industry"></span><select id="industry"></select></label>
+        <label class="f"><span data-t="stage"></span><select id="stage"></select></label>
+      </div>
+      <div class="actions">
+        <button class="btn" id="bench" type="button"></button>
+        <button class="btn ghost" id="copy" type="button"></button>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  </section>
+
+  <footer>
+    <span data-t="privacy"></span>
+    <span data-t="disclaimer"></span>
+    <span><span data-t="by"></span> <a id="site" href="https://jcmunguia.com" target="_blank" rel="noopener">jcmunguia.com</a></span>
+  </footer>
+</div>
+
+<script>
+/* Benchmark: paste the Google Form "Get pre-filled link" URL parts here once the form exists. */
+const BENCHMARK = { formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdsmQU-bZTIrCKehvqpdJO8KJzI7KEa3scjkG_h6yainolnuQ/viewform", fields: { tool:"entry.2025995289", lang:"entry.638941958", industry:"entry.731073695", stage:"entry.166712380", scores:"entry.1177376561", total:"entry.1239110888" } };
+
+const T = {
+ en:{kicker:"CX Hub Excellence Insights #27",title:"AI Readiness Quick Scan",
+  sub:"7 disciplines, under 3 minutes. Tick what is true for your AI today. Based on the COPC CX Standard, Release 8.0, in priority order.",
+  ofPoints:"ready",see:"See my score",reset:"Start over",resTitle:"Your AI readiness",
+  nextTitle:"Your two next steps",ctaTitle:"Want the full picture?",
+  cta:'The Deep Audit goes question by question, like an auditor would, and gives you a 30/60/90-day plan. Comment <span class="kw">AUDIT</span> on my LinkedIn post and I\'ll send you the link. Not on LinkedIn? Write to contact@jcmunguia.com or ask in the chat.',
+  benchTitle:"Help build the benchmark (optional)",
+  benchText:"Add your scores anonymously. No name, no email, no company. I'll share the combined results in edition #28, only for groups with 5 or more answers.",
+  industry:"Industry",stage:"Where is your AI today?",bench:"Add my result anonymously",benchSoon:"Benchmark opens this week",
+  copy:"Copy my results",copied:"Copied to your clipboard.",copyFail:"Couldn't copy. Select the text in your results instead.",opened:"Thanks. The form opened in a new tab.",
+  privacy:"Your answers stay in this page. Nothing is saved or sent unless you choose to add your result to the benchmark.",
+  disclaimer:"An independent tool based on the published COPC CX Standard, Release 8.0. Not affiliated with or endorsed by COPC Inc. It measures readiness, not certification or compliance.",
+  by:"Built by Juan Carlos Munguia ·",pick:"Choose…",
+  levels:[["Starting out","Most of the oversight you give your agents is not yet in place for your AI."],["Building","Some foundations are there. The gaps below are where customers feel it first."],["Managed","Your AI is managed much like a team member. Close the remaining gaps to make it stick."],["Strong","You hold your AI to the same standard as your people. Keep proving it with evidence."]]},
+ es:{kicker:"CX Hub Excellence Insights #27",title:"Diagnóstico Rápido de IA",
+  sub:"7 disciplinas, menos de 3 minutos. Marca lo que hoy es cierto para tu IA. Basado en el Estándar CX de COPC, Release 8.0, en orden de prioridad.",
+  ofPoints:"de preparación",see:"Ver mi resultado",reset:"Empezar de nuevo",resTitle:"La preparación de tu IA",
+  nextTitle:"Tus dos siguientes pasos",ctaTitle:"¿Quieres el panorama completo?",
+  cta:'La Auditoría Completa revisa pregunta por pregunta, como lo haría un auditor, y te da un plan a 30, 60 y 90 días. Comenta <span class="kw">AUDITORÍA</span> en mi publicación de LinkedIn y te envío el enlace. ¿No estás en LinkedIn? Escríbeme a contact@jcmunguia.com o pregunta en el chat.',
+  benchTitle:"Ayuda a construir el benchmark (opcional)",
+  benchText:"Agrega tus resultados de forma anónima. Sin nombre, sin correo, sin empresa. Compartiré los resultados combinados en la edición #28, solo para grupos con 5 o más respuestas.",
+  industry:"Industria",stage:"¿Dónde está hoy tu IA?",bench:"Agregar mi resultado anónimo",benchSoon:"El benchmark abre esta semana",
+  copy:"Copiar mis resultados",copied:"Copiado al portapapeles.",copyFail:"No se pudo copiar. Selecciona el texto de tus resultados.",opened:"Gracias. El formulario se abrió en otra pestaña.",
+  privacy:"Tus respuestas se quedan en esta página. No se guarda ni se envía nada, a menos que decidas agregar tu resultado al benchmark.",
+  disclaimer:"Herramienta independiente basada en la versión publicada del Estándar CX de COPC, Release 8.0. No está afiliada ni respaldada por COPC Inc. Mide preparación, no certificación ni cumplimiento.",
+  by:"Creado por Juan Carlos Munguía ·",pick:"Elige…",
+  levels:[["Empezando","La mayor parte de la supervisión que das a tus agentes aún no existe para tu IA."],["En construcción","Hay bases. Las brechas de abajo son donde tus clientes lo notan primero."],["Gestionada","Tu IA se gestiona casi como un integrante del equipo. Cierra lo que falta para que se sostenga."],["Sólida","Le exiges a tu IA el mismo estándar que a tu gente. Sigue demostrándolo con evidencia."]]}
+};
+
+const D = [
+ {en:"Core metrics",es:"Métricas clave",
+  q:{en:"How do you measure your AI's results?",es:"¿Cómo mides los resultados de tu IA?"},
+  o:{en:["We measure CSAT and DSAT on AI conversations, separately","We measure if AI-first journeys were resolved, not only contained","AI and agent results sit in the same report, by journey","AI metrics have targets we review at least quarterly"],
+     es:["Medimos CSAT y DSAT de las conversaciones con IA, por separado","Medimos si los recorridos con IA se resolvieron, no solo la contención","Los resultados de la IA y de los agentes están en el mismo reporte, por recorrido del cliente","Las métricas de IA tienen metas que revisamos al menos cada trimestre"]},
+  n:{en:"Add CSAT, DSAT and a resolution measure to your AI conversations, and report them next to your agents' results.",es:"Agrega CSAT, DSAT y una medida de resolución a las conversaciones con IA, y repórtalas junto a los resultados de tus agentes."}},
+ {en:"Governance",es:"Gobernanza",
+  q:{en:"What rules govern your AI?",es:"¿Qué reglas gobiernan a tu IA?"},
+  o:{en:["A written ethics or acceptable-use policy covers our AI","We documented what the AI may and may not do on its own","We check AI conversations for compliance errors, bias or policy violations","At least yearly, we verify these controls work in practice"],
+     es:["Tenemos una política escrita de ética o de uso aceptable que incluye a nuestra IA","Documentamos qué puede y qué no puede hacer la IA por sí sola","Revisamos las conversaciones con IA por errores de cumplimiento, sesgo o violaciones de política","Al menos una vez al año verificamos que estos controles funcionan en la práctica"]},
+  n:{en:"Write a one-page policy: what your AI may do alone, what it may not, and who owns it.",es:"Escribe una política de una página: qué puede hacer tu IA sola, qué no, y quién es responsable."}},
+ {en:"Quality assurance",es:"Aseguramiento de calidad",
+  q:{en:"How do you check the quality of AI conversations?",es:"¿Cómo revisas la calidad de las conversaciones con IA?"},
+  o:{en:["AI conversations are monitored on an ongoing basis","We score AI with the same quality form as agents","We track the AI's defect or critical-error rate monthly","Whoever scores the AI (people or tools) is calibrated"],
+     es:["Monitoreamos las conversaciones con IA de forma continua","Evaluamos a la IA con el mismo formulario de calidad que a los agentes","Medimos cada mes la tasa de defectos o errores críticos de la IA","Quien evalúa a la IA (personas o herramientas) está calibrado"]},
+  n:{en:"Score a weekly sample of AI conversations with your agent QA form, and track defects monthly.",es:"Evalúa cada semana una muestra de conversaciones con IA usando tu formulario de calidad de agentes, y mide los defectos cada mes."}},
+ {en:"Escalation",es:"Escalamiento",
+  q:{en:"What happens when the AI can't help?",es:"¿Qué pasa cuando la IA no puede ayudar?"},
+  o:{en:["Customers can reach a person easily at any point","Context passes to the agent, so customers don't repeat themselves","We record why each AI conversation is transferred","We review transfer reasons and act on them at least quarterly"],
+     es:["El cliente puede llegar a una persona fácilmente en cualquier momento","El contexto pasa al agente, así el cliente no repite su caso","Registramos por qué se transfiere cada conversación con IA","Revisamos los motivos de transferencia y actuamos al menos cada trimestre"]},
+  n:{en:"Map every point where a customer can reach a person, and start recording why each transfer happens.",es:"Mapea cada punto donde el cliente puede llegar a una persona y empieza a registrar por qué ocurre cada transferencia."}},
+ {en:"Supervision",es:"Supervisión",
+  q:{en:"Who watches what the AI decides?",es:"¿Quién vigila lo que decide la IA?"},
+  o:{en:["Every decision the AI makes on its own can be reviewed later","People review high-risk or low-confidence AI cases","We have a way to catch unintended outcomes, such as unfair treatment","One named person owns the AI's day-to-day performance"],
+     es:["Cada decisión que la IA toma sola se puede revisar después","Personas revisan los casos de alto riesgo y aquellos en los que la IA tiene baja certeza en su respuesta","Tenemos forma de detectar resultados no deseados, como un trato injusto","Hay un responsable designado del desempeño diario de la IA"]},
+  n:{en:"Turn on decision logs and name one owner who reviews risky AI cases every week.",es:"Activa los registros de decisiones y nombra a un responsable que revise cada semana los casos riesgosos."}},
+ {en:"Onboarding",es:"Inducción",
+  q:{en:"How did your AI start its job?",es:"¿Cómo empezó tu IA su trabajo?"},
+  o:{en:["We defined which intents or tasks the AI owns before go-live","We tested it on real cases with pass/fail thresholds before launch","We checked it early after launch to confirm it works as planned","We re-test it after changes to products, policies or systems"],
+     es:["Definimos qué intenciones o tareas atiende la IA antes de salir en vivo","La probamos con casos reales y umbrales de aprobado/reprobado antes del lanzamiento","La revisamos poco después del lanzamiento para confirmar que funciona como se planeó","La volvemos a probar tras cambios en productos, políticas o sistemas"]},
+  n:{en:"Define the intents your AI owns and test it against 50 real cases with pass/fail thresholds.",es:"Define las intenciones que atiende tu IA y pruébala con 50 casos reales y umbrales de aprobado/reprobado."}},
+ {en:"Coaching",es:"Coaching",
+  q:{en:"How does your AI keep getting better?",es:"¿Cómo sigue mejorando tu IA?"},
+  o:{en:["We review failed AI conversations regularly","The knowledge the AI uses has an owner and is kept current","We formally update the AI when requirements change","We check that each update actually improved results"],
+     es:["Revisamos con regularidad las conversaciones fallidas de la IA","El conocimiento que usa la IA tiene un responsable y se mantiene al día","Actualizamos formalmente a la IA cuando cambian los requisitos","Verificamos que cada actualización realmente mejoró los resultados"]},
+  n:{en:"Review your 10 worst AI conversations every two weeks and fix the content behind them.",es:"Revisa cada dos semanas tus 10 peores conversaciones con IA y corrige el contenido que las causó."}}
+];
+const OPTS = {
+ industry:{en:["Fintech & banking","Insurance","Telecom","Retail & e-commerce","Travel & hospitality","Healthcare","Technology & SaaS","BPO / outsourcing","Public sector","Other"],
+           es:["Fintech y banca","Seguros","Telecomunicaciones","Retail y e-commerce","Viajes y hospitalidad","Salud","Tecnología y SaaS","BPO / outsourcing","Sector público","Otra"]},
+ stage:{en:["No AI yet","Piloting","Live, internal only (agent assist, QA)","Live, customer-facing","Both internal and customer-facing"],
+        es:["Aún sin IA","En piloto","En vivo, solo interna (asistencia, calidad)","En vivo, de cara al cliente","Ambas: interna y de cara al cliente"]}
+};
+const CODES = {industry:["fintech","insurance","telecom","retail","travel","health","tech","bpo","public","other"],stage:["none","pilot","internal","customer","both"]};
+
+let lang = "en";
+const $ = s => document.querySelector(s);
+const checks = () => D.map((_, i) => [...document.querySelectorAll(`input[name="d${i}"]`)].map(x => x.checked));
+const scores = () => checks().map(a => a.filter(Boolean).length);
+const pct = s => Math.round(s.reduce((a, b) => a + b, 0) / 28 * 100);
+const lvl = p => p < 40 ? 0 : p < 70 ? 1 : p < 90 ? 2 : 3;
+const color = p => p < 40 ? "var(--low)" : p < 70 ? "var(--mid)" : "var(--good)";
+
+function buildCards(){
+  const saved = document.querySelectorAll("#cards input").length ? checks() : null;
+  $("#cards").innerHTML = D.map((d, i) => `
+    <fieldset class="card" style="margin:0">
+      <legend class="sr" style="position:absolute;left:-9999px">${d[lang]}</legend>
+      <h2><span class="n">${i + 1}</span>${d[lang]}<span class="pts" id="p${i}">0/4</span></h2>
+      <p class="q">${d.q[lang]}</p>
+      <div class="opts">${d.o[lang].map((o, j) => `
+        <label class="opt" for="d${i}o${j}"><input type="checkbox" id="d${i}o${j}" name="d${i}"${saved && saved[i][j] ? " checked" : ""}><span>${o}</span></label>`).join("")}
+      </div>
+    </fieldset>`).join("");
+  update();
+}
+function fillSelect(id){
+  const el = $("#" + id), v = el.value;
+  el.innerHTML = `<option value="">${T[lang].pick}</option>` + OPTS[id][lang].map((o, k) => `<option value="${CODES[id][k]}">${o}</option>`).join("");
+  el.value = v;
+}
+function update(){
+  const s = scores(), p = pct(s);
+  s.forEach((v, i) => { const e = $("#p" + i); if (e) e.textContent = v + "/4"; });
+  $("#meter").style.width = p + "%"; $("#live").textContent = p + "%";
+  if (!$("#results").hidden) renderResults();
+}
+function renderResults(){
+  const t = T[lang], s = scores(), p = pct(s), L = lvl(p);
+  $("#total").textContent = p + "%";
+  $("#level").textContent = t.levels[L][0]; $("#level").style.background = color(p);
+  $("#levelText").textContent = t.levels[L][1];
+  $("#bars").innerHTML = D.map((d, i) => { const q = s[i] * 25; return `
+    <div class="bar"><span>${i + 1}. ${d[lang]}</span><span class="t"><i style="width:${q}%;background:${color(q)}"></i></span><b>${q}%</b></div>`; }).join("");
+  const weak = s.map((v, i) => [v, i]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).slice(0, 2);
+  $("#nextList").innerHTML = weak.map(([v, i]) => `<div><strong>${D[i][lang]} · ${v * 25}%</strong>${D[i].n[lang]}</div>`).join("");
+  $("#ctaText").innerHTML = t.cta;
+  const b = $("#bench");
+  if (BENCHMARK.formUrl){ b.disabled = false; b.textContent = t.bench; } else { b.disabled = true; b.textContent = t.benchSoon; }
+}
+function summary(){
+  const t = T[lang], s = scores(), p = pct(s);
+  return `${t.title} · ${p}% (${t.levels[lvl(p)][0]})\n` + D.map((d, i) => `${i + 1}. ${d[lang]}: ${s[i] * 25}%`).join("\n") + `\n${$("#site").href}`;
+}
+function setLang(l){
+  lang = l; document.documentElement.lang = l;
+  $("#lang-en").setAttribute("aria-pressed", l === "en"); $("#lang-es").setAttribute("aria-pressed", l === "es");
+  document.querySelectorAll("[data-t]").forEach(e => e.textContent = T[l][e.dataset.t]);
+  $("#see").textContent = T[l].see; $("#reset").textContent = T[l].reset; $("#copy").textContent = T[l].copy;
+  $("#site").href = l === "es" ? "https://jcmunguia.com/es/" : "https://jcmunguia.com";
+  $("#site").textContent = l === "es" ? "jcmunguia.com/es" : "jcmunguia.com";
+  buildCards(); fillSelect("industry"); fillSelect("stage");
+}
+$("#cards").addEventListener("change", update);
+$("#see").addEventListener("click", () => { $("#results").hidden = false; renderResults(); $("#results").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); });
+$("#reset").addEventListener("click", () => { document.querySelectorAll("#cards input").forEach(x => x.checked = false); $("#results").hidden = true; update(); window.scrollTo(0, 0); });
+$("#lang-en").addEventListener("click", () => setLang("en"));
+$("#lang-es").addEventListener("click", () => setLang("es"));
+$("#copy").addEventListener("click", () => {
+  navigator.clipboard.writeText(summary()).then(() => $("#toast").textContent = T[lang].copied).catch(() => $("#toast").textContent = T[lang].copyFail);
+});
+$("#bench").addEventListener("click", () => {
+  if (!BENCHMARK.formUrl) return;
+  const f = BENCHMARK.fields, s = scores(), q = new URLSearchParams({usp: "pp_url"});
+  const put = (k, v) => { if (f[k]) q.set(f[k], v); };
+  put("tool", "quick"); put("lang", lang); put("industry", $("#industry").value || "na"); put("stage", $("#stage").value || "na");
+  put("scores", s.map(v => v * 25).join(",")); put("total", pct(s));
+  const a = document.createElement("a"); a.href = BENCHMARK.formUrl + "?" + q.toString(); a.target = "_blank"; a.rel = "noopener"; a.click();
+  $("#toast").textContent = T[lang].opened;
+});
+const h = location.hash.replace("#", ""); const start = (h === "es" || h === "en") ? h : (document.documentElement.lang === "es" ? "es" : "en");
+setLang(start);
+</script>
+
+<!-- Intercom Messenger (JC Munguia Consulting) -->
+<script>
+  window.intercomSettings = {
+    api_base: "https://api-iam.intercom.io",
+    app_id: "dt4w2azd"
+  };
+</script>
+<script>
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dt4w2azd';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+</body>
+</html>

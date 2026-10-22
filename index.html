@@ -841,6 +841,23 @@
     .cw-res div { background: var(--navy); border-radius: 10px; padding: 10px 10px 9px; }
     .cw-res b { display: block; color: var(--gold); font-size: 1.05rem; font-weight: 800; line-height: 1.2; }
     .cw-res span { display: block; color: rgba(255,255,255,.78); font-size: .72rem; line-height: 1.35; margin-top: 3px; }
+
+    /* ── AI READINESS ── */
+    #ai-readiness { background: var(--navy); color: var(--white); }
+    #ai-readiness .section-label { color: var(--teal); }
+    #ai-readiness .section-title { color: var(--white); margin-bottom: 16px; }
+    .air-lead { max-width: 780px; font-size: 1.05rem; line-height: 1.75; color: #c9d6e3; margin-bottom: 36px; }
+    .air-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+    .air-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+    .air-card--main { border-color: var(--gold); }
+    .air-tag { font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+    .air-card h3 { font-size: 1.2rem; color: var(--white); margin: 0; }
+    .air-card p { color: #c9d6e3; line-height: 1.65; font-size: .95rem; margin: 0; }
+    .air-card ul { margin: 0; padding-left: 18px; color: #c9d6e3; font-size: .93rem; line-height: 1.7; }
+    .air-card .btn { align-self: flex-start; margin-top: auto; border: 0; cursor: pointer; font-family: inherit; }
+    .air-btn-ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.4) !important; }
+    .air-btn-ghost:hover { border-color: var(--white) !important; }
+    .air-note { margin-top: 22px; font-size: .8rem; color: #8fa3b8; max-width: 900px; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -857,6 +874,7 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#credentials">Credentials</a></li>
     <li><a href="#consulting">Consulting</a></li>
+    <li><a href="#ai-readiness">AI Readiness</a></li>
     <li><a href="#clients">Results</a></li>
     <li><a href="#interviews">Interviews</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1880,6 +1898,40 @@
       <a class="btn btn-gold" href="mailto:contact@jcmunguia.com?subject=Service%20operations%20consulting">Tell me the problem: book a free 30-minute call</a>
       <a class="menu-link" href="JC_Munguia_Menu_Business_EN.pdf" target="_blank" rel="noopener">&#128196; Program menu (PDF)</a>
     </div>
+  </div>
+</section>
+
+<!-- AI READINESS -->
+<section id="ai-readiness">
+  <div class="section-inner">
+    <p class="section-label">AI in CX</p>
+    <h2 class="section-title">AI readiness: hold your AI to the same standard as your people</h2>
+    <p class="air-lead">The COPC CX Standard, Release 8.0, now manages AI with the same discipline as people. I use seven disciplines (core metrics, governance, quality, escalation, supervision, onboarding and coaching) to find where your AI gets less rigor than your newest hire, and to close that gap.</p>
+    <div class="air-grid">
+      <article class="air-card air-card--main">
+        <span class="air-tag">Free &middot; 3 minutes &middot; English and Spanish</span>
+        <h3>AI Readiness Quick Scan</h3>
+        <p>Seven questions about how your team manages its AI today. You get a score for each discipline and your two next steps. Nothing is saved unless you choose to add your result to the anonymous benchmark.</p>
+        <a class="btn btn-gold" href="/ai-scan/">Take the Quick Scan</a>
+      </article>
+      <article class="air-card">
+        <span class="air-tag">For newsletter readers and on request</span>
+        <h3>AI Readiness Deep Audit</h3>
+        <ul>
+          <li>28 questions, rated the way an auditor would: defined, deployed, proven</li>
+          <li>A 30/60/90-day plan built from your answers</li>
+          <li>The evidence an auditor would ask for, in a PDF report</li>
+        </ul>
+        <button class="btn air-btn-ghost" type="button" onclick="window.Intercom ? Intercom('showNewMessage', 'I would like the AI Readiness Deep Audit, please.') : (location.href='#contact')">Ask for the Deep Audit</button>
+      </article>
+      <article class="air-card">
+        <span class="air-tag">Live on this site</span>
+        <h3>My own test: Fin, Intercom's AI agent</h3>
+        <p>The chat in the bottom-right corner answers questions about my consulting services. I'm measuring it against the same seven disciplines, and I'll share the results in CX Hub Excellence Insights #28.</p>
+        <button class="btn air-btn-ghost" type="button" onclick="window.Intercom && Intercom('show')">Open the chat</button>
+      </article>
+    </div>
+    <p class="air-note">The Quick Scan and Deep Audit are independent tools based on the published COPC CX Standard, Release 8.0. They are not affiliated with or endorsed by COPC Inc. and measure readiness, not certification or compliance.</p>
   </div>
 </section>
 
