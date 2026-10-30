@@ -871,7 +871,190 @@
     .air-btn-ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.4) !important; }
     .air-btn-ghost:hover { border-color: var(--white) !important; }
     .air-note { margin-top: 22px; font-size: .8rem; color: #8fa3b8; max-width: 900px; line-height: 1.6; }
-</style>
+
+    /* ── WEEK 2: TEXT HERO (replaces banner image) ── */
+    .bhero { margin-top: 88px; position: relative; overflow: hidden; color: var(--white);
+      background: radial-gradient(120% 140% at 85% 30%, #17426d 0%, #0f2a47 45%, #0a1726 100%); padding: 46px 5% 42px; }
+    .bhero::before { content: ''; position: absolute; right: -6%; top: 50%; width: 760px; height: 760px; transform: translateY(-50%);
+      background: repeating-radial-gradient(circle, transparent 0 118px, rgba(255,255,255,.05) 119px 120px); pointer-events: none; }
+    .bhero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+    .bhero-head { font-size: clamp(1.9rem, 3.4vw, 2.9rem); font-weight: 800; line-height: 1.1; letter-spacing: -.02em; }
+    .bhero-sub { font-size: clamp(1.15rem, 2vw, 1.7rem); font-weight: 600; line-height: 1.25; color: rgba(255,255,255,.92); margin-top: 6px; }
+    .bhero-rule { display: block; width: 64px; height: 4px; border-radius: 2px; background: var(--gold); margin: 18px 0 16px; }
+    .bhero-kicker { color: #5fd0da; font-size: .92rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 10px; }
+    .bhero-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .bchip { display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 8px; border-radius: 10px; text-decoration: none; color: var(--white);
+      border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.06); transition: border-color .2s, background .2s; }
+    .bchip:hover { border-color: var(--gold); background: rgba(255,255,255,.1); }
+    .bchip i { font-style: normal; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+    .bchip .n1 { background: var(--teal); } .bchip .n2 { background: var(--accent); } .bchip .n3 { background: var(--gold); color: var(--navy); }
+    .bchip span { font-weight: 700; font-size: .95rem; line-height: 1.25; }
+    .bchip small { display: block; font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.7); }
+    .bhero-name { margin-top: 18px; font-size: 1.05rem; color: rgba(255,255,255,.85); }
+    .bhero-name b { color: var(--white); }
+    .bhero-creds { margin-top: 4px; font-size: .85rem; color: rgba(255,255,255,.62); }
+    .bhero-side { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+    .bhero-logo { width: 190px; height: 190px; border-radius: 50%; background: var(--white); padding: 24px; object-fit: contain; box-shadow: 0 0 0 10px rgba(255,255,255,.06); }
+    .bhero-btn { background: var(--gold); color: var(--navy); font-weight: 700; font-size: .95rem; padding: 13px 32px; border-radius: 999px; text-decoration: none; white-space: nowrap; transition: filter .2s, transform .2s; }
+    .bhero-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
+    .bhero + .hero { padding-top: 64px; min-height: auto; }
+    @media (max-width: 900px) {
+      .bhero-inner { grid-template-columns: 1fr; gap: 22px; }
+      .bhero-side { flex-direction: row; justify-content: flex-start; }
+      .bhero-logo { display: none; }
+    }
+
+    /* ── WEEK 2: RECOMMENDATIONS ── */
+    #recommendations { background: var(--white); }
+    .rec-lead { max-width: 760px; color: #3a4a5c; margin: -28px 0 26px; line-height: 1.7; }
+    .rec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .rec { background: var(--light); border: 1px solid var(--border); border-radius: 14px; padding: 22px 22px 18px; display: flex; flex-direction: column; margin: 0; }
+    .rec blockquote { margin: 0 0 16px; font-size: .93rem; line-height: 1.65; color: #2b3a4c; flex: 1; }
+    .rec blockquote::before { content: '\201C'; display: block; font-family: 'Playfair Display', serif; font-size: 2.6rem; line-height: .8; color: var(--gold); margin-bottom: 4px; }
+    .rec figcaption { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 14px; }
+    .rec-av { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--white); display: grid; place-items: center; font-weight: 700; font-size: .8rem; flex-shrink: 0; }
+    .rec-who b { display: block; font-size: .9rem; color: var(--navy); }
+    .rec-who span { display: block; font-size: .76rem; color: var(--muted); line-height: 1.4; }
+    .rec-rel { display: inline-block; margin-top: 4px; font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); }
+    .rec-foot { margin-top: 20px; font-size: .85rem; color: var(--muted); }
+    .rec-foot a { color: var(--accent); font-weight: 600; }
+    @media (max-width: 1000px) { .rec-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 760px) {
+      .rec-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 8px; margin: 0 -5%; padding-left: 5%; padding-right: 5%; scrollbar-width: thin; }
+      .rec { flex: 0 0 86%; scroll-snap-align: start; }
+    }
+
+    /* ── WEEK 2: TAILORED RESUME LINE ── */
+    .avail-resume { flex-basis: 100%; margin: 0; font-size: .9rem; color: #3a4a5c; }
+    .avail-resume a { color: var(--accent); font-weight: 600; }
+
+    /* ── WEEK 2: NAV MENU BUTTON + MOBILE FIRST SCREEN ── */
+    .nav-toggle, .lang-bar { display: none; }
+    @media (max-width: 1080px) {
+      .nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 0 11px;
+        background: transparent; border: 1px solid rgba(255,255,255,.3); border-radius: 10px; cursor: pointer; }
+      .nav-toggle span { display: block; height: 2px; background: var(--white); border-radius: 2px; transition: transform .2s, opacity .2s; }
+      nav.nav--open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      nav.nav--open .nav-toggle span:nth-child(2) { opacity: 0; }
+      nav.nav--open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .nav-right { display: flex; align-items: center; gap: 12px; }
+      .lang-bar { display: inline-block; color: var(--white); text-decoration: none; font-size: .85rem; font-weight: 700; border: 1px solid rgba(255,255,255,.45); border-radius: 6px; padding: 4px 9px; }
+      nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0;
+        background: #0d1b2a; padding: 6px 5% 14px; box-shadow: 0 12px 24px rgba(0,0,0,.25); }
+      nav.nav--open ul { display: flex; }
+      nav { backdrop-filter: none; }
+      nav ul a { display: block; padding: 13px 0; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+      nav ul li:has(.lang-switch) { display: none; }
+    }
+    @media (max-width: 760px) {
+      nav { height: 64px; flex-wrap: nowrap; padding: 0 5%; }
+      .nav-logo img { height: 48px; }
+      section[id], .anchor-alias { scroll-margin-top: 72px; }
+      .bhero { margin-top: 64px; padding: 26px 5% 24px; }
+      .bhero::before { display: none; }
+      .bhero-rule { margin: 14px 0 0; }
+      .bhero-kicker, .bhero-chips, .bhero-name, .bhero-creds, .bhero-side { display: none; }
+      .bhero + .hero { padding-top: 28px; padding-bottom: 48px; }
+      .hero-inner { gap: 18px; }
+      .hero-photo { width: 96px; height: 96px; box-shadow: 0 0 0 5px rgba(42,125,225,.25); }
+      .hero-text { display: flex; flex-direction: column; align-items: center; }
+      .hero-eyebrow { order: 1; margin-bottom: 12px; font-size: .68rem; }
+      .hero-name { order: 2; }
+      .hero-title { order: 3; }
+      .hero-cta { order: 4; margin: 18px 0 22px; justify-content: center; gap: 10px; }
+      .hero-cta .btn { padding: 11px 18px; }
+      .hero-stats { order: 5; margin-bottom: 0; }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jcmunguia.com/#person",
+      "name": "Juan Carlos Munguia Salcido",
+      "alternateName": [
+        "JC Munguia",
+        "Juan Carlos Munguia"
+      ],
+      "jobTitle": "CX & Operations Leader",
+      "url": "https://jcmunguia.com/",
+      "image": "https://jcmunguia.com/Linkedin_profile-pic-JC.jpg",
+      "email": "mailto:contact@jcmunguia.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mexico City",
+        "addressCountry": "MX"
+      },
+      "knowsLanguage": [
+        "es",
+        "en"
+      ],
+      "knowsAbout": [
+        "Customer Experience",
+        "Contact center operations",
+        "BPO governance",
+        "Lean Six Sigma",
+        "COPC CX Standard",
+        "Quality assurance",
+        "Organizational psychology",
+        "Training and certification"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad TecMilenio"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "California State University, Los Angeles"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/jc-munguia",
+        "https://community.pmi.org/profile/jcmunguia"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jcmunguia.com/#consulting",
+      "name": "Juan Carlos Munguia | Consultoría de Mejora Continua",
+      "url": "https://jcmunguia.com/",
+      "image": "https://jcmunguia.com/logo-emblem.png",
+      "email": "mailto:contact@jcmunguia.com",
+      "founder": {
+        "@id": "https://jcmunguia.com/#person"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mexico City",
+        "addressCountry": "MX"
+      },
+      "areaServed": [
+        "MX",
+        "US",
+        "CA",
+        "Latin America"
+      ],
+      "availableLanguage": [
+        "Spanish",
+        "English"
+      ],
+      "description": "Service operations consulting for contact-center and service teams: Engineering the Employee, Customer and Business Experience, with Lean Six Sigma and COPC-aligned programs."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jcmunguia.com/#webpage",
+      "url": "https://jcmunguia.com/",
+      "inLanguage": "en",
+      "about": {
+        "@id": "https://jcmunguia.com/#person"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -881,7 +1064,8 @@
     <img src="LOGO JUAN CARLOS MUNGUIA.png" alt="JC Munguia Logo" />
     <span class="nav-logo-text">JC Munguia</span>
   </a>
-  <ul>
+  <div class="nav-right"><a class="lang-bar" href="/es/" hreflang="es" lang="es" title="Ver en español">ES</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button></div>
+  <ul id="nav-menu">
     <li><a href="#how-i-work">How I Work</a></li>
     <li><a href="#hiring">Hiring</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -895,10 +1079,28 @@
   </ul>
 </nav>
 
-<!-- BRAND BAND -->
-<div class="brandband brandband--top">
-  <img src="LinkedIn_Banner_EN.png" alt="Service operations that work. Because the people running them do. Three standards: Engineering the Employee, Customer and Business Experience. Juan Carlos Munguia, CX and Operations Leader." />
-</div>
+<!-- BRAND HERO (text) -->
+<header class="bhero">
+  <div class="bhero-inner">
+    <div class="bhero-text">
+      <p class="bhero-head">Service operations that work.</p>
+      <p class="bhero-sub">Because the people running them do.</p>
+      <span class="bhero-rule" aria-hidden="true"></span>
+      <p class="bhero-kicker">Three standards &middot; Engineering the</p>
+      <div class="bhero-chips">
+        <a class="bchip" href="#people"><i class="n1">1</i><span><small>People</small>Employee Experience</span></a>
+        <a class="bchip" href="#customers"><i class="n2">2</i><span><small>Customers</small>Customer Experience</span></a>
+        <a class="bchip" href="#business"><i class="n3">3</i><span><small>Business</small>Business Experience</span></a>
+      </div>
+      <p class="bhero-name"><b>Juan Carlos Munguia</b> &middot; CX &amp; Operations Leader</p>
+      <p class="bhero-creds">PMP &middot; Lean Six Sigma Master Black Belt &middot; Organizational Psychologist &middot; Fintech, BPO &amp; Shared Services</p>
+    </div>
+    <div class="bhero-side">
+      <img class="bhero-logo" src="logo-emblem.png" alt="" width="190" height="190" />
+      <a class="bhero-btn" href="#consulting">Free toolkits + 30-min call</a>
+    </div>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -922,6 +1124,42 @@
         <a class="btn btn-outline" href="https://www.linkedin.com/in/jc-munguia" target="_blank" rel="noopener">LinkedIn Profile</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section id="recommendations">
+  <div class="section-inner">
+    <p class="section-label">Recommendations</p>
+    <h2 class="section-title">What managers and colleagues say</h2>
+    <p class="rec-lead">Excerpts from recommendations on my LinkedIn profile, from two managers, a peer and three people who reported to me.</p>
+    <div class="rec-grid">
+      <figure class="rec">
+        <blockquote>I can confidently say he is one of the most reliable and results-driven professionals I&rsquo;ve worked with. &hellip; He doesn&rsquo;t simply execute tasks&mdash;he takes responsibility for outcomes, builds trust with stakeholders, and continuously looks for ways to improve the customer and employee experience.</blockquote>
+        <figcaption><span class="rec-av" aria-hidden="true">OC</span><span class="rec-who"><b>Oscar Cubero</b><span>HR BPM Pay Transformation, Microsoft</span><span class="rec-rel">Managed JC directly &middot; Microsoft</span></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <blockquote>Juan Carlos is the kind of leader who elevates an organization. He strengthens performance, develops talent, builds trust, and inspires others to take ownership of their results.</blockquote>
+        <figcaption><span class="rec-av" aria-hidden="true">RN</span><span class="rec-who"><b>Raul Nu&ntilde;o Quintero</b><span>BPO Director &middot; Customer Service and Contact Center Expert</span><span class="rec-rel">Managed JC directly &middot; Teleperformance</span></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <blockquote>He has a rare ability to take a problem that seems overwhelming, break it down into manageable pieces, and get people moving in the same direction. &hellip; He never lost sight of the people behind the metrics.</blockquote>
+        <figcaption><span class="rec-av" aria-hidden="true">PD</span><span class="rec-who"><b>Proc Dominguez</b><span>Director of Training Services, Solera Holdings</span><span class="rec-rel">Worked with JC &middot; Teleperformance</span></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <blockquote>He believed in my potential, gave me the opportunity to grow, and supported my development for almost 2 years. During that time, I achieved the highest graduation rate recognition among trainers, and his commitment to continuous improvement inspired me to pursue and obtain my own Black Belt certification.</blockquote>
+        <figcaption><span class="rec-av" aria-hidden="true">AC</span><span class="rec-who"><b>Armando Contreras</b><span>Project Manager (PMP), Insulet</span><span class="rec-rel">Reported to JC &middot; Teleperformance</span></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <blockquote>Juan is quite simply a fantastic leader. From day one, he supported my growth, trusted my expertise, and provided the guidance I needed to develop further in my career. He also generously shared his deep knowledge of Quality and Continuous Improvement, lifting the capabilities of the whole team.</blockquote>
+        <figcaption><span class="rec-av" aria-hidden="true">MA</span><span class="rec-who"><b>Mar&iacute;a Carolina Alandete Ricardo</b><span>Senior CX Quality Assurance Lead, eDreams ODIGEO</span><span class="rec-rel">Reported to JC &middot; DiDi Global</span></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <blockquote>What always stood out about Juan Carlos was his ability to lead by example. He genuinely cared about the success of his team, was always willing to share his knowledge, and created an environment where people felt supported and motivated to do their best.</blockquote>
+        <figcaption><span class="rec-av" aria-hidden="true">OR</span><span class="rec-who"><b>Oscar Ramirez Gonzalez</b><span>Client Success Activation Manager, Support Services Group</span><span class="rec-rel">Reported to JC &middot; Teleperformance</span></span></figcaption>
+      </figure>
+    </div>
+    <p class="rec-foot">Read the full recommendations <a href="https://www.linkedin.com/in/jc-munguia/details/recommendations/" target="_blank" rel="noopener">on LinkedIn &rarr;</a></p>
   </div>
 </section>
 
@@ -1505,6 +1743,7 @@
     <div class="avail-note">
       <p><b>Availability.</b> I'm available for full-time leadership roles in Customer Experience, Operations Excellence and BPO Governance. If I join your company, my consulting practice pauses or runs only within your policies.</p>
       <a class="btn btn-primary" href="https://cal.com/jcmunguia/role" target="_blank" rel="noopener">Let's talk about the role</a>
+      <p class="avail-resume">Want a r&eacute;sum&eacute; tailored to your role? <a href="https://cal.com/jcmunguia/role" target="_blank" rel="noopener">Book 30 minutes</a> or <a href="mailto:contact@jcmunguia.com?subject=Tailored%20r%C3%A9sum%C3%A9%20request">email me the job description</a>, and I&rsquo;ll send one within 2 business days.</p>
     </div>
   </div>
 </section>
@@ -2120,5 +2359,12 @@
   (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dt4w2azd';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b1c2f5b90b404c0c962fda89aca86481"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+(function(){var n=document.querySelector('nav'),b=n&&n.querySelector('.nav-toggle');if(!b)return;
+function set(o){n.classList.toggle('nav--open',o);b.setAttribute('aria-expanded',o?'true':'false');}
+b.addEventListener('click',function(){set(!n.classList.contains('nav--open'));});
+n.querySelectorAll('#nav-menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
+</script>
 </body>
 </html>
