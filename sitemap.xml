@@ -42,4 +42,18 @@
     <lastmod>2026-10-29</lastmod>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://jcmunguia.com/speaking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/speaking/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/conferencias/"/>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/conferencias/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/speaking/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/conferencias/"/>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
