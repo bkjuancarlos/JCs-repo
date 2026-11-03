@@ -112,4 +112,16 @@
     <lastmod>2026-11-03</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://jcmunguia.com/insights/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/insights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/articulos/"/>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/articulos/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/insights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/articulos/"/>
+  </url>
 </urlset>
