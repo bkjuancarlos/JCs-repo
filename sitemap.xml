@@ -56,4 +56,60 @@
     <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://jcmunguia.com/results/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/resultados/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/results/yellow-belt-sme/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/yellow-belt-sme/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/yellow-belt-pyme/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/resultados/yellow-belt-pyme/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/yellow-belt-sme/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/yellow-belt-pyme/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/results/green-belt-csat/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/green-belt-csat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/green-belt-csat/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/resultados/green-belt-csat/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/green-belt-csat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/green-belt-csat/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/results/black-belt-qa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/black-belt-qa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/black-belt-calidad/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/resultados/black-belt-calidad/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/results/black-belt-qa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/resultados/black-belt-calidad/"/>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
