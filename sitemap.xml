@@ -33,11 +33,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jcmunguia.com/consulting.html</loc>
-    <lastmod>2026-10-29</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jcmunguia.com/cxe.html</loc>
     <lastmod>2026-10-29</lastmod>
     <priority>0.6</priority>
@@ -123,5 +118,29 @@
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/insights/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/articulos/"/>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/about/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/sobre-mi/"/>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/sobre-mi/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/sobre-mi/"/>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/consulting/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/consulting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/consultoria/"/>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/consultoria/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/consulting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/consultoria/"/>
   </url>
 </urlset>

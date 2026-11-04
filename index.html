@@ -967,6 +967,20 @@
       .hero-cta .btn { padding: 11px 18px; }
       .hero-stats { order: 5; margin-bottom: 0; }
     }
+
+    /* B1: insights teaser */
+    #insights-teaser { padding: 72px 5%; background: var(--white); }
+    #insights-teaser .it-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
+    #insights-teaser .it-card { border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; background: var(--light, #f4f7fb); }
+    #insights-teaser .it-card small { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+    #insights-teaser .it-card b { font-size: 1.05rem; line-height: 1.4; color: var(--navy); }
+    #insights-teaser .it-card p { font-size: .92rem; line-height: 1.6; color: #3a4a5c; margin: 0; }
+    #insights-teaser .it-card a { margin-top: auto; font-weight: 700; color: var(--accent); text-decoration: none; }
+    #insights-teaser .it-all { display: inline-block; margin-top: 22px; font-weight: 700; color: var(--accent); }
+    .page-top { margin-top: 88px; }
+    @media (max-width: 1080px) { .page-top { margin-top: 64px; } }
+    .audience-band h1 { display: block; font-size: 1.6rem; line-height: 1.3; font-family: inherit; color: inherit; margin: 0; }
+    @media (max-width: 860px) { #insights-teaser .it-grid { grid-template-columns: 1fr; } }
   </style>
   <script type="application/ld+json">
 {
@@ -1062,20 +1076,15 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#top">
-    <img src="LOGO JUAN CARLOS MUNGUIA.png" alt="JC Munguia Logo" />
+  <a class="nav-logo" href="/">
+    <img src="/LOGO JUAN CARLOS MUNGUIA.png" alt="JC Munguia Logo" />
     <span class="nav-logo-text">JC Munguia</span>
   </a>
   <div class="nav-right"><a class="lang-bar" href="/es/" hreflang="es" lang="es" title="Ver en español">ES</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button></div>
   <ul id="nav-menu">
-    <li><a href="#how-i-work">How I Work</a></li>
-    <li><a href="#hiring">Hiring</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#credentials">Credentials</a></li>
-    <li><a href="#consulting">Consulting</a></li>
-    <li><a href="#ai-readiness">AI Readiness</a></li>
-    <li><a href="#clients">Results</a></li>
-    <li><a href="#interviews">Interviews</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/consulting/">Consulting</a></li>
+    <li><a href="/results/">Results</a></li>
     <li><a href="/insights/">Insights</a></li>
     <li><a href="/speaking/">Speaking</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1092,16 +1101,16 @@
       <span class="bhero-rule" aria-hidden="true"></span>
       <p class="bhero-kicker">Three standards &middot; Engineering the</p>
       <div class="bhero-chips">
-        <a class="bchip" href="#people"><i class="n1">1</i><span><small>People</small>Employee Experience</span></a>
-        <a class="bchip" href="#customers"><i class="n2">2</i><span><small>Customers</small>Customer Experience</span></a>
-        <a class="bchip" href="#business"><i class="n3">3</i><span><small>Business</small>Business Experience</span></a>
+        <a class="bchip" href="/consulting/#people"><i class="n1">1</i><span><small>People</small>Employee Experience</span></a>
+        <a class="bchip" href="/consulting/#customers"><i class="n2">2</i><span><small>Customers</small>Customer Experience</span></a>
+        <a class="bchip" href="/consulting/#business"><i class="n3">3</i><span><small>Business</small>Business Experience</span></a>
       </div>
       <p class="bhero-name"><b>Juan Carlos Munguia</b> &middot; CX &amp; Operations Leader</p>
       <p class="bhero-creds">PMP &middot; Lean Six Sigma Master Black Belt &middot; Organizational Psychologist &middot; Fintech, BPO &amp; Shared Services</p>
     </div>
     <div class="bhero-side">
-      <img class="bhero-logo" src="logo-emblem.png" alt="" width="190" height="190" />
-      <a class="bhero-btn" href="#consulting">Free toolkits + 30-min call</a>
+      <img class="bhero-logo" src="/logo-emblem.png" alt="" width="190" height="190" />
+      <a class="bhero-btn" href="/consulting/#consulting">Free toolkits + 30-min call</a>
     </div>
   </div>
 </header>
@@ -1110,7 +1119,7 @@
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-photo">
-      <img src="Linkedin_profile-pic-JC.jpg" alt="JC Munguia" />
+      <img src="/Linkedin_profile-pic-JC.jpg" alt="JC Munguia" />
     </div>
     <div class="hero-text">
       <div class="hero-eyebrow">CX &amp; Operations Leader · Open to full-time leadership roles</div>
@@ -1123,8 +1132,8 @@
         <div class="hero-stat"><b>500+</b><span>FTE operation led for one of the largest US neobanks</span></div>
       </div>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#hiring">I'm hiring</a>
-        <a class="btn btn-outline" href="#consulting">I need consulting</a>
+        <a class="btn btn-primary" href="/about/#hiring">I'm hiring</a>
+        <a class="btn btn-outline" href="/consulting/#consulting">I need consulting</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/jc-munguia" target="_blank" rel="noopener">LinkedIn Profile</a>
       </div>
     </div>
@@ -1240,954 +1249,17 @@
 
     <p class="val-kicker">Choose your path</p>
     <div class="path-grid">
-      <a class="path-card" href="#hiring" style="--c:#1a4f8a">
+      <a class="path-card" href="/about/#hiring" style="--c:#1a4f8a">
         <small>For hiring teams</small>
         <b>I'm hiring a CX or operations leader</b>
         <span>Experience, results, credentials and tools, in about two minutes.</span>
       </a>
-      <a class="path-card" href="#consulting" style="--c:#d29a16">
+      <a class="path-card" href="/consulting/#consulting" style="--c:#d29a16">
         <small>For companies and teams</small>
         <b>I need help with my service operation</b>
         <span>Three standards, programs sized to your team, a results guarantee and a free 30-minute call.</span>
       </a>
     </div>
-  </div>
-</section>
-
-<!-- ===================== FOR HIRING TEAMS ===================== -->
-<div class="audience-band" id="hiring">
-  <small>For hiring teams</small>
-  <b>CX &amp; operations leadership, 15 years at scale</b>
-  <p>Experience, results, credentials and tools. Available for full-time leadership roles, remote or hybrid from Mexico City.</p>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <p class="section-label">About Me</p>
-    <h2 class="section-title">Customer Operations Leader<br>Built for Scale</h2>
-    <div class="about-grid">
-      <div class="about-bio">
-        <p>
-          I'm a Customer Operations leader with 15 years driving CX strategy and service delivery
-          across banking, fintech, remittance, and BPO environments. I specialize in scaling
-          customer operations through people, process, and technology, consistently delivering
-          measurable gains in SLA performance, CSAT/NPS, and operational efficiency.
-        </p>
-        <p>
-          I've led multi-country BPO ecosystems and transformed service models through automation,
-          analytics, and Lean Six Sigma disciplines. Whether building from the ground up or
-          optimizing at scale, I create high-performing teams and systems that thrive in regulated,
-          high-growth environments. Since 2023 I have also run my own consulting practice in
-          service operations, quality and training, which keeps my methods tested on real operations.
-        </p>
-        <p>
-          Beyond the metrics, I'm a Raja Yoga Meditation teacher, a Lean Six Sigma coach, and a
-          PMP mentor, because great service starts with great people.
-        </p>
-      </div>
-      <div class="about-details">
-        <div class="detail-item">
-          <span class="detail-icon">📍</span>
-          <div>
-            <div class="detail-text">Mexico City</div>
-            <div class="detail-sub">Open to remote / hybrid roles</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">💼</span>
-          <div>
-            <div class="detail-text">Independent Consultant</div>
-            <div class="detail-sub">Juan Carlos Munguia Consulting · Service operations, quality &amp; training · May 2023 – Present</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">✍️</span>
-          <div>
-            <div class="detail-text"><a href="https://www.linkedin.com/newsletters/cx-hub-excellence-insights-7100859934686224384/" target="_blank" rel="noopener">CX Hub Excellence Insights</a></div>
-            <div class="detail-sub">LinkedIn newsletter on CX and operational excellence · 600+ subscribers · <a href="https://www.linkedin.com/newsletters/cx-hub-excellence-insights-7100859934686224384/" target="_blank" rel="noopener">Subscribe free &rarr;</a> · <a href="/insights/">Read the archive &rarr;</a></div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">🎓</span>
-          <div>
-            <div class="detail-text">B.A. in Business Psychology</div>
-            <div class="detail-sub">TEC Milenio · 2012–2016</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">🌐</span>
-          <div>
-            <div class="detail-text">Spanish (Native) · English (C1 Advanced)</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">📧</span>
-          <div>
-            <div class="detail-text">contact@jcmunguia.com</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CAPABILITIES -->
-<section id="capabilities">
-  <div class="section-inner">
-    <p class="section-label">Core Capabilities</p>
-    <h2 class="section-title">What I Bring to the Table</h2>
-    <div class="caps-grid">
-      <div class="cap-card">
-        <div class="cap-icon">🎯</div>
-        <div class="cap-title">CX Operations Strategy &amp; Scaling</div>
-        <div class="cap-desc">Designing and scaling customer operations that drive performance, efficiency, and exceptional customer experiences across channels.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">🏢</div>
-        <div class="cap-title">BPO Governance &amp; Vendor Management</div>
-        <div class="cap-desc">Managing multi-vendor BPO ecosystems across geographies with rigorous SLA governance, QA calibration, and performance accountability.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">📊</div>
-        <div class="cap-title">SLA / KPI Performance &amp; Root Cause Analysis</div>
-        <div class="cap-desc">Translating operational data into actionable insights, identifying root causes, and implementing corrective strategies that stick.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">⚙️</div>
-        <div class="cap-title">Process Optimization &amp; CI</div>
-        <div class="cap-desc">Applying Lean Six Sigma and COPC-aligned frameworks to eliminate waste, reduce defects, and build continuous improvement cultures.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">🤖</div>
-        <div class="cap-title">Automation &amp; Digital CX (AI-enabled)</div>
-        <div class="cap-desc">Accelerating self-service and automation capabilities using AI and digital tools to improve efficiency without sacrificing experience quality.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">📣</div>
-        <div class="cap-title">Voice of Customer &amp; CX Analytics</div>
-        <div class="cap-desc">Designing VoC programs, NPS/CSAT/CES measurement, and analytics pipelines that inform strategic and operational decisions.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-inner">
-    <p class="section-label">Professional Experience</p>
-    <h2 class="section-title">Career Timeline</h2>
-    <div class="timeline">
-
-      <!-- Independent Consultant -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="LOGO%20JUAN%20CARLOS%20MUNGUIA.png" alt="Juan Carlos Munguia Consulting logo" loading="lazy" style="width:56.4px;left:23.9px;top:2.3px"></div>
-          <div class="tdate-range">May 2023 – Present</div>
-          <div class="tdate-company">Juan Carlos Munguia Consulting</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Independent Consultant · People, Customer &amp; Business Experience</div>
-            <div class="job-company">Hybrid and Remote · Mexico City · Selected engagements</div>
-          </div>
-          <ul class="job-bullets">
-            <li>I bring three standards to service and contact-center teams, in the order I apply them.</li>
-            <li><b>People · Engineering the Employee Experience:</b> values, agent and leadership competencies, career paths and reviews with evidence. Managers certified internally as assessors.</li>
-            <li><b>Customers · Engineering the Customer Experience:</b> 7 trainable skills that lower customer effort, certified at agent and leader level with role plays and live observation. Delivered to 400+ representatives.</li>
-            <li><b>Business · Engineering the Business Experience:</b> Lean Six Sigma (DMAIC / DMADV) and COPC-aligned Yellow, Green and Black Belt programs, sized to the team: 2, 4 or 6 months.</li>
-          </ul>
-          <span class="job-badge">Talent Development</span>
-          <span class="job-badge">Customer Experience</span>
-          <span class="job-badge">Lean Six Sigma</span>
-          <span class="job-badge">Training &amp; Certification</span>
-        </div>
-      </div>
-
-      <!-- Pangea -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo" style="background:rgb(0, 171, 199)"><img src="pangea_logo.jpg" alt="Pangea Money Transfer logo" loading="lazy" style="width:157.2px;left:-26.7px;top:-17.3px"></div>
-          <div class="tdate-range">Jun 2024 – Sep 2026</div>
-          <div class="tdate-company">Pangea Money Transfer</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Customer Experience Operations Manager</div>
-            <div class="job-company">Hybrid · Mexico City · 6 direct reports</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Led Customer Experience and Voice of Customer (VoC) strategy across U.S.–LatAm remittance and fintech operations, overseeing a 50+ FTE BPO and driving SLA, incident, and CX performance.</li>
-            <li>Achieved <strong>BBB Accreditation</strong> through end-to-end CX process improvements and customer complaint resolution frameworks.</li>
-            <li>Redesigned customer journeys and operational workflows, reducing repeat contacts by <strong>15%</strong> and improving SLA adherence by <strong>10%</strong>.</li>
-            <li>Ran both tiers of the CX operation on Zendesk and Aircall, including a WhatsApp self-service queue and public review response: <strong>100% of negative reviews answered</strong>, typically within 24 hours.</li>
-            <li>Lifted the ID verification SLA from <strong>85% to 94%</strong> and drove cross-functional transformation with Product, Engineering, and Compliance.</li>
-          </ul>
-          <span class="job-badge">Remittance</span>
-          <span class="job-badge">Fintech</span>
-          <span class="job-badge">BPO Oversight</span>
-          <span class="job-badge">VoC</span>
-        </div>
-      </div>
-
-      <!-- Microsoft Testing Center -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="MOS%20Testing%20center%20logo.jpg" alt="Microsoft Office Specialist Authorized Testing Center logo" loading="lazy" style="width:64.7px;left:20.5px;top:-2.7px"></div>
-          <div class="tdate-range">May 2023 – May 2025</div>
-          <div class="tdate-company">Microsoft Office Specialist<br>Authorized Testing Center</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Head of Customer Success and Operations</div>
-            <div class="job-company">Remote · Mexico City · Partner: ICEMexico · Part-time, in parallel</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Owned the full customer lifecycle from acquisition to post-service, improving conversion, adoption, and satisfaction across a digital platform.</li>
-            <li>Built and scaled service delivery model, achieving <strong>3× business growth in 6 months</strong> through process and experience optimization.</li>
-            <li>Implemented automation and data-driven improvements, increasing delivery capacity by <strong>30%</strong> without proportional headcount growth.</li>
-          </ul>
-          <span class="job-badge">Customer Success</span>
-          <span class="job-badge">Growth</span>
-          <span class="job-badge">Automation</span>
-        </div>
-      </div>
-
-      <!-- Microsoft Corporate -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo" style="background:rgb(249, 249, 249)"><img src="microsoft-logo.png" alt="Microsoft logo" loading="lazy" style="width:150.5px;left:-23.4px;top:-26.1px"></div>
-          <div class="tdate-range">Sep 2022 – Apr 2023</div>
-          <div class="tdate-company">Microsoft<br>Global Technology · 220k+ Employees</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">HR Services Manager, Quality &amp; Process Excellence</div>
-            <div class="job-company">Hybrid · Mexico City · Global HR Shared Services</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Led quality and process excellence initiatives within Microsoft's Global HR Services organization, ensuring consistent service delivery and operational standards.</li>
-            <li>Held service-line error margins <strong>below 5%</strong> and the quality index <strong>above 90%</strong>, and trained <strong>250+ employees globally</strong> on the quality and process-excellence guidelines.</li>
-            <li>Partnered with global HR Operations stakeholders to design and implement quality frameworks and performance measurement systems.</li>
-          </ul>
-          <span class="job-badge">HR Operations</span>
-          <span class="job-badge">Process Excellence</span>
-          <span class="job-badge">Lean Six Sigma</span>
-        </div>
-      </div>
-
-      <!-- DiDi Role 2 -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="DiDi-logo.png" alt="DiDi Global logo" loading="lazy" style="width:88.7px;left:7.7px;top:9.5px"></div>
-          <div class="tdate-range">Jan 2022 – Aug 2022</div>
-          <div class="tdate-company">DiDi Global<br>Mobility · Fintech · 24k Employees</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">CX Training, Quality &amp; Service Excellence Manager, LatAm</div>
-            <div class="job-company">Hybrid · Mexico City · 5 direct reports</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Expanded scope to include CX Training strategy across 9 LatAm markets, designing onboarding and capability-building programs for BPO partners.</li>
-            <li>Led end-to-end quality governance, calibration cycles, and corrective action plans to ensure consistent service standards across vendors.</li>
-            <li>Partnered cross-functionally with Product, Ops, and Vendor teams to drive CSAT improvements through training-informed process redesign.</li>
-          </ul>
-          <span class="job-badge">Training</span>
-          <span class="job-badge">Quality</span>
-          <span class="job-badge">Multi-Market</span>
-        </div>
-      </div>
-
-      <!-- DiDi Role 1 -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="DiDi-logo.png" alt="DiDi Global logo" loading="lazy" style="width:88.7px;left:7.7px;top:9.5px"></div>
-          <div class="tdate-range">Jun 2021 – Dec 2021</div>
-          <div class="tdate-company">DiDi Global<br>Mobility · Fintech · 24k Employees</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">CX Quality &amp; Service Excellence Manager, LatAm</div>
-            <div class="job-company">Hybrid · Mexico City</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Led CX quality and service excellence across <strong>9 LatAm markets</strong>, overseeing 5+ BPO vendors and establishing QA calibration and SLA governance models.</li>
-            <li>Built a "Smart QA" model combining interaction analytics and RPA on repetitive inbound and back-office transactions.</li>
-            <li>Drove regional consistency in customer service delivery through structured performance management and data-driven insights.</li>
-          </ul>
-          <span class="job-badge">Quality Excellence</span>
-          <span class="job-badge">BPO Governance</span>
-          <span class="job-badge">9 LatAm Markets</span>
-        </div>
-      </div>
-
-      <!-- Teleperformance -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="teleperformance-logo.png" alt="Teleperformance logo" loading="lazy" style="width:95.2px;left:4.4px;top:-23.6px"></div>
-          <div class="tdate-range">Nov 2010 – Jun 2021</div>
-          <div class="tdate-company">Teleperformance (TP)<br>Global BPO · 420k+ Employees<br>10 yrs 8 mos</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Account Manager – Fintech Client (USA)</div>
-            <div class="job-company">On-site · Mexico City · 5 Assistant Managers · Jul 2019 – Jun 2021</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Led and scaled a <strong>500+ FTE</strong> customer operations environment for one of the largest US neobanks, managing multi-channel programs with full ownership of performance, quality, and CSAT.</li>
-            <li>Ran the operation on a full parameter set: 250–300 agents scheduled daily, roughly <strong>8,000–10,000 contacts per day</strong>, an 80/20 service level, and voice AHT taken from ~350s at ramp to <strong>~280s at maturity</strong>.</li>
-            <li>Owned the escalation department for every line of business and pioneered ML/AI QA analytics plus RPA verification that cut handling by <strong>30–45 seconds per contact</strong>.</li>
-            <li>Implemented SLA governance frameworks, QA models, and CI initiatives aligned to COPC and Lean Six Sigma standards.</li>
-          </ul>
-          <span class="job-badge">Fintech</span>
-          <span class="job-badge">500+ FTE</span>
-          <span class="job-badge">COPC-aligned</span>
-          <div style="margin-top:20px; padding:16px; background:var(--light); border-radius:10px; border:1px solid var(--border);">
-            <div style="font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">Career Progression at Teleperformance</div>
-            <div style="display:flex; flex-direction:column; gap:8px;">
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Quality Assurance Project Manager<span class="tprog-loc">On-site · Chihuahua</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">May – Jun 2019</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Training Coordinator<span class="tprog-loc">On-site · Guadalajara</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Apr 2017 – Apr 2019</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Quality Control Coordinator<span class="tprog-loc">On-site · Guadalajara</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Apr 2015 – Mar 2017</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Lead Trainer<span class="tprog-loc">On-site · Guadalajara</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Jan 2012 – Mar 2015</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Quality Assurance Analyst<span class="tprog-loc">On-site · Hermosillo</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Apr – Dec 2011</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Customer Service Representative<span class="tprog-loc">On-site · Hermosillo</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">Nov 2010 – Mar 2011</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Freelance Translator -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tdate-range">2005 – 2017</div>
-          <div class="tdate-company">Freelance</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Freelance Translator</div>
-            <div class="job-company">English ↔ Spanish · Legal, Medical, Business &amp; Technical</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Provided professional English–Spanish translation services for legal, medical, business and technical documents across a 12-year parallel career.</li>
-            <li>Handled business administration and start-up strategy management, including creating OKRs.</li>
-          </ul>
-          <span class="job-badge">EN–ES Translation</span>
-          <span class="job-badge">Legal</span>
-          <span class="job-badge">Medical</span>
-        </div>
-      </div>
-
-      <!-- City of Angels -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tdate-range">Oct 2007 – Oct 2008</div>
-          <div class="tdate-company">City of Angels Insurance,<br>Tax &amp; Translation Services</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Project Manager</div>
-            <div class="job-company">Los Angeles, CA</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Managed client-facing translation, insurance, and tax service operations, coordinating project delivery and customer satisfaction for a bilingual community services firm.</li>
-          </ul>
-          <span class="job-badge">Project Management</span>
-          <span class="job-badge">Bilingual Services</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CREDENTIALS -->
-<section id="credentials">
-  <span class="anchor-alias" id="certifications"></span>
-  <div class="section-inner">
-    <p class="section-label">Credentials</p>
-    <h2 class="section-title">Professional Credentials &amp; Education</h2>
-    <div class="certs-grid">
-      <div class="cert-card">
-        <div class="cert-badge">📋</div>
-        <div>
-          <div class="cert-name">PMP® – Project Management Professional</div>
-          <div class="cert-org">Project Management Institute · 2024–2027</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">⚡</div>
-        <div>
-          <div class="cert-name">Lean Six Sigma Master Black Belt</div>
-          <div class="cert-org">International Lean Six Sigma · 2022</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🧠</div>
-        <div>
-          <div class="cert-name">Organizational Psychologist – Professional License</div>
-          <div class="cert-org">Secretaría de Educación Pública (Cédula) · 2022</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🏆</div>
-        <div>
-          <div class="cert-name">COPC CX Standard &ndash; Internal Training</div>
-          <div class="cert-org">Internal company program (Mexico) &middot; training only, not a COPC certification</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🔧</div>
-        <div>
-          <div class="cert-name">Industry 4.0</div>
-          <div class="cert-org">International Lean Six Sigma · 2024</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🎓</div>
-        <div>
-          <div class="cert-name">B.A. in Business Psychology</div>
-          <div class="cert-org">TEC Milenio · Lic. 12929918 · 2012–2016</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">📜</div>
-        <div>
-          <div class="cert-name">Certificate in Legal Interpretation &amp; Translation</div>
-          <div class="cert-org">California State University, Los Angeles · 2008–2010</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🌐</div>
-        <div>
-          <div class="cert-name">PMI Community Member</div>
-          <div class="cert-org">community.pmi.org/profile/jcmunguia</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Courses Facilitated -->
-    <div style="margin-top:48px;">
-      <p class="section-label">Courses Facilitated</p>
-      <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
-        <div class="cert-card">
-          <div class="cert-badge">🎤</div>
-          <div>
-            <div class="cert-name">"Engineering the Customer Experience"</div>
-            <div class="cert-org">Facilitated to 400+ customer service and sales representatives</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-badge">🧠</div>
-          <div>
-            <div class="cert-name">Professional &amp; Personal Development Workshops</div>
-            <div class="cert-org">Emotional Intelligence · Time Management · Coaching &amp; Feedback · Stress Management · Meditation — facilitated to 250+ employees</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TOOLS -->
-<section id="tools">
-  <div class="section-inner">
-    <p class="section-label">Tech Stack</p>
-    <h2 class="section-title">CX Technology &amp; Platforms</h2>
-    <div class="tools-grid">
-      <div class="tool-pill">Zendesk</div>
-      <div class="tool-pill">Aircall</div>
-      <div class="tool-pill">Genesys</div>
-      <div class="tool-pill">NICE</div>
-      <div class="tool-pill">Five9</div>
-      <div class="tool-pill">Avaya</div>
-      <div class="tool-pill">Verint Impact 360</div>
-      <div class="tool-pill">Minitab</div>
-      <div class="tool-pill">Power BI</div>
-      <div class="tool-pill">Hootsuite</div>
-      <div class="tool-pill">CRM &amp; Ticketing Systems</div>
-      <div class="tool-pill">Workflow Automation</div>
-      <div class="tool-pill">SLA/KPI Dashboards</div>
-      <div class="tool-pill">Omnichannel Support Models</div>
-      <div class="tool-pill">Routing Logic</div>
-      <div class="tool-pill">Microsoft Office Suite</div>
-      <div class="tool-pill">Claude Workflows</div>
-      <div class="tool-pill">Gemini GEMs</div>
-      <div class="tool-pill">Copilot (Microsoft)</div>
-      <div class="tool-pill">AI-assisted prototyping</div>
-      <div class="tool-pill">GitHub</div>
-    </div>
-    <div class="avail-note">
-      <p><b>Availability.</b> I'm available for full-time leadership roles in Customer Experience, Operations Excellence and BPO Governance. If I join your company, my consulting practice pauses or runs only within your policies.</p>
-      <a class="btn btn-primary" href="https://cal.com/jcmunguia/role" target="_blank" rel="noopener">Let's talk about the role</a>
-      <p class="avail-resume">Want a r&eacute;sum&eacute; tailored to your role? <a href="https://cal.com/jcmunguia/role" target="_blank" rel="noopener">Book 30 minutes</a> or <a href="mailto:contact@jcmunguia.com?subject=Tailored%20r%C3%A9sum%C3%A9%20request">email me the job description</a>, and I&rsquo;ll send one within 2 business days.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOR CLIENTS ===================== -->
-<div class="audience-band">
-  <small>For companies and teams</small>
-  <b>Consulting: calmer people, effortless experiences, lasting results</b>
-  <p>Programs for service and contact-center teams, sized to your team and applied to your real operation.</p>
-</div>
-
-<!-- CONSULTING INTRO -->
-<section id="consulting">
-  <div class="section-inner">
-    <p class="section-label">Consulting</p>
-    <h2 class="section-title std-title">Three standards for your service operation</h2>
-    <p class="val-kicker">In the order I apply them</p>
-    <div class="std-grid">
-      <a class="std-card" href="#people" style="--c:#0fa3b1">
-        <span class="std-n">1 &middot; People</span>
-        <b>Engineering the Employee Experience</b>
-        <em>Develop the people who run the operation</em>
-        <span class="std-d">Values, agent and leadership competencies and a career path, so everyone knows what good looks like, how they are rated and how to grow.</span>
-        <span class="std-go">See the standard &rarr;</span>
-      </a>
-      <a class="std-card" href="#customers" style="--c:#2a7de1">
-        <span class="std-n">2 &middot; Customers</span>
-        <b>Engineering the Customer Experience</b>
-        <em>Lower the effort, for customers and for the agents who serve them</em>
-        <span class="std-d">Seven trainable skills that reduce customer effort, certified at agent and leader level with role plays and live observation.</span>
-        <span class="std-go">See the standard &rarr;</span>
-      </a>
-      <a class="std-card" href="#business" style="--c:#0d1b2a">
-        <span class="std-n">3 &middot; Business</span>
-        <b>Engineering the Business Experience</b>
-        <em>When the team already has the metrics, but not the results</em>
-        <span class="std-d">Lean Six Sigma and COPC-aligned Yellow, Green and Black Belt programs, sized to your team and applied to your real operation.</span>
-        <span class="std-go">See the standard &rarr;</span>
-      </a>
-    </div>
-    <p class="std-combine"><b>Three sizes for every program:</b> Team (2 months, up to 30 people), Department (4 months, 30 to 150 people) and Enterprise (6 months, more than 150 people). Programs can be combined, in sequence or in parallel, within twelve months per client.</p>
-
-    <div class="guarantee">
-      <div class="guarantee-badge">100%</div>
-      <div>
-        <b>Results guarantee</b>
-        <p>If we don't reach the goals set in your signed plan, within the plan's timeline, you get back all fees paid for the program.</p>
-        <span>Applies to consulting programs when the conditions agreed in the plan are met: access to the data, your team's time and the actions agreed with owners. Claims are made in writing by email, and I reply personally within 2 business days. Full terms in each proposal.</span>
-      </div>
-    </div>
-
-    <div class="how-cta">
-      <a class="btn btn-gold" href="https://cal.com/jcmunguia/consultation" target="_blank" rel="noopener">Book a free 30-minute call</a>
-      <a class="menu-link" href="JC_Munguia_Services_Menu_EN.pdf" target="_blank" rel="noopener">&#128196; Full services menu (PDF)</a>
-    </div>
-  </div>
-</section>
-
-<!-- PEOPLE · STANDARD 1 -->
-<section id="people">
-  <span class="anchor-alias" id="eex"></span>
-  <div class="section-inner">
-    <p class="section-label">Talent Development &middot; Standard 1</p>
-    <h2 class="section-title std-title">Engineering the Employee Experience</h2>
-    <p class="std-sub">Develop the people who run the operation</p>
-    <p class="eex-desc">
-      Agents treat customers the way they are treated. <em>Engineering the Employee Experience</em> is the sister program to
-      Engineering the Customer Experience, and it works on how your people are treated: what &ldquo;good&rdquo; looks like in each role,
-      how they are rated, and how they grow. It starts with a competency career path built for your operation, then a
-      review cycle your managers are certified to run on their own. Led by a licensed <strong>Organizational Psychologist</strong> and
-      Lean Six Sigma Master Black Belt, with workshops already delivered to <strong>250+ employees</strong>.
-    </p>
-
-    <div class="eex-frame">
-      <div>
-        <p class="eex-kicker">Module 1 &middot; The competency career path</p>
-        <h3>One standard, from agent to director</h3>
-        <ul class="eex-parts">
-          <li style="--dot:#1a4f8a"><span><strong>5 core values</strong> everyone is rated on, each with five observable levels.</span></li>
-          <li style="--dot:#2a7de1"><span><strong>6 agent competencies:</strong> Communication &middot; Self-Leadership &middot; Organized &middot; Analytical Thinker &middot; Results Driven &middot; Integrity.</span></li>
-          <li style="--dot:#0d1b2a"><span><strong>6 leadership competencies</strong> for supervisors and managers: Engaging Communication &middot; Lead &middot; Organized Execution &middot; Systems Thinker &middot; Drives Results &amp; Change &middot; Integrity &amp; Fairness.</span></li>
-          <li style="--dot:#0fa3b1"><span><strong>A 5-role career ladder</strong> from Customer Care Agent to Director, with the level each role requires and the CXE and Belt credential for each step.</span></li>
-          <li style="--dot:#e8b54a"><span><strong>Reviews with evidence:</strong> self, manager and peer ratings, calibration across managers, and a development plan reviewed every month.</span></li>
-        </ul>
-      </div>
-      <a class="svc-kit eex-kit" href="EEX_Toolkit.png" target="_blank" rel="noopener" title="Open the Engineering the Employee Experience toolkit one-pager"><img src="EEX_Toolkit.png" width="3200" height="1720" alt="Engineering the Employee Experience toolkit: competencies book, review forms, 360 questionnaire, development plan, calibration guide and assessor certification" loading="lazy" /><span>What your team receives &middot; click to enlarge</span></a>
-    </div>
-
-    <div class="svc-grid">
-      <article class="svc-card svc-card--f">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Team &middot; 2 months &middot; up to 30 people</div>
-          <div class="svc-card__t">Foundation program</div>
-          <div class="svc-card__belt">Values &amp; career path</div>
-        </div>
-        <p class="svc-card__who">One team or role family that needs a clear standard.</p>
-        <ul>
-          <li>Values with a five-level behavior scale, built with your leaders</li>
-          <li>Competency matrix for up to three roles</li>
-          <li>Level descriptions for one career ladder</li>
-          <li>Review format and one pilot cycle</li>
-          <li>Managers certified internally as assessors</li>
-          <li>One weekly session with you</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--b">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Department &middot; 4 months &middot; 30 to 150 people</div>
-          <div class="svc-card__t">Build program</div>
-          <div class="svc-card__belt">Reviews &amp; development</div>
-        </div>
-        <p class="svc-card__who">A department, line of business or client program.</p>
-        <ul>
-          <li>Everything in the Foundation program</li>
-          <li>Full agent and leadership matrices, and career ladders with promotion criteria</li>
-          <li>360 feedback, calibration sessions and one full review cycle</li>
-          <li>A development plan for every person, and a learning catalog mapped to competencies</li>
-          <li>HR partners certified internally as calibrators</li>
-          <li>Fortnightly support</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--t">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Enterprise &middot; 6 months &middot; more than 150 people</div>
-          <div class="svc-card__t">Transform program</div>
-          <div class="svc-card__belt">Talent system</div>
-        </div>
-        <p class="svc-card__who">Sites, regions or the whole company.</p>
-        <ul>
-          <li>Everything above</li>
-          <li>Company-wide model tied to hiring, promotion and succession</li>
-          <li>Competency-based interviews and role plays for recruitment</li>
-          <li>Mentoring program, internal coaches and a talent dashboard</li>
-          <li>Your HR team certified internally to own and update the model</li>
-          <li>Documented handover and close</li>
-        </ul>
-      </article>
-    </div>
-
-    <p class="eex-addons">
-      <b>Add-ons for any program:</b> workshops in Emotional Intelligence, Time Management, Coaching &amp; Feedback,
-      Stress Management and Meditation. For organizations in Mexico, a NOM-035-STPS-2018 package (Mexico's standard on psychosocial risk at work): prevention policy,
-      reference guides by workplace size, analysis and action plan. Same terms as all my programs: a free 30-minute call,
-      a proposal in 5 business days, two-month renewable contracts, twelve months maximum.
-    </p>
-
-    <div class="eex-cta">
-      <p class="cxe-slogan">Build the path. <span>Keep your people.</span></p>
-      <p>
-        Download the free Competencies Book to see the values, the agent and leadership competencies and the career path
-        in full, then let's talk about what it would take to build yours.
-      </p>
-      <div class="cxe-cta-buttons">
-        <a class="btn btn-gold" href="https://cal.com/jcmunguia/consultation" target="_blank" rel="noopener">Book a free 30-minute consultation</a>
-        <a class="eex-pdf" href="EEX_Competencies_Book.pdf" target="_blank" rel="noopener">&#128196; Free Competencies Book (PDF)</a>
-        <a class="eex-pdf" href="JC_Munguia_Menu_People_EN.pdf" target="_blank" rel="noopener">&#128196; Program menu (PDF)</a>
-      </div>
-      <p class="eex-fine">Free example edition, 27 pages, built for a fictitious service operation. Certifications are internal and are not accredited third-party certifications. The competency areas are informed by PMI&rsquo;s PMCD Framework (3rd ed.); names and descriptions are original work, not affiliated with or endorsed by PMI.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CUSTOMERS · STANDARD 2 -->
-<section id="customers">
-  <span class="anchor-alias" id="methodology"></span>
-  <div class="section-inner">
-    <p class="section-label">Customer Experience &middot; Standard 2</p>
-    <h2 class="section-title std-title">Engineering the Customer Experience</h2>
-    <p class="std-sub">Lower the effort, for customers and for the agents who serve them</p>
-    <p class="methodology-desc">
-      My original consulting framework — <em>Engineering the Customer Experience</em> — reduces customer effort through 7 core skills organized in four parts. Developed and facilitated to <strong style="color:var(--teal);">400+ customer service and sales representatives</strong> across multiple organizations and markets, this model builds the mindset and behaviors that create effortless, memorable service interactions.
-    </p>
-    <div class="cxe-framework">
-      <div class="cxe-wheel">
-        <img src="cxe-framework-wheel.png" width="1023" height="1017" alt="Customer Experience Engineering framework: four parts and seven skills around one goal, lower effort for customers and agents" loading="lazy" />
-      </div>
-      <div>
-        <p class="cxe-framework-kicker">The framework: four parts, seven skills, one goal</p>
-        <h3>Lower effort, for the customer and for the agent</h3>
-        <p class="cxe-framework-sub">
-          Most disloyalty is created by effort, not by a lack of courtesy. The framework gives frontline teams and their leaders
-          a shared, trainable way to guide every interaction so customers do less work and feel more in control,
-          and so agents spend less energy negotiating and more time solving.
-        </p>
-        <ul class="cxe-parts">
-          <li style="--dot:#2F6FB0"><span><strong>What I hear:</strong> 1. Active Listening &middot; 2. Purposeful Small Talk. Capture what is said and uncover what is not.</span></li>
-          <li style="--dot:#4f7fc0"><span><strong>How I respond:</strong> 3. Positive Language &middot; 4. Advocacy &middot; 5. Alternative Positioning. Frame solutions in the best possible light.</span></li>
-          <li style="--dot:#1B8A8F"><span><strong>Develop self-awareness:</strong> 6. Understanding My Dominant Style. Know your strengths and your stress response.</span></li>
-          <li style="--dot:#6A3D9A"><span><strong>Maintain self-awareness:</strong> 7. Flexing to Others' Personalities. Adapt so the skills hold up under pressure.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cxe-why">
-      <h3>Why adopt it as your high-performing team standard</h3>
-      <p class="cxe-why-intro">
-        One standard, used at two levels. Agents use it with customers. Leaders use the same seven skills with their agents,
-        because agents tend to treat customers the way they are treated. Certification is internal and practical:
-        theory, role plays and observed live interactions, aligned with the COPC CX Standard R8.0 (2026).
-      </p>
-      <div class="cxe-why-grid">
-        <div class="cxe-why-card">
-          <h4>&#127919; For your operation</h4>
-          <ul>
-            <li><b>Effort predicts disloyalty.</b> 96% of customers with a high-effort experience become more disloyal, versus 9% after a low-effort one.</li>
-            <li><b>Resolution pays back.</b> Every 1-point gain in first-contact resolution lifts interaction NPS by about 1.4 points.</li>
-            <li><b>Humans now get the hardest contacts.</b> Only 14% of service issues are fully solved in self-service, so the human conversation is where loyalty is won or lost.</li>
-            <li><b>Measurable, not motivational.</b> Scorecards track CES (customer effort score), FCR (first-contact resolution), repeat contacts, transfers and critical errors before and after.</li>
-          </ul>
-        </div>
-        <div class="cxe-why-card">
-          <h4>&#129517; For your leadership team</h4>
-          <ul>
-            <li><b>Leaders design half the effort.</b> The organization, not the agent, causes 49% of repeat calls: policy, tools and knowledge are leadership levers.</li>
-            <li><b>Managers set the tone.</b> Global manager engagement is 22%, and managers account for about 70% of the variance in team engagement.</li>
-            <li><b>Coaching that sticks.</b> A 5-step coaching conversation, quarterly calibration and monitoring rules aligned with COPC R8.0.</li>
-            <li><b>A culture, not a course.</b> Daily effort huddles, a monthly "effort hunt" on repeat-contact drivers, and leaders certified on the same standard.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="cxe-sources">
-        Sources: CEB/Gartner Customer Loyalty Survey (n=54,166), <i>The Effortless Experience</i> (2013);
-        <a href="https://www.sqmgroup.com/resources/library/blog/call-center-fcr-benchmark-2024-results-by-industry" target="_blank" rel="noopener">SQM Group FCR Benchmark (Feb 2025)</a>;
-        <a href="https://www.gartner.com/en/newsroom/press-releases/2024-08-19-gartner-survey-finds-only-14-percent-of-customer-service-issues-are-fully-resolved-in-self-service" target="_blank" rel="noopener">Gartner (Aug 2024)</a>;
-        <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">Gallup State of the Global Workplace (2026)</a>;
-        COPC CX Standard for Contact Centers R8.0 (Jan 2026).
-      </p>
-    </div>
-
-    <p class="cx-sizes-h">Three sizes, for your team</p>
-    <div class="svc-grid cx-grid">
-      <article class="svc-card svc-card--ca">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Team &middot; 2 months &middot; up to 30 people</div>
-          <div class="svc-card__t">Certified Agents program</div>
-          <div class="svc-card__belt">Agent certification</div>
-        </div>
-        <p class="svc-card__who">One team or channel that needs a shared way to lower customer effort.</p>
-        <ul>
-          <li>Baseline from your own data: effort score, repeat contacts, transfers and critical errors</li>
-          <li>The 7 skills, trained with role plays on your real contacts</li>
-          <li>Internal agent certification: theory, role plays and observed live interactions</li>
-          <li>Team leads ready to run a daily 10-minute effort huddle</li>
-          <li>Before-and-after scorecard</li>
-          <li>One weekly session with you</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--al">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Department &middot; 4 months &middot; 30 to 150 people</div>
-          <div class="svc-card__t">Agents &amp; Leaders program</div>
-          <div class="svc-card__belt">Coaching &amp; calibration</div>
-        </div>
-        <p class="svc-card__who">A department, line of business or client program.</p>
-        <ul>
-          <li>Everything in the Certified Agents program</li>
-          <li>Leader track: the same seven skills applied to coaching their agents</li>
-          <li>A 5-step coaching conversation and quarterly calibration</li>
-          <li>Monitoring rules aligned with the COPC CX Standard</li>
-          <li>Internal leader certification</li>
-          <li>Fortnightly support</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--ec">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Enterprise &middot; 6 months &middot; more than 150 people</div>
-          <div class="svc-card__t">Effortless Culture program</div>
-          <div class="svc-card__belt">Site-wide standard</div>
-        </div>
-        <p class="svc-card__who">Sites, regions or the whole operation, in-house or delivered by a BPO.</p>
-        <ul>
-          <li>Everything above</li>
-          <li>A monthly &ldquo;effort hunt&rdquo; on repeat-contact drivers, with owners for policy, tool and knowledge fixes</li>
-          <li>Effort and first-contact resolution built into the quality form and the dashboard</li>
-          <li>Internal trainers and certifiers, so you certify new hires on your own</li>
-          <li>Onboarding curriculum updated with the standard</li>
-          <li>Documented handover and close</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="cxe-cta">
-      <p class="cxe-slogan">Lower the effort. <span>Raise the standard.</span></p>
-      <p>
-        Let's look at where effort hides in your operation and what it would take to certify your agents and leaders
-        on one standard. The first conversation is free: 30 minutes, no slides, just your numbers and your questions.
-      </p>
-      <div class="cxe-cta-buttons">
-        <a class="btn btn-gold" href="https://cal.com/jcmunguia/consultation" target="_blank" rel="noopener">Book a free 30-minute consultation</a>
-        <a class="pdf-download-btn" href="CXE_Participant_Manual_FREE_PREVIEW.pdf" target="_blank" rel="noopener">&#128196; Free preview (PDF)</a>
-        <a class="pdf-download-btn" href="JC_Munguia_Menu_Customers_EN.pdf" target="_blank" rel="noopener">&#128196; Program menu (PDF)</a>
-      </div>
-      <p class="cxe-note" style="margin-top:14px">Free preview of the 2026 Participant Manual: full structure, Module 1 and a first look at the agent and leader tracks.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- BUSINESS · STANDARD 3 -->
-<section id="business">
-  <span class="anchor-alias" id="services"></span>
-  <div class="section-inner">
-    <p class="section-label">Business Excellence &middot; Standard 3</p>
-    <h2 class="section-title std-title">Engineering the Business Experience</h2>
-    <p class="std-sub">When the team already has the metrics, but not the results</p>
-    <p class="svc-lead">
-      Fifteen years running service operations in fintech, mobility and large-scale BPO. Three levels of
-      support, sized to your team: each one applies Lean Six Sigma and COPC-aligned best practices to your
-      real operation and certifies your people internally, so the operation keeps improving after I'm gone.
-    </p>
-    <p class="svc-led"><span></span>Every program is led by a Lean Six Sigma Master Black Belt (PMP).</p>
-
-
-    <div class="svc-grid">
-      <article class="svc-card svc-card--yb">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Team &middot; 2 months &middot; up to 30 people</div>
-          <div class="svc-card__t">Yellow Belt program</div>
-          <div class="svc-card__belt">Diagnosis &amp; roadmap</div>
-        </div>
-        <p class="svc-card__who">One team, one contained problem: one KPI, one channel or one process.</p>
-        <ul>
-          <li>Diagnosis with your own data, plus interviews with the team</li>
-          <li>Process map, Pareto and root cause, applied to your KPI</li>
-          <li>Prioritized 90-day plan with owners, and one quick win delivered</li>
-          <li>Yellow Belt training for team leads and analysts, with AI study guides</li>
-          <li>Internal Yellow Belt certification: exam, charter review and certificate</li>
-          <li>One weekly session with you</li>
-        </ul>
-        <a class="svc-kit" href="LSS_Yellow_Belt_Toolkit.png" target="_blank" rel="noopener" title="Open the Yellow Belt toolkit one-pager"><img src="LSS_Yellow_Belt_Toolkit.png" width="1600" height="1020" alt="Yellow Belt toolkit: training manual, AI study companion, exam, answer key, project rubric and certificate" loading="lazy" /><span>What your team receives · click to enlarge</span></a>
-        <a class="svc-card__btn" href="LSS_Yellow_Belt_FREE_PREVIEW_EN.pdf" target="_blank" rel="noopener">&#128196; Yellow Belt free preview (PDF)</a>
-      </article>
-
-      <article class="svc-card svc-card--gb">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Department &middot; 4 months &middot; 30 to 150 people</div>
-          <div class="svc-card__t">Green Belt program</div>
-          <div class="svc-card__belt">Implementation</div>
-        </div>
-        <p class="svc-card__who">A department, line of business or client program. One or two processes, or a new channel.</p>
-        <ul>
-          <li>Everything in the Yellow Belt program</li>
-          <li>Quality framework aligned to COPC and ISO 9001 practices</li>
-          <li>Measurement you can trust: QA calibration, capability and control charts</li>
-          <li>Metrics dashboard and a daily and weekly review routine</li>
-          <li>Green Belt training, with each participant leading a DMAIC project (Define, Measure, Analyze, Improve, Control)</li>
-          <li>Internal Green Belt certification: exam, project rubric, Finance-validated benefits</li>
-          <li>Fortnightly support through execution</li>
-        </ul>
-        <a class="svc-kit" href="LSS_Green_Belt_Toolkit.png" target="_blank" rel="noopener" title="Open the Green Belt toolkit one-pager"><img src="LSS_Green_Belt_Toolkit.png" width="1600" height="1020" alt="Green Belt toolkit: training manual, AI study companion, exam, answer key, project rubric and certificate" loading="lazy" /><span>What your team receives · click to enlarge</span></a>
-        <a class="svc-card__btn" href="LSS_Green_Belt_FREE_PREVIEW_EN.pdf" target="_blank" rel="noopener">&#128196; Green Belt free preview (PDF)</a>
-      </article>
-
-      <article class="svc-card svc-card--bb">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Enterprise &middot; 6 months &middot; more than 150 people</div>
-          <div class="svc-card__t">Black Belt program</div>
-          <div class="svc-card__belt">Scale &amp; sustain</div>
-        </div>
-        <p class="svc-card__who">Full accounts, sites or regions. Multi-channel operations, shared-services towers or service delivered by a BPO.</p>
-        <ul>
-          <li>Everything above</li>
-          <li>Strategy deployment (an X-matrix: one page linking yearly goals to projects, metrics and owners)</li>
-          <li>End-to-end operating model; QA with speech analytics and automation</li>
-          <li>Building the manager layer and your own Green Belt coaches</li>
-          <li>Black Belt training for improvement leads; internal Black Belt certification</li>
-          <li>Documented handover, benefits tracking and close</li>
-        </ul>
-        <p class="svc-note">If the system you already have has been running for more than 6 months, the engagement is not extended. If a new tool or vendor is needed, the contract can extend to 12 months to cover procurement and implementation.</p>
-        <a class="svc-kit" href="LSS_Black_Belt_Toolkit.png" target="_blank" rel="noopener" title="Open the Black Belt toolkit one-pager"><img src="LSS_Black_Belt_Toolkit.png" width="1600" height="1020" alt="Black Belt toolkit: training manual, AI study companion, exam, answer key, project rubric and certificate" loading="lazy" /><span>What your team receives · click to enlarge</span></a>
-        <a class="svc-card__btn" href="LSS_Black_Belt_FREE_PREVIEW_EN.pdf" target="_blank" rel="noopener">&#128196; Black Belt free preview (PDF)</a>
-      </article>
-    </div>
-
-    <div class="svc-steps">
-      <div class="svc-step">
-        <b>1. A 30-minute call</b>
-        <span>At no cost, to understand the problem.</span>
-      </div>
-      <div class="svc-step">
-        <b>2. Proposal in 5 business days</b>
-        <span>Scope, deliverables, schedule and investment.</span>
-      </div>
-      <div class="svc-step">
-        <b>3. We start</b>
-        <span>With the data and tools you already have. If a new system is needed, it comes with a minimum of 3 to 6 months of implementation, including my exit transition.</span>
-      </div>
-    </div>
-
-    <p class="svc-terms">
-      <b>Terms.</b> Two-month renewable contract, with the package as the horizon and a maximum of
-      twelve months per client. Remote, with in-person sessions in Mexico City and the option of one
-      week on site per month; travel outside Mexico City at the client's request and expense.
-      Confidentiality in writing: your operation's data doesn't leave and isn't used as an example
-      without your permission. I work in Spanish and English.
-    </p>
-    <p class="svc-terms" style="font-size:.78rem;color:var(--muted)">
-      Certifications are internal: they certify competence inside your organization and are not accredited
-      third-party certifications. COPC® is a registered trademark of COPC Inc.; these programs follow
-      practices aligned with its published CX Standard and do not grant COPC certification.
-    </p>
-
-    <div class="svc-cta">
-      <a class="btn btn-gold" href="https://cal.com/jcmunguia/consultation" target="_blank" rel="noopener">Tell me the problem: book a free 30-minute call</a>
-      <a class="menu-link" href="JC_Munguia_Menu_Business_EN.pdf" target="_blank" rel="noopener">&#128196; Program menu (PDF)</a>
-    </div>
-  </div>
-</section>
-
-<!-- AI READINESS -->
-<section id="ai-readiness">
-  <div class="section-inner">
-    <p class="section-label">AI in CX</p>
-    <h2 class="section-title">AI readiness: hold your AI to the same standard as your people</h2>
-    <p class="air-lead">The COPC CX Standard, Release 8.0, now manages AI with the same discipline as people. I use seven disciplines (core metrics, governance, quality, escalation, supervision, onboarding and coaching) to find where your AI gets less rigor than your newest hire, and to close that gap.</p>
-    <div class="air-grid">
-      <article class="air-card air-card--main">
-        <span class="air-tag">Free &middot; 3 minutes &middot; English and Spanish</span>
-        <h3>AI Readiness Quick Scan</h3>
-        <p>Seven questions about how your team manages its AI today. You get a score for each discipline and your two next steps. Nothing is saved unless you choose to add your result to the anonymous benchmark.</p>
-        <a class="btn btn-gold" href="/ai-scan/">Take the Quick Scan</a>
-      </article>
-      <article class="air-card">
-        <span class="air-tag">For newsletter readers and on request</span>
-        <h3>AI Readiness Deep Audit</h3>
-        <ul>
-          <li>28 questions, rated the way an auditor would: defined, deployed, proven</li>
-          <li>A 30/60/90-day plan built from your answers</li>
-          <li>The evidence an auditor would ask for, in a PDF report</li>
-        </ul>
-        <button class="btn air-btn-ghost" type="button" onclick="window.Intercom ? Intercom('showNewMessage', 'I would like the AI Readiness Deep Audit, please.') : (location.href='#contact')">Ask for the Deep Audit</button>
-      </article>
-      <article class="air-card">
-        <span class="air-tag">Live on this site</span>
-        <h3>My own test: Fin, Intercom's AI agent</h3>
-        <p>The chat in the bottom-right corner answers questions about my consulting services. I'm measuring it against the same seven disciplines, and I'll share the results in CX Hub Excellence Insights #28.</p>
-        <button class="btn air-btn-ghost" type="button" onclick="window.Intercom && Intercom('show')">Open the chat</button>
-      </article>
-    </div>
-    <p class="air-note">The Quick Scan and Deep Audit are independent tools based on the published COPC CX Standard, Release 8.0. They are not affiliated with or endorsed by COPC Inc. and measure readiness, not certification or compliance.</p>
   </div>
 </section>
 
@@ -2199,7 +1271,7 @@
     <p class="cw-lead">One result for each belt level: one with a consulting client and two from in-house roles, where I applied the same methods. Each image shows the full case: the challenge, what we did, the kit and the results.</p>
     <div class="cw-grid">
       <article class="cw-card cw-card--yb">
-        <a class="cw-img" href="Case_Yellow_Belt_SME.png" target="_blank" rel="noopener" title="Open the full case study"><img src="Case_Yellow_Belt_SME.png" width="3200" height="1640" alt="Case study: 3x sales in a family-owned services SME, consulting client, Yellow Belt methods" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
+        <a class="cw-img" href="/Case_Yellow_Belt_SME.png" target="_blank" rel="noopener" title="Open the full case study"><img src="/Case_Yellow_Belt_SME.png" width="3200" height="1640" alt="Case study: 3x sales in a family-owned services SME, consulting client, Yellow Belt methods" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
         <p class="cw-tag">Consulting client &middot; Yellow Belt methods &middot; 2023</p>
         <h3>3&times; sales in a family-owned services SME, Mexico</h3>
         <div class="cw-res"><div><b>3&times;</b><span>sales vs. same months prior year</span></div><div><b>&minus;20%</b><span>staff attrition</span></div><div><b>2026</b><span>plan carried a leadership succession</span></div></div>
@@ -2212,7 +1284,7 @@
         <a class="cw-more" href="/results/yellow-belt-sme/">Read the full case &rarr;</a>
       </article>
       <article class="cw-card cw-card--gb">
-        <a class="cw-img" href="Case_Green_Belt_CSAT.png" target="_blank" rel="noopener" title="Open the full case study"><img src="Case_Green_Belt_CSAT.png" width="3200" height="1640" alt="Case study: CSAT turnaround in a 200-person contact-center division, in-house role, Green Belt level with Black Belt methods" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
+        <a class="cw-img" href="/Case_Green_Belt_CSAT.png" target="_blank" rel="noopener" title="Open the full case study"><img src="/Case_Green_Belt_CSAT.png" width="3200" height="1640" alt="Case study: CSAT turnaround in a 200-person contact-center division, in-house role, Green Belt level with Black Belt methods" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
         <p class="cw-tag">In-house role &middot; Green Belt level, Black Belt methods &middot; 2019</p>
         <h3>CSAT turnaround for a US retail energy account</h3>
         <div class="cw-res"><div><b>70%&rarr;90%</b><span>CSAT, 12-month avg. (73% at start) vs. 78% target</span></div><div><b>12+ mo</b><span>above the new 85% goal</span></div><div><b>2&times;</b><span>survey response rate</span></div></div>
@@ -2225,7 +1297,7 @@
         <a class="cw-more" href="/results/green-belt-csat/">Read the full case &rarr;</a>
       </article>
       <article class="cw-card cw-card--bb">
-        <a class="cw-img" href="Case_Black_Belt_QA.png" target="_blank" rel="noopener" title="Open the full case study"><img src="Case_Black_Belt_QA.png" width="3200" height="1640" alt="Case study: one QA standard across five BPO partners in nine countries, in-house role, Black Belt methods" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
+        <a class="cw-img" href="/Case_Black_Belt_QA.png" target="_blank" rel="noopener" title="Open the full case study"><img src="/Case_Black_Belt_QA.png" width="3200" height="1640" alt="Case study: one QA standard across five BPO partners in nine countries, in-house role, Black Belt methods" loading="lazy" /><span>Full case and kit &middot; click to enlarge</span></a>
         <p class="cw-tag">In-house role &middot; Black Belt methods &middot; 2021&ndash;2022</p>
         <h3>One QA standard across five BPO partners, LatAm</h3>
         <div class="cw-res"><div><b>90%+</b><span>quality index, from low 70s</span></div><div><b>10%&rarr;90%</b><span>QA coverage</span></div><div><b>+5&ndash;7 pts</b><span>CSAT, 3 verticals</span></div></div>
@@ -2244,63 +1316,20 @@
       <figure class="rv">
         <div class="rv-stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <blockquote>&ldquo;Exact words from the client.&rdquo;</blockquote>
-        <figcaption><a href="LINKEDIN_PROFILE_URL" target="_blank" rel="noopener">Client name</a> &middot; Role, company</figcaption>
+        <figcaption><a href="/LINKEDIN_PROFILE_URL" target="_blank" rel="noopener">Client name</a> &middot; Role, company</figcaption>
       </figure>
     </div>
     -->
   </div>
 </section>
 
-<!-- INTERVIEWS -->
-<section id="interviews">
+<!-- INSIGHTS TEASER -->
+<section id="insights-teaser">
   <div class="section-inner">
-    <p class="section-label">In the Media</p>
-    <h2 class="section-title">Interviews</h2>
-    <p class="iv-lead">Conversations about leadership, quality and customer experience. Both are in Spanish.</p>
-    <div class="iv-grid">
-      <article class="iv-card">
-        <div class="iv-media iv-video">
-          <a class="yt-facade" href="https://www.youtube.com/watch?v=HZEy0dNV-fo" target="_blank" rel="noopener" aria-label="Watch the L&iacute;deres del Futuro interview on YouTube">
-            <img src="https://i.ytimg.com/vi/HZEy0dNV-fo/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HZEy0dNV-fo/hqdefault.jpg'">
-            <span class="yt-play" aria-hidden="true"></span><span class="yt-cta" aria-hidden="true">Watch on YouTube</span>
-          </a>
-        </div>
-        <div class="iv-body">
-          <span class="iv-tag">Video &middot; CX Leaders &middot; 2026</span>
-          <h3>L&iacute;deres del Futuro: leading with consciousness in the age of AI</h3>
-          <p>A conversation with Tuyo Isaza about my path from meditation teacher to CX leader, the mistake that taught me the most, and how to keep people at the center as AI transforms service.</p>
-          <p class="iv-quote">&ldquo;En un mundo inundado de inteligencia artificial, el l&iacute;der que verdaderamente va a poder triunfar es aquel que pueda integrar la tecnolog&iacute;a con prop&oacute;sito y los resultados con humanidad.&rdquo;</p>
-          <a class="iv-link" href="https://www.youtube.com/watch?v=HZEy0dNV-fo" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
-        </div>
-      </article>
-      <article class="iv-card">
-        <div class="iv-media iv-audio">
-          <iframe src="https://open.spotify.com/embed/episode/3cGCUayPCyleDSuWNcjYae" title="Masters de la Mejora: Evolucionando procesos de calidad en la industria de servicios" loading="lazy" allow="encrypted-media; clipboard-write"></iframe>
-        </div>
-        <div class="iv-body">
-          <span class="iv-tag">Podcast &middot; Masters de la Mejora &middot; March 2023 &middot; 15 min</span>
-          <h3>Evolving quality processes in the service industry</h3>
-          <p>With Santiago Mayagoitia: the basics, and the not-so-basics, of quality in service operations, recorded while I led quality and process excellence in Microsoft&rsquo;s global HR services.</p>
-          <a class="iv-link" href="https://open.spotify.com/episode/3cGCUayPCyleDSuWNcjYae" target="_blank" rel="noopener">Listen on Spotify &rarr;</a>
-        </div>
-      </article>
-    </div>
-    <p style="margin:-6px 0 18px"><a href="/speaking/" style="font-weight:600">Invite me to speak: talks, formats and bio &rarr;</a></p>
-    <h3 class="iv-sub">Short clips</h3>
-    <div class="reel-row">
-      <article class="reel-card">
-        <a class="yt-facade yt-facade--short" href="https://www.youtube.com/shorts/S2b6VWEZgl8" target="_blank" rel="noopener" aria-label="Watch the Short &ldquo;Can AI replace empathy?&rdquo; on YouTube">
-          <img src="https://i.ytimg.com/vi/S2b6VWEZgl8/oar2.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/S2b6VWEZgl8/hqdefault.jpg'">
-          <span class="yt-play" aria-hidden="true"></span><span class="yt-cta" aria-hidden="true">Watch on YouTube</span>
-        </a>
-        <div class="iv-body">
-          <span class="iv-tag">Short &middot; CX Leaders &middot; 2026 &middot; 57 sec</span>
-          <h3>Can AI replace empathy?</h3>
-          <p>A 57-second clip from my L&iacute;deres del Futuro interview (in Spanish).</p>
-          <a class="iv-link" href="https://www.youtube.com/shorts/S2b6VWEZgl8" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
-        </div>
-      </article>
-    </div>
+    <p class="section-label">Insights</p>
+    <h2 class="section-title">Latest from the newsletter</h2>
+    <div class="it-grid"><article class="it-card"><small>Edition 27</small><b>Hold Your AI to the Same Standard as Your People</b><p>Your AI agent should meet the same quality bar as your human agents. Uses the COPC CX Standard R8.0 and rollback data to give you a KPI checklist for AI versus agents.</p><a href="https://www.linkedin.com/pulse/hold-your-ai-same-standard-people-juan-carlos-munguia-u65ne/" target="_blank" rel="noopener">Read on LinkedIn &rarr;</a></article><article class="it-card"><small>Edition 26</small><b>Leading from Within in the Age of AI</b><p>The comeback edition, built from my CX Leaders "Líderes del Futuro" interview: why inner clarity and human judgment matter more as AI takes on more of the work.</p><a href="https://www.linkedin.com/pulse/leading-from-within-age-ai-juan-carlos-munguia-scbfe/" target="_blank" rel="noopener">Read on LinkedIn &rarr;</a></article><article class="it-card"><small>Edition 25</small><b>Scaling Smarter: Operational Excellence in Fintech</b><p>Scaling a fintech operation means building better, not just bigger: COPC, Lean Six Sigma and Agile foundations, vendor QA with root-cause analysis, and CX digital twins.</p><a href="https://www.linkedin.com/pulse/scaling-smarter-practical-guide-operational-fintech-munguia-toxkf/" target="_blank" rel="noopener">Read on LinkedIn &rarr;</a></article></div>
+    <a class="it-all" href="/insights/">All 27 editions &rarr;</a>
   </div>
 </section>
 
@@ -2374,5 +1403,6 @@ b.addEventListener('click',function(){set(!n.classList.contains('nav--open'));})
 n.querySelectorAll('#nav-menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
 </script>
+<script>(function(){var M={"hiring": "/about/", "about": "/about/", "capabilities": "/about/", "experience": "/about/", "credentials": "/about/", "certifications": "/about/", "tools": "/about/", "consulting": "/consulting/", "people": "/consulting/", "eex": "/consulting/", "customers": "/consulting/", "methodology": "/consulting/", "business": "/consulting/", "services": "/consulting/", "ai-readiness": "/consulting/", "interviews": "/speaking/"};var h=location.hash.slice(1);if(h&&!document.getElementById(h)&&M[h])location.replace(M[h]+'#'+h);})();</script>
 </body>
 </html>
