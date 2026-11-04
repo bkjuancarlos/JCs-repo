@@ -78,6 +78,38 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);margi
 footer{background:#0a1520;color:rgba(255,255,255,.6);font-size:.82rem;padding:22px 0;text-align:center}
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.reel{max-width:300px;aspect-ratio:4/3}.topics,.media{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}}
 @media (max-width:640px){nav{height:60px}nav img{height:44px}.nav-links{gap:12px}.nav-links .hide-m{display:none}.bio{grid-template-columns:1fr}.bio img{width:140px;height:140px}section{padding:48px 0}.hero{padding:44px 0}}
+/* B1 media */
+.iv-lead { font-size: 1rem; line-height: 1.7; color: #3a4a5c; max-width: 760px; margin: 0 0 28px; }
+.iv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.iv-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.iv-media { position: relative; background: var(--navy); }
+.iv-media iframe { display: block; width: 100%; border: 0; }
+.iv-video iframe { aspect-ratio: 16 / 9; height: auto; }
+.iv-audio { padding: 18px 18px 6px; }
+.iv-audio iframe { height: 152px; border-radius: 12px; }
+.iv-body { padding: 18px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+.iv-tag { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.iv-body h3 { font-size: 1.12rem; line-height: 1.35; color: var(--navy); margin: 0; }
+.iv-body p { font-size: .95rem; line-height: 1.65; color: #3a4a5c; margin: 0; }
+.iv-quote { border-left: 3px solid var(--gold); padding: 4px 0 4px 14px; font-style: italic; color: var(--navy) !important; }
+.iv-link { margin-top: auto; font-weight: 700; color: var(--accent); text-decoration: none; }
+.iv-link:hover { text-decoration: underline; }
+@media (max-width: 860px) { .iv-grid { grid-template-columns: 1fr; } }
+.yt-facade { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--navy); overflow: hidden; }
+.yt-facade--short { aspect-ratio: 9 / 16; }
+.yt-facade img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease, filter .3s ease; }
+.yt-facade:hover img, .yt-facade:focus-visible img { transform: scale(1.03); filter: brightness(.85); }
+.yt-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; margin: -24px 0 0 -34px; border-radius: 14px; background: #f00; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.yt-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #fff; }
+.yt-cta { position: absolute; left: 12px; bottom: 12px; padding: 6px 12px; border-radius: 20px; background: rgba(0,0,0,.72); color: #fff; font-size: .8rem; font-weight: 700; }
+.iv-sub { margin: 40px 0 16px; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.reel-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 260px)); gap: 22px; }
+.reel-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.reel-card iframe { display: block; width: 100%; aspect-ratio: 9 / 16; height: auto; border: 0; background: var(--navy); }
+.reel-card .iv-body { padding: 14px 16px 18px; gap: 8px; }
+.reel-card h3 { font-size: 1rem; }
+@media (max-width: 560px) { .reel-row { grid-template-columns: minmax(0, 300px); justify-content: center; } }
+.iv-grid{margin-top:8px}
 
 .chero{color:#fff;padding:56px 0 44px}
 .chero.yb{background:#e8b54a;color:var(--navy)} .chero.gb{background:#2e9e5b} .chero.bb{background:#0f1b2a}
@@ -124,6 +156,22 @@ footer{background:#0a1520;color:rgba(255,255,255,.6);font-size:.82rem;padding:22
 .ovc .go{margin-top:auto;color:var(--accent);font-weight:600;font-size:.9rem}
 @media (max-width:900px){.stats{grid-template-columns:1fr 1fr}.cbody{grid-template-columns:1fr;gap:28px}.ov{grid-template-columns:1fr}}
 @media (max-width:640px){.kit{grid-template-columns:1fr}.chero{padding:40px 0 44px}}
+
+.su{background:#0d1b2a;color:#fff;border-radius:16px;padding:30px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+.su h2{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;line-height:1.25;margin:0 0 10px;color:#fff}
+.su p{margin:0;color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.6}
+.su ul{margin:12px 0 0 18px;color:rgba(255,255,255,.85);font-size:.92rem;line-height:1.7}
+.su form{display:flex;flex-direction:column;gap:10px}
+.su .row{display:flex;gap:10px;flex-wrap:wrap}
+.su input[type=text],.su input[type=email]{flex:1 1 180px;font:inherit;font-size:.95rem;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff}
+.su input::placeholder{color:rgba(255,255,255,.55)}
+.su label.ok{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.su label.ok input{margin-top:3px;accent-color:#e8b54a}
+.su label.ok a{color:#e8b54a}
+.su button{font:inherit;font-weight:700;font-size:.95rem;background:#e8b54a;color:#0d1b2a;border:0;border-radius:10px;padding:12px 18px;cursor:pointer}
+.su .msg{font-size:.88rem;color:#e8b54a;min-height:1.2em}
+.su .alt{font-size:.8rem;color:rgba(255,255,255,.6)}.su .alt a{color:rgba(255,255,255,.85)}
+@media (max-width:820px){.su{grid-template-columns:1fr;padding:24px 20px}}
 </style>
 </head>
 <body><nav><div class="wrap"><a href="/"><img src="/LOGO%20JUAN%20CARLOS%20MUNGUIA.png" alt="JC Munguia" /></a>
@@ -151,12 +199,27 @@ footer{background:#0a1520;color:rgba(255,255,255,.6);font-size:.82rem;padding:22
   <figure class="onepager"><a href="/Case_Green_Belt_CSAT.png" target="_blank" rel="noopener"><img src="/Case_Green_Belt_CSAT.png" alt="CSAT turnaround in a contact-center division" width="3200" height="1640" loading="lazy" /><span>Full one-page case · click to enlarge</span></a></figure>
   <p class="disc">Client and employer names and proprietary details are withheld under confidentiality agreements. References available on request.</p>
   <div class="pager"><span><a href="/results/yellow-belt-sme/">&larr; Previous case</a></span><a href="/results/">All cases</a><span><a href="/results/black-belt-qa/">Next case &rarr;</a></span></div>
+  <div style="margin-top:40px"><div class="su" id="subscribe">
+  <div><h2>Practical CX and operations tools, in your inbox</h2><p>Join my email list and get:</p><ul><li>New newsletter editions, each with one tool you can use right away</li><li>Templates and checklists from my Lean Six Sigma and CX kits</li><li>Early invitations to talks and the Excellence from Within podcast</li></ul></div>
+  <form class="su-form" data-action="https://assets.mailerlite.com/jsonp/2767359/forms/203174711268476560/subscribe" data-done="Almost there: check your inbox and confirm your email." data-err="Something went wrong. Please try again or write to contact@jcmunguia.com." data-draft="Preview only: the form is not connected yet." data-where="case" novalidate>
+    <div class="row"><input type="text" name="fields[name]" placeholder="First name" autocomplete="given-name" aria-label="First name" /><input type="email" name="fields[email]" placeholder="Email" autocomplete="email" aria-label="Email" required /></div>
+    <label class="ok"><input type="checkbox" required /> <span>I agree to receive emails from Juan Carlos Munguia. I can unsubscribe at any time. See the <a href="/privacy/">privacy notice</a>.</span></label>
+    <button type="submit">Subscribe</button>
+    <p class="msg" aria-live="polite"></p>
+    <p class="alt">Prefer LinkedIn? <a href="https://www.linkedin.com/newsletters/cx-hub-excellence-insights-7100859934686224384/" target="_blank" rel="noopener">Subscribe there</a>.</p>
+  </form>
+</div></div>
 </main>
 <section class="final"><div class="wrap">
   <h2>Want results like these?</h2><p class="sub">Clients: tell me the problem in a free 30-minute call. Recruiters: let's talk about the role.</p>
   <div class="cta"><a class="btn btn-gold" href="https://cal.com/jcmunguia/consultation" target="_blank" rel="noopener">Book a free 30-minute call</a><a class="btn btn-ghost" href="https://cal.com/jcmunguia/role" target="_blank" rel="noopener">Hiring? Let's talk about the role</a></div>
 </div></section>
-<footer>© 2026 Juan Carlos Munguia Salcido · CX &amp; Operations Leader · jcmunguia.com</footer>
+<footer>© 2026 Juan Carlos Munguia Salcido · CX &amp; Operations Leader · jcmunguia.com · <a href="/privacy/" style="color:inherit">Privacy</a></footer>
+<script>document.querySelectorAll('.su-form').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.msg'),em=f.querySelector('input[type=email]'),ck=f.querySelector('input[type=checkbox]');
+if(!em.value||!em.checkValidity()){em.focus();return}if(!ck.checked){ck.focus();return}
+const a=f.dataset.action;if(!a){m.textContent=f.dataset.draft;return}
+const d=new FormData(f);d.append('ml-submit','1');d.append('anticsrf','true');
+try{const r=await fetch(a,{method:'POST',body:d});const j=await r.json().catch(()=>({}));if(r.ok&&j.success!==false){m.textContent=f.dataset.done;f.querySelectorAll('input,button').forEach(x=>x.disabled=true)}else m.textContent=f.dataset.err}catch(_){m.textContent=f.dataset.err}}))</script>
 <!-- Intercom Messenger (JC Munguia Consulting) -->
 <script>
   window.intercomSettings = {

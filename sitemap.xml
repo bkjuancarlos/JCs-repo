@@ -143,4 +143,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/consulting/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/consultoria/"/>
   </url>
+  <url>
+    <loc>https://jcmunguia.com/privacy/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/aviso-de-privacidad/"/>
+  </url>
+  <url>
+    <loc>https://jcmunguia.com/es/aviso-de-privacidad/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcmunguia.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jcmunguia.com/es/aviso-de-privacidad/"/>
+  </url>
 </urlset>
