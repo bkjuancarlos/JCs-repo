@@ -981,6 +981,23 @@
     @media (max-width: 1080px) { .page-top { margin-top: 64px; } }
     .audience-band h1 { display: block; font-size: 1.6rem; line-height: 1.3; font-family: inherit; color: inherit; margin: 0; }
     @media (max-width: 860px) { #insights-teaser .it-grid { grid-template-columns: 1fr; } }
+/* EMAIL SIGNUP (B2) */
+.su{background:#0d1b2a;color:#fff;border-radius:16px;padding:30px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+.su h2{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;line-height:1.25;margin:0 0 10px;color:#fff}
+.su p{margin:0;color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.6}
+.su ul{margin:12px 0 0 18px;color:rgba(255,255,255,.85);font-size:.92rem;line-height:1.7}
+.su form{display:flex;flex-direction:column;gap:10px}
+.su .row{display:flex;gap:10px;flex-wrap:wrap}
+.su input[type=text],.su input[type=email]{flex:1 1 180px;font:inherit;font-size:.95rem;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff}
+.su input::placeholder{color:rgba(255,255,255,.55)}
+.su label.ok{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.su label.ok input{margin-top:3px;accent-color:#e8b54a}
+.su label.ok a{color:#e8b54a}
+.su button{font:inherit;font-weight:700;font-size:.95rem;background:#e8b54a;color:#0d1b2a;border:0;border-radius:10px;padding:12px 18px;cursor:pointer}
+.su .msg{font-size:.88rem;color:#e8b54a;min-height:1.2em}
+.su .alt{font-size:.8rem;color:rgba(255,255,255,.6)}.su .alt a{color:rgba(255,255,255,.85)}
+@media (max-width:820px){.su{grid-template-columns:1fr;padding:24px 20px}}
+#signup{padding:8px 5% 56px}#signup .section-inner{max-width:1100px;margin:0 auto}
   </style>
 </head>
 <body>
@@ -1442,9 +1459,21 @@
   </div>
 </section>
 
+<!-- SIGNUP -->
+<section id="signup" style="padding-top:56px"><div class="section-inner"><div class="su" id="subscribe">
+  <div><h2>Practical CX and operations tools, in your inbox</h2><p>Join my email list and get:</p><ul><li>New newsletter editions, each with one tool you can use right away</li><li>Templates and checklists from my Lean Six Sigma and CX kits</li><li>Early invitations to talks and the Excellence from Within podcast</li></ul></div>
+  <form class="su-form" data-action="" data-done="Almost there: check your inbox and confirm your email." data-err="Something went wrong. Please try again or write to contact@jcmunguia.com." data-draft="Preview only: the form is not connected yet." data-where="consulting" novalidate>
+    <div class="row"><input type="text" name="fields[name]" placeholder="First name" autocomplete="given-name" aria-label="First name" /><input type="email" name="fields[email]" placeholder="Email" autocomplete="email" aria-label="Email" required /></div>
+    <label class="ok"><input type="checkbox" required /> <span>I agree to receive emails from Juan Carlos Munguia. I can unsubscribe at any time. See the <a href="/privacy/">privacy notice</a>.</span></label>
+    <button type="submit">Subscribe</button>
+    <p class="msg" aria-live="polite"></p>
+    <p class="alt">Prefer LinkedIn? <a href="https://www.linkedin.com/newsletters/cx-hub-excellence-insights-7100859934686224384/" target="_blank" rel="noopener">Subscribe there</a>.</p>
+  </form>
+</div></div></section>
+
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Juan Carlos Munguia Salcido · Customer Experience &amp; Operations Leader · People · Customers · Business</p>
+  <p>© 2026 Juan Carlos Munguia Salcido · Customer Experience &amp; Operations Leader · People · Customers · Business · <a href="/privacy/" style="color:inherit">Privacy notice</a></p>
 </footer>
 
 <!-- Intercom Messenger (JC Munguia Consulting) -->
@@ -1465,5 +1494,10 @@ b.addEventListener('click',function(){set(!n.classList.contains('nav--open'));})
 n.querySelectorAll('#nav-menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
 </script>
+<script>document.querySelectorAll('.su-form').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.msg'),em=f.querySelector('input[type=email]'),ck=f.querySelector('input[type=checkbox]');
+if(!em.value||!em.checkValidity()){em.focus();return}if(!ck.checked){ck.focus();return}
+const a=f.dataset.action;if(!a){m.textContent=f.dataset.draft;return}
+const d=new FormData(f);d.append('ml-submit','1');d.append('anticsrf','true');
+try{const r=await fetch(a,{method:'POST',body:d});const j=await r.json().catch(()=>({}));if(r.ok&&j.success!==false){m.textContent=f.dataset.done;f.querySelectorAll('input,button').forEach(x=>x.disabled=true)}else m.textContent=f.dataset.err}catch(_){m.textContent=f.dataset.err}}))</script>
 </body>
 </html>
