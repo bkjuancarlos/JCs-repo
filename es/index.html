@@ -970,6 +970,20 @@
       .hero-cta .btn { padding: 11px 18px; }
       .hero-stats { order: 5; margin-bottom: 0; }
     }
+
+    /* B1: insights teaser */
+    #insights-teaser { padding: 72px 5%; background: var(--white); }
+    #insights-teaser .it-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
+    #insights-teaser .it-card { border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; background: var(--light, #f4f7fb); }
+    #insights-teaser .it-card small { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+    #insights-teaser .it-card b { font-size: 1.05rem; line-height: 1.4; color: var(--navy); }
+    #insights-teaser .it-card p { font-size: .92rem; line-height: 1.6; color: #3a4a5c; margin: 0; }
+    #insights-teaser .it-card a { margin-top: auto; font-weight: 700; color: var(--accent); text-decoration: none; }
+    #insights-teaser .it-all { display: inline-block; margin-top: 22px; font-weight: 700; color: var(--accent); }
+    .page-top { margin-top: 88px; }
+    @media (max-width: 1080px) { .page-top { margin-top: 64px; } }
+    .audience-band h1 { display: block; font-size: 1.6rem; line-height: 1.3; font-family: inherit; color: inherit; margin: 0; }
+    @media (max-width: 860px) { #insights-teaser .it-grid { grid-template-columns: 1fr; } }
   </style>
   <script type="application/ld+json">
 {
@@ -1065,20 +1079,15 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#top">
-    <img src="../LOGO JUAN CARLOS MUNGUIA.png" alt="Logo de JC Munguia" />
+  <a class="nav-logo" href="/es/">
+    <img src="/LOGO JUAN CARLOS MUNGUIA.png" alt="Logo de JC Munguia" />
     <span class="nav-logo-text">JC Munguia</span>
   </a>
   <div class="nav-right"><a class="lang-bar" href="/" hreflang="en" lang="en" title="View in English">EN</a><button class="nav-toggle" type="button" aria-label="Abrir men&uacute;" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button></div>
   <ul id="nav-menu">
-    <li><a href="#how-i-work">Cómo trabajo</a></li>
-    <li><a href="#hiring">Contratación</a></li>
-    <li><a href="#experience">Experiencia</a></li>
-    <li><a href="#credentials">Credenciales</a></li>
-    <li><a href="#consulting">Consultoría</a></li>
-    <li><a href="#ai-readiness">IA en CX</a></li>
-    <li><a href="#clients">Resultados</a></li>
-    <li><a href="#interviews">Entrevistas</a></li>
+    <li><a href="/es/sobre-mi/">Sobre mí</a></li>
+    <li><a href="/es/consultoria/">Consultoría</a></li>
+    <li><a href="/es/resultados/">Resultados</a></li>
     <li><a href="/es/articulos/">Artículos</a></li>
     <li><a href="/es/conferencias/">Conferencias</a></li>
     <li><a href="#contact">Contacto</a></li>
@@ -1095,16 +1104,16 @@
       <span class="bhero-rule" aria-hidden="true"></span>
       <p class="bhero-kicker">Tres est&aacute;ndares &middot; Ingenier&iacute;a de la experiencia</p>
       <div class="bhero-chips">
-        <a class="bchip" href="#people"><i class="n1">1</i><span><small>Personas</small>Del Colaborador</span></a>
-        <a class="bchip" href="#customers"><i class="n2">2</i><span><small>Clientes</small>Del Cliente</span></a>
-        <a class="bchip" href="#business"><i class="n3">3</i><span><small>Negocio</small>Del Negocio</span></a>
+        <a class="bchip" href="/es/consultoria/#people"><i class="n1">1</i><span><small>Personas</small>Del Colaborador</span></a>
+        <a class="bchip" href="/es/consultoria/#customers"><i class="n2">2</i><span><small>Clientes</small>Del Cliente</span></a>
+        <a class="bchip" href="/es/consultoria/#business"><i class="n3">3</i><span><small>Negocio</small>Del Negocio</span></a>
       </div>
       <p class="bhero-name"><b>Juan Carlos Mungu&iacute;a</b> &middot; L&iacute;der de CX y Operaciones</p>
       <p class="bhero-creds">PMP &middot; Lean Six Sigma Master Black Belt &middot; Psic&oacute;logo Organizacional &middot; Fintech, BPO y Servicios Compartidos</p>
     </div>
     <div class="bhero-side">
-      <img class="bhero-logo" src="../logo-emblem.png" alt="" width="190" height="190" />
-      <a class="bhero-btn" href="#consulting">Kits gratis + llamada de 30 min</a>
+      <img class="bhero-logo" src="/logo-emblem.png" alt="" width="190" height="190" />
+      <a class="bhero-btn" href="/es/consultoria/#consulting">Kits gratis + llamada de 30 min</a>
     </div>
   </div>
 </header>
@@ -1113,7 +1122,7 @@
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-photo">
-      <img src="../Linkedin_profile-pic-JC.jpg" alt="JC Munguia" />
+      <img src="/Linkedin_profile-pic-JC.jpg" alt="JC Munguia" />
     </div>
     <div class="hero-text">
       <div class="hero-eyebrow">Líder de CX y Operaciones · Disponible para puestos de liderazgo de tiempo completo</div>
@@ -1126,8 +1135,8 @@
         <div class="hero-stat"><b>500+</b><span>FTE en la operación que dirigí para uno de los neobancos más grandes de EE. UU.</span></div>
       </div>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#hiring">Estoy contratando</a>
-        <a class="btn btn-outline" href="#consulting">Busco consultoría</a>
+        <a class="btn btn-primary" href="/es/sobre-mi/#hiring">Estoy contratando</a>
+        <a class="btn btn-outline" href="/es/consultoria/#consulting">Busco consultoría</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/jc-munguia" target="_blank" rel="noopener">Perfil de LinkedIn</a>
       </div>
     </div>
@@ -1241,925 +1250,17 @@
 
     <p class="val-kicker">Elige tu camino</p>
     <div class="path-grid">
-      <a class="path-card" href="#hiring" style="--c:#1a4f8a">
+      <a class="path-card" href="/es/sobre-mi/#hiring" style="--c:#1a4f8a">
         <small>Para equipos de reclutamiento</small>
         <b>Busco un líder de CX u operaciones</b>
         <span>Experiencia, resultados, credenciales y herramientas, en unos dos minutos.</span>
       </a>
-      <a class="path-card" href="#consulting" style="--c:#d29a16">
+      <a class="path-card" href="/es/consultoria/#consulting" style="--c:#d29a16">
         <small>Para empresas y equipos</small>
         <b>Necesito ayuda con mi operación de servicio</b>
         <span>Tres estándares, programas a la medida de tu equipo, garantía de resultados y una llamada gratuita de 30 minutos.</span>
       </a>
     </div>
-  </div>
-</section>
-
-<!-- ===================== FOR HIRING TEAMS ===================== -->
-<div class="audience-band" id="hiring">
-  <small>Para equipos de reclutamiento</small>
-  <b>Liderazgo en CX y operaciones, 15 años a gran escala</b>
-  <p>Experiencia, resultados, credenciales y herramientas. Disponible para puestos de liderazgo de tiempo completo, remotos o híbridos desde la Ciudad de México.</p>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <p class="section-label">Sobre mí</p>
-    <h2 class="section-title">Líder de Operaciones de Servicio al Cliente<br>Hecho para crecer</h2>
-    <div class="about-grid">
-      <div class="about-bio">
-        <p>
-          Soy líder de Operaciones de Servicio al Cliente, con 15 años impulsando la estrategia de CX y la entrega del servicio en banca, fintech, remesas y BPO. Me especializo en escalar operaciones de servicio a través de personas, procesos y tecnología, con mejoras medibles y constantes en cumplimiento de SLA, CSAT/NPS y eficiencia operativa.
-        </p>
-        <p>
-          He liderado ecosistemas de BPO en varios países y transformado modelos de servicio con automatización, analítica y Lean Six Sigma. Ya sea construyendo desde cero u optimizando a gran escala, creo equipos y sistemas de alto desempeño que prosperan en entornos regulados y de alto crecimiento. Desde 2023 también dirijo mi propia práctica de consultoría en operaciones de servicio, calidad y capacitación, lo que mantiene mis métodos probados en operaciones reales.
-        </p>
-        <p>
-          Más allá de las métricas, soy instructor de meditación Raja Yoga, coach de Lean Six Sigma y mentor PMP, porque un gran servicio empieza con grandes personas.
-        </p>
-      </div>
-      <div class="about-details">
-        <div class="detail-item">
-          <span class="detail-icon">📍</span>
-          <div>
-            <div class="detail-text">Ciudad de México</div>
-            <div class="detail-sub">Disponible para puestos remotos o híbridos</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">💼</span>
-          <div>
-            <div class="detail-text">Consultor independiente</div>
-            <div class="detail-sub">Juan Carlos Munguia Consultoría · Operaciones de servicio, calidad y capacitación · may 2023 – actual</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">✍️</span>
-          <div>
-            <div class="detail-text"><a href="https://www.linkedin.com/newsletters/cx-hub-excellence-insights-7100859934686224384/" target="_blank" rel="noopener">CX Hub Excellence Insights</a></div>
-            <div class="detail-sub">Newsletter de LinkedIn sobre CX y excelencia operativa · 600+ suscriptores · <a href="https://www.linkedin.com/newsletters/cx-hub-excellence-insights-7100859934686224384/" target="_blank" rel="noopener">Suscríbete gratis &rarr;</a> · <a href="/es/articulos/">Ver el archivo &rarr;</a></div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">🎓</span>
-          <div>
-            <div class="detail-text">Licenciatura en Psicología Empresarial</div>
-            <div class="detail-sub">TEC Milenio · 2012–2016</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">🌐</span>
-          <div>
-            <div class="detail-text">Español (nativo) · Inglés (C1 avanzado)</div>
-          </div>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">📧</span>
-          <div>
-            <div class="detail-text">contact@jcmunguia.com</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CAPABILITIES -->
-<section id="capabilities">
-  <div class="section-inner">
-    <p class="section-label">Capacidades clave</p>
-    <h2 class="section-title">Lo que aporto</h2>
-    <div class="caps-grid">
-      <div class="cap-card">
-        <div class="cap-icon">🎯</div>
-        <div class="cap-title">Estrategia y escalamiento de operaciones de CX</div>
-        <div class="cap-desc">Diseño y escalamiento de operaciones de servicio que impulsan el desempeño, la eficiencia y experiencias excepcionales en todos los canales.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">🏢</div>
-        <div class="cap-title">Gobierno de BPO y gestión de proveedores</div>
-        <div class="cap-desc">Gestión de ecosistemas de BPO con varios proveedores y países, con gobierno riguroso de SLA, calibración de calidad y rendición de cuentas sobre el desempeño.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">📊</div>
-        <div class="cap-title">Desempeño de SLA / KPI y análisis de causa raíz</div>
-        <div class="cap-desc">Convierto los datos operativos en hallazgos accionables, identifico causas raíz e implemento estrategias correctivas que se sostienen.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">⚙️</div>
-        <div class="cap-title">Optimización de procesos y mejora continua</div>
-        <div class="cap-desc">Aplico marcos de Lean Six Sigma alineados a COPC para eliminar desperdicios, reducir defectos y construir culturas de mejora continua.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">🤖</div>
-        <div class="cap-title">Automatización y CX digital (con IA)</div>
-        <div class="cap-desc">Acelero el autoservicio y la automatización con IA y herramientas digitales para mejorar la eficiencia sin sacrificar la calidad de la experiencia.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-icon">📣</div>
-        <div class="cap-title">Voz del cliente y analítica de CX</div>
-        <div class="cap-desc">Diseño de programas de VoC, medición de NPS/CSAT/CES y flujos de analítica que informan decisiones estratégicas y operativas.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-inner">
-    <p class="section-label">Experiencia profesional</p>
-    <h2 class="section-title">Trayectoria</h2>
-    <div class="timeline">
-
-      <!-- Independent Consultant -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="../LOGO%20JUAN%20CARLOS%20MUNGUIA.png" alt="Logo de Juan Carlos Munguia Consultoría" loading="lazy" style="width:56.4px;left:23.9px;top:2.3px"></div>
-          <div class="tdate-range">may 2023 – actual</div>
-          <div class="tdate-company">Juan Carlos Munguia Consultoría</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Consultor independiente · Experiencia del Colaborador, del Cliente y del Negocio</div>
-            <div class="job-company">Híbrido y remoto · Ciudad de México · Proyectos seleccionados</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Llevo tres estándares a equipos de servicio y contact center, en el orden en que los aplico.</li>
-            <li><b>Personas · Ingeniería de la Experiencia del Colaborador:</b> valores, competencias de agentes y líderes, planes de carrera y evaluaciones con evidencia. Gerentes certificados internamente como evaluadores.</li>
-            <li><b>Clientes · Ingeniería de la Experiencia del Cliente:</b> 7 habilidades entrenables que reducen el esfuerzo del cliente, certificadas a nivel agente y líder con role plays y observación en vivo. Impartido a más de 400 representantes.</li>
-            <li><b>Negocio · Ingeniería de la Experiencia del Negocio:</b> Programas Yellow, Green y Black Belt de Lean Six Sigma (DMAIC / DMADV) alineados a COPC, a la medida del equipo: 2, 4 o 6 meses.</li>
-          </ul>
-          <span class="job-badge">Desarrollo de talento</span>
-          <span class="job-badge">Experiencia del cliente</span>
-          <span class="job-badge">Lean Six Sigma</span>
-          <span class="job-badge">Capacitación y certificación</span>
-        </div>
-      </div>
-
-      <!-- Pangea -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo" style="background:rgb(0, 171, 199)"><img src="../pangea_logo.jpg" alt="Logo de Pangea Money Transfer" loading="lazy" style="width:157.2px;left:-26.7px;top:-17.3px"></div>
-          <div class="tdate-range">jun 2024 – sep 2026</div>
-          <div class="tdate-company">Pangea Money Transfer</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Gerente de Operaciones de Experiencia del Cliente</div>
-            <div class="job-company">Híbrido · Ciudad de México · 6 reportes directos</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Lideré la estrategia de Experiencia del Cliente y Voz del Cliente (VoC) en operaciones de remesas y fintech entre EE. UU. y LatAm, supervisando un BPO de más de 50 FTE e impulsando el desempeño de SLA, incidentes y CX.</li>
-            <li>Obtuve la <strong>acreditación de BBB</strong> gracias a mejoras de punta a punta en los procesos de CX y a marcos de resolución de quejas.</li>
-            <li>Rediseñé los recorridos del cliente y los flujos operativos, reduciendo los contactos repetidos en un <strong>15%</strong> y mejorando el cumplimiento de SLA en un <strong>10%</strong>.</li>
-            <li>Operé ambos niveles de la operación de CX en Zendesk y Aircall, incluida una fila de autoservicio en WhatsApp y la respuesta a reseñas públicas: <strong>100% de las reseñas negativas respondidas</strong>, normalmente en menos de 24 horas.</li>
-            <li>Subí el SLA de verificación de identidad de <strong>85% a 94%</strong> e impulsé la transformación transversal con Producto, Ingeniería y Cumplimiento.</li>
-          </ul>
-          <span class="job-badge">Remesas</span>
-          <span class="job-badge">Fintech</span>
-          <span class="job-badge">Supervisión de BPO</span>
-          <span class="job-badge">VoC</span>
-        </div>
-      </div>
-
-      <!-- Microsoft Testing Center -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="../MOS%20Testing%20center%20logo.jpg" alt="Logo de Microsoft Office Specialist Authorized Testing Center" loading="lazy" style="width:64.7px;left:20.5px;top:-2.7px"></div>
-          <div class="tdate-range">may 2023 – may 2025</div>
-          <div class="tdate-company">Microsoft Office Specialist<br>Centro Autorizado de Certificación</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Responsable de Customer Success y Operaciones</div>
-            <div class="job-company">Remoto · Ciudad de México · Socio: ICEMexico · Medio tiempo, en paralelo</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Fui responsable de todo el ciclo de vida del cliente, desde la adquisición hasta el posservicio, mejorando la conversión, la adopción y la satisfacción en una plataforma digital.</li>
-            <li>Construí y escalé el modelo de entrega del servicio, logrando <strong>un crecimiento del negocio de 3× en 6 meses</strong> mediante la optimización de procesos y de la experiencia.</li>
-            <li>Implementé automatización y mejoras basadas en datos, aumentando la capacidad de entrega en un <strong>30%</strong> sin un crecimiento proporcional de plantilla.</li>
-          </ul>
-          <span class="job-badge">Customer Success</span>
-          <span class="job-badge">Crecimiento</span>
-          <span class="job-badge">Automatización</span>
-        </div>
-      </div>
-
-      <!-- Microsoft Corporate -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo" style="background:rgb(249, 249, 249)"><img src="../microsoft-logo.png" alt="Logo de Microsoft" loading="lazy" style="width:150.5px;left:-23.4px;top:-26.1px"></div>
-          <div class="tdate-range">sep 2022 – abr 2023</div>
-          <div class="tdate-company">Microsoft<br>Tecnología global · más de 220 mil empleados</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Gerente de Servicios de RR. HH., Calidad y Excelencia de Procesos</div>
-            <div class="job-company">Híbrido · Ciudad de México · Servicios Compartidos Globales de RR. HH.</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Lideré iniciativas de calidad y excelencia de procesos en la organización global de Servicios de RR. HH. de Microsoft, asegurando una entrega del servicio y estándares operativos consistentes.</li>
-            <li>Mantuve los márgenes de error de la línea de servicio <strong>por debajo del 5%</strong> y el índice de calidad <strong>por encima del 90%</strong>, y capacité a <strong>más de 250 empleados a nivel global</strong> en los lineamientos de calidad y excelencia de procesos.</li>
-            <li>Colaboré con líderes globales de Operaciones de RR. HH. para diseñar e implementar marcos de calidad y sistemas de medición del desempeño.</li>
-          </ul>
-          <span class="job-badge">Operaciones de RR. HH.</span>
-          <span class="job-badge">Excelencia de procesos</span>
-          <span class="job-badge">Lean Six Sigma</span>
-        </div>
-      </div>
-
-      <!-- DiDi Role 2 -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="../DiDi-logo.png" alt="Logo de DiDi Global" loading="lazy" style="width:88.7px;left:7.7px;top:9.5px"></div>
-          <div class="tdate-range">ene 2022 – ago 2022</div>
-          <div class="tdate-company">DiDi Global<br>Movilidad · Fintech · 24 mil empleados</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Gerente de Capacitación, Calidad y Excelencia en el Servicio de CX, LatAm</div>
-            <div class="job-company">Híbrido · Ciudad de México · 5 reportes directos</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Amplié mi alcance a la estrategia de capacitación de CX en 9 mercados de LatAm, diseñando programas de onboarding y desarrollo de capacidades para los socios BPO.</li>
-            <li>Lideré el gobierno de calidad de punta a punta, los ciclos de calibración y los planes de acción correctiva para asegurar estándares de servicio consistentes entre proveedores.</li>
-            <li>Colaboré con los equipos de Producto, Operaciones y Proveedores para mejorar el CSAT mediante el rediseño de procesos a partir de la capacitación.</li>
-          </ul>
-          <span class="job-badge">Capacitación</span>
-          <span class="job-badge">Calidad</span>
-          <span class="job-badge">Multimercado</span>
-        </div>
-      </div>
-
-      <!-- DiDi Role 1 -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="../DiDi-logo.png" alt="Logo de DiDi Global" loading="lazy" style="width:88.7px;left:7.7px;top:9.5px"></div>
-          <div class="tdate-range">jun 2021 – dic 2021</div>
-          <div class="tdate-company">DiDi Global<br>Movilidad · Fintech · 24 mil empleados</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Gerente de Calidad y Excelencia en el Servicio de CX, LatAm</div>
-            <div class="job-company">Híbrido · Ciudad de México</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Lideré la calidad y la excelencia en el servicio de CX en <strong>9 mercados de LatAm</strong>, supervisando a más de 5 proveedores BPO y estableciendo modelos de calibración de calidad y gobierno de SLA.</li>
-            <li>Construí un modelo de "Smart QA" que combina analítica de interacciones y RPA en transacciones repetitivas de inbound y back office.</li>
-            <li>Impulsé la consistencia regional en la entrega del servicio al cliente con una gestión estructurada del desempeño y hallazgos basados en datos.</li>
-          </ul>
-          <span class="job-badge">Excelencia en calidad</span>
-          <span class="job-badge">Gobierno de BPO</span>
-          <span class="job-badge">9 mercados de LatAm</span>
-        </div>
-      </div>
-
-      <!-- Teleperformance -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tlogo"><img src="../teleperformance-logo.png" alt="Logo de Teleperformance" loading="lazy" style="width:95.2px;left:4.4px;top:-23.6px"></div>
-          <div class="tdate-range">nov 2010 – jun 2021</div>
-          <div class="tdate-company">Teleperformance (TP)<br>BPO global · más de 420 mil empleados<br>10 años 8 meses</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Account Manager – Cliente fintech (EE. UU.)</div>
-            <div class="job-company">Presencial · Ciudad de México · 5 gerentes asistentes · jul 2019 – jun 2021</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Lideré y escalé una <strong>operación de más de 500 FTE</strong> de servicio al cliente para uno de los neobancos más grandes de EE. UU., con programas multicanal y plena responsabilidad del desempeño, la calidad y el CSAT.</li>
-            <li>Dirigí la operación con todos sus parámetros: 250 a 300 agentes programados al día, alrededor de <strong>8,000 a 10,000 contactos diarios</strong>, un nivel de servicio 80/20 y un AHT de voz que pasó de ~350 s en el arranque a <strong>~280 s en madurez</strong>.</li>
-            <li>Fui responsable del área de escalaciones de todas las líneas de negocio e introduje analítica de calidad con ML/IA y verificación con RPA que redujo el manejo en <strong>30 a 45 segundos por contacto</strong>.</li>
-            <li>Implementé marcos de gobierno de SLA, modelos de calidad e iniciativas de mejora continua alineados a los estándares de COPC y Lean Six Sigma.</li>
-          </ul>
-          <span class="job-badge">Fintech</span>
-          <span class="job-badge">operación de más de 500 FTE</span>
-          <span class="job-badge">Alineado a COPC</span>
-          <div style="margin-top:20px; padding:16px; background:var(--light); border-radius:10px; border:1px solid var(--border);">
-            <div style="font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">Crecimiento profesional en Teleperformance</div>
-            <div style="display:flex; flex-direction:column; gap:8px;">
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Gerente de Proyecto de Aseguramiento de Calidad<span class="tprog-loc">Presencial · Chihuahua</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">may – jun 2019</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Coordinador de Capacitación<span class="tprog-loc">Presencial · Guadalajara</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">abr 2017 – abr 2019</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Coordinador de Control de Calidad<span class="tprog-loc">Presencial · Guadalajara</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">abr 2015 – mar 2017</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Capacitador líder<span class="tprog-loc">Presencial · Guadalajara</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">ene 2012 – mar 2015</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Analista de Aseguramiento de Calidad<span class="tprog-loc">Presencial · Hermosillo</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">abr – dic 2011</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; font-size:.82rem; color:var(--navy);">
-                <span>Representante de Servicio al Cliente<span class="tprog-loc">Presencial · Hermosillo</span></span>
-                <span style="color:var(--muted); flex-shrink:0; margin-left:12px;">nov 2010 – mar 2011</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Freelance Translator -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tdate-range">2005 – 2017</div>
-          <div class="tdate-company">Independiente</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Traductor independiente</div>
-            <div class="job-company">Inglés ↔ Español · Legal, médico, de negocios y técnico</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Brindé servicios profesionales de traducción inglés–español de documentos legales, médicos, de negocios y técnicos durante una carrera paralela de 12 años.</li>
-            <li>Me encargué de la administración del negocio y de la estrategia de arranque, incluida la definición de OKR.</li>
-          </ul>
-          <span class="job-badge">Traducción EN–ES</span>
-          <span class="job-badge">Legal</span>
-          <span class="job-badge">Médico</span>
-        </div>
-      </div>
-
-      <!-- City of Angels -->
-      <div class="timeline-item">
-        <div class="timeline-date">
-          <div class="tdate-range">oct 2007 – oct 2008</div>
-          <div class="tdate-company">City of Angels Insurance,<br>Tax &amp; Translation Services</div>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="job-header">
-            <div class="job-title">Gerente de Proyectos</div>
-            <div class="job-company">Los Angeles, CA</div>
-          </div>
-          <ul class="job-bullets">
-            <li>Dirigí las operaciones de servicio de traducción, seguros e impuestos, coordinando la entrega de proyectos y la satisfacción del cliente en una firma bilingüe de servicios comunitarios.</li>
-          </ul>
-          <span class="job-badge">Gestión de proyectos</span>
-          <span class="job-badge">Servicios bilingües</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CREDENTIALS -->
-<section id="credentials">
-  <span class="anchor-alias" id="certifications"></span>
-  <div class="section-inner">
-    <p class="section-label">Credenciales</p>
-    <h2 class="section-title">Credenciales profesionales y formación</h2>
-    <div class="certs-grid">
-      <div class="cert-card">
-        <div class="cert-badge">📋</div>
-        <div>
-          <div class="cert-name">PMP® – Project Management Professional</div>
-          <div class="cert-org">Project Management Institute · 2024–2027</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">⚡</div>
-        <div>
-          <div class="cert-name">Lean Six Sigma Master Black Belt</div>
-          <div class="cert-org">International Lean Six Sigma · 2022</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🧠</div>
-        <div>
-          <div class="cert-name">Psicólogo organizacional – Cédula profesional</div>
-          <div class="cert-org">Secretaría de Educación Pública (cédula) · 2022</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🏆</div>
-        <div>
-          <div class="cert-name">Estándar COPC CX &ndash; Capacitación interna</div>
-          <div class="cert-org">Programa interno de empresa (México) &middot; solo capacitación, no es una certificación COPC</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🔧</div>
-        <div>
-          <div class="cert-name">Industria 4.0</div>
-          <div class="cert-org">International Lean Six Sigma · 2024</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🎓</div>
-        <div>
-          <div class="cert-name">Licenciatura en Psicología Empresarial</div>
-          <div class="cert-org">TEC Milenio · Lic. 12929918 · 2012–2016</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">📜</div>
-        <div>
-          <div class="cert-name">Certificado en Interpretación y Traducción Legal</div>
-          <div class="cert-org">California State University, Los Angeles · 2008–2010</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-badge">🌐</div>
-        <div>
-          <div class="cert-name">Miembro de la comunidad PMI</div>
-          <div class="cert-org">community.pmi.org/profile/jcmunguia</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Courses Facilitated -->
-    <div style="margin-top:48px;">
-      <p class="section-label">Cursos impartidos</p>
-      <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
-        <div class="cert-card">
-          <div class="cert-badge">🎤</div>
-          <div>
-            <div class="cert-name">"Ingeniería de la Experiencia del Cliente"</div>
-            <div class="cert-org">Impartido a más de 400 representantes de servicio al cliente y ventas</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-badge">🧠</div>
-          <div>
-            <div class="cert-name">Talleres de desarrollo profesional y personal</div>
-            <div class="cert-org">Inteligencia emocional · Administración del tiempo · Coaching y retroalimentación · Manejo del estrés · Meditación — impartidos a más de 250 colaboradores</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TOOLS -->
-<section id="tools">
-  <div class="section-inner">
-    <p class="section-label">Herramientas</p>
-    <h2 class="section-title">Tecnología y plataformas de CX</h2>
-    <div class="tools-grid">
-      <div class="tool-pill">Zendesk</div>
-      <div class="tool-pill">Aircall</div>
-      <div class="tool-pill">Genesys</div>
-      <div class="tool-pill">NICE</div>
-      <div class="tool-pill">Five9</div>
-      <div class="tool-pill">Avaya</div>
-      <div class="tool-pill">Verint Impact 360</div>
-      <div class="tool-pill">Minitab</div>
-      <div class="tool-pill">Power BI</div>
-      <div class="tool-pill">Hootsuite</div>
-      <div class="tool-pill">Sistemas de CRM y ticketing</div>
-      <div class="tool-pill">Automatización de flujos</div>
-      <div class="tool-pill">Tableros de SLA/KPI</div>
-      <div class="tool-pill">Modelos de atención omnicanal</div>
-      <div class="tool-pill">Lógica de enrutamiento</div>
-      <div class="tool-pill">Paquetería Microsoft Office</div>
-      <div class="tool-pill">Claude Workflows</div>
-      <div class="tool-pill">Gemini GEMs</div>
-      <div class="tool-pill">Copilot (Microsoft)</div>
-      <div class="tool-pill">Prototipado asistido por IA</div>
-      <div class="tool-pill">GitHub</div>
-    </div>
-    <div class="avail-note">
-      <p><b>Disponibilidad.</b> Estoy disponible para puestos de liderazgo de tiempo completo en Experiencia del Cliente, Excelencia Operativa y Gobierno de BPO. Si me sumo a tu empresa, mi práctica de consultoría se pausa o funciona solo dentro de tus políticas.</p>
-      <a class="btn btn-primary" href="https://cal.com/jcmunguia/role" target="_blank" rel="noopener">Hablemos del puesto</a>
-      <p class="avail-resume">&iquest;Quieres un curr&iacute;culum adaptado a tu puesto? <a href="https://cal.com/jcmunguia/role" target="_blank" rel="noopener">Agenda 30 minutos</a> o <a href="mailto:contact@jcmunguia.com?subject=Solicitud%20de%20curr%C3%ADculum%20adaptado">env&iacute;ame la descripci&oacute;n del puesto</a> por correo y te lo env&iacute;o en un m&aacute;ximo de 2 d&iacute;as h&aacute;biles.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOR CLIENTS ===================== -->
-<div class="audience-band">
-  <small>Para empresas y equipos</small>
-  <b>Consultoría: personas más serenas, experiencias sin esfuerzo, resultados que perduran</b>
-  <p>Programas para equipos de servicio y contact center, a la medida de tu equipo y aplicados a tu operación real.</p>
-</div>
-
-<!-- CONSULTING INTRO -->
-<section id="consulting">
-  <div class="section-inner">
-    <p class="section-label">Consultoría</p>
-    <h2 class="section-title std-title">Tres estándares para tu operación de servicio</h2>
-    <p class="val-kicker">En el orden en que los aplico</p>
-    <div class="std-grid">
-      <a class="std-card" href="#people" style="--c:#0fa3b1">
-        <span class="std-n">1 &middot; Personas</span>
-        <b>Ingeniería de la Experiencia del Colaborador</b> <small class="en-name-inline">(Engineering the Employee Experience)</small>
-        <em>Desarrolla a las personas que operan el servicio</em>
-        <span class="std-d">Valores, competencias de agentes y líderes y un plan de carrera, para que todos sepan cómo se ve un buen trabajo, cómo se les evalúa y cómo crecer.</span>
-        <span class="std-go">Ver el estándar &rarr;</span>
-      </a>
-      <a class="std-card" href="#customers" style="--c:#2a7de1">
-        <span class="std-n">2 &middot; Clientes</span>
-        <b>Ingeniería de la Experiencia del Cliente</b> <small class="en-name-inline">(Engineering the Customer Experience)</small>
-        <em>Menos esfuerzo, para los clientes y para los agentes que los atienden</em>
-        <span class="std-d">Siete habilidades entrenables que reducen el esfuerzo del cliente, certificadas a nivel agente y líder con role plays y observación en vivo.</span>
-        <span class="std-go">Ver el estándar &rarr;</span>
-      </a>
-      <a class="std-card" href="#business" style="--c:#0d1b2a">
-        <span class="std-n">3 &middot; Negocio</span>
-        <b>Ingeniería de la Experiencia del Negocio</b> <small class="en-name-inline">(Engineering the Business Experience)</small>
-        <em>Cuando el equipo ya tiene las métricas, pero no los resultados</em>
-        <span class="std-d">Programas Yellow, Green y Black Belt de Lean Six Sigma alineados a COPC, a la medida de tu equipo y aplicados a tu operación real.</span>
-        <span class="std-go">Ver el estándar &rarr;</span>
-      </a>
-    </div>
-    <p class="std-combine"><b>Tres tamaños para cada programa:</b> Equipo (2 meses, hasta 30 personas), Departamento (4 meses, de 30 a 150 personas) y Empresa (6 meses, más de 150 personas). Los programas se pueden combinar, en secuencia o en paralelo, dentro de doce meses por cliente.</p>
-
-    <div class="guarantee">
-      <div class="guarantee-badge">100%</div>
-      <div>
-        <b>Garantía de resultados</b>
-        <p>Si no alcanzamos las metas de tu plan firmado, dentro de los plazos del plan, te devolvemos todos los honorarios pagados por el programa.</p>
-        <span>Aplica a los programas de consultoría cuando se cumplen las condiciones acordadas en el plan: acceso a los datos, tiempo de tu equipo y las acciones acordadas con responsables. Las reclamaciones se hacen por escrito, por correo, y respondo personalmente en un máximo de 2 días hábiles. Términos completos en cada propuesta.</span>
-      </div>
-    </div>
-
-    <div class="how-cta">
-      <a class="btn btn-gold" href="https://cal.com/jcmunguia/consulta" target="_blank" rel="noopener">Agenda una llamada gratuita de 30 minutos</a>
-      <a class="menu-link" href="../JC_Munguia_Services_Menu_ES.pdf" target="_blank" rel="noopener">&#128196; Menú completo de servicios (PDF)</a>
-    </div>
-  </div>
-</section>
-
-<!-- PEOPLE · STANDARD 1 -->
-<section id="people">
-  <span class="anchor-alias" id="eex"></span>
-  <div class="section-inner">
-    <p class="section-label">Desarrollo de talento &middot; Estándar 1</p>
-    <h2 class="section-title std-title">Ingeniería de la Experiencia del Colaborador <small class="en-name">Engineering the Employee Experience</small></h2>
-    <p class="std-sub">Desarrolla a las personas que operan el servicio</p>
-    <p class="eex-desc">
-      Los agentes tratan a los clientes como ellos son tratados. <em>Ingeniería de la Experiencia del Colaborador</em> <small class="en-name-inline">(Engineering the Employee Experience)</small> es el programa hermano de Ingeniería de la Experiencia del Cliente, y trabaja en cómo se trata a tu gente: cómo se ve un &ldquo;buen trabajo&rdquo; en cada puesto, cómo se evalúa y cómo crece cada persona. Empieza con un plan de carrera por competencias hecho para tu operación, y después un ciclo de evaluación que tus gerentes se certifican para conducir por su cuenta. Lo dirige un <strong>psicólogo organizacional con cédula</strong> y Lean Six Sigma Master Black Belt, con talleres ya impartidos a <strong>más de 250 colaboradores</strong>.
-    </p>
-
-    <div class="eex-frame">
-      <div>
-        <p class="eex-kicker">Módulo 1 &middot; El plan de carrera por competencias</p>
-        <h3>Un solo estándar, de agente a director</h3>
-        <ul class="eex-parts">
-          <li style="--dot:#1a4f8a"><span><strong>5 valores clave</strong> con los que se evalúa a todos, cada uno con cinco niveles observables.</span></li>
-          <li style="--dot:#2a7de1"><span><strong>6 competencias de agente:</strong> Comunicación &middot; Autoliderazgo &middot; Organización &middot; Pensamiento analítico &middot; Orientación a resultados &middot; Integridad.</span></li>
-          <li style="--dot:#0d1b2a"><span><strong>6 competencias de liderazgo</strong> para supervisores y gerentes: Comunicación que involucra &middot; Liderar &middot; Ejecución organizada &middot; Pensamiento sistémico &middot; Impulsa resultados y cambio &middot; Integridad y equidad.</span></li>
-          <li style="--dot:#0fa3b1"><span><strong>Una escalera de carrera de 5 puestos</strong> de agente de atención al cliente a director, con el nivel que requiere cada puesto y la credencial CXE y Belt de cada paso.</span></li>
-          <li style="--dot:#e8b54a"><span><strong>Evaluaciones con evidencia:</strong> autoevaluación, evaluación del gerente y de pares, calibración entre gerentes y un plan de desarrollo revisado cada mes.</span></li>
-        </ul>
-      </div>
-      <a class="svc-kit eex-kit" href="../EEX_Toolkit_ES.png" target="_blank" rel="noopener" title="Abrir el resumen del kit de Experiencia del Colaborador"><img src="../EEX_Toolkit_ES.png" width="3200" height="1720" alt="Kit de Ingeniería de la Experiencia del Colaborador: libro de competencias, formatos de evaluación, cuestionario 360, plan de desarrollo, guía de calibración y certificación de evaluadores" loading="lazy" /><span>Lo que recibe tu equipo &middot; clic para ampliar</span></a>
-    </div>
-
-    <div class="svc-grid">
-      <article class="svc-card svc-card--f">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Equipo &middot; 2 meses &middot; hasta 30 personas</div>
-          <div class="svc-card__t">Programa Fundamentos</div>
-          <div class="svc-card__belt">Valores y plan de carrera</div>
-        </div>
-        <p class="svc-card__who">Un equipo o familia de puestos que necesita un estándar claro.</p>
-        <ul>
-          <li>Valores con una escala de conducta de cinco niveles, construida con tus líderes</li>
-          <li>Matriz de competencias para hasta tres puestos</li>
-          <li>Descripción de niveles para una escalera de carrera</li>
-          <li>Formato de evaluación y un ciclo piloto</li>
-          <li>Gerentes certificados internamente como evaluadores</li>
-          <li>Una sesión semanal contigo</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--b">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Departamento &middot; 4 meses &middot; de 30 a 150 personas</div>
-          <div class="svc-card__t">Programa Construcción</div>
-          <div class="svc-card__belt">Evaluaciones y desarrollo</div>
-        </div>
-        <p class="svc-card__who">Un departamento, línea de negocio o programa de cliente.</p>
-        <ul>
-          <li>Todo lo del programa Fundamentos</li>
-          <li>Matrices completas de agentes y líderes, y escaleras de carrera con criterios de promoción</li>
-          <li>Retroalimentación 360, sesiones de calibración y un ciclo completo de evaluación</li>
-          <li>Un plan de desarrollo para cada persona y un catálogo de aprendizaje alineado a competencias</li>
-          <li>Socios de RR. HH. certificados internamente como calibradores</li>
-          <li>Acompañamiento quincenal</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--t">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Empresa &middot; 6 meses &middot; más de 150 personas</div>
-          <div class="svc-card__t">Programa Transformación</div>
-          <div class="svc-card__belt">Sistema de talento</div>
-        </div>
-        <p class="svc-card__who">Sitios, regiones o toda la empresa.</p>
-        <ul>
-          <li>Todo lo anterior</li>
-          <li>Modelo para toda la empresa ligado a contratación, promoción y sucesión</li>
-          <li>Entrevistas por competencias y role plays para reclutamiento</li>
-          <li>Programa de mentoría, coaches internos y un tablero de talento</li>
-          <li>Tu equipo de RR. HH. certificado internamente para administrar y actualizar el modelo</li>
-          <li>Entrega documentada y cierre</li>
-        </ul>
-      </article>
-    </div>
-
-    <p class="eex-addons">
-      <b>Complementos para cualquier programa:</b> talleres de Inteligencia emocional, Administración del tiempo, Coaching y retroalimentación, Manejo del estrés y Meditación. Para organizaciones en México, un paquete NOM-035-STPS-2018 (la norma mexicana sobre riesgo psicosocial en el trabajo): política de prevención, guías de referencia por tamaño de centro de trabajo, análisis y plan de acción. Mismos términos que todos mis programas: una llamada gratuita de 30 minutos, propuesta en 5 días hábiles, contratos renovables de dos meses, doce meses como máximo.
-    </p>
-
-    <div class="eex-cta">
-      <p class="cxe-slogan">Construye el camino. <span>Retén a tu gente.</span></p>
-      <p>
-        Descarga gratis el Libro de Competencias para ver completos los valores, las competencias de agentes y líderes y el plan de carrera, y luego hablemos de lo que haría falta para construir el tuyo.
-      </p>
-      <div class="cxe-cta-buttons">
-        <a class="btn btn-gold" href="https://cal.com/jcmunguia/consulta" target="_blank" rel="noopener">Agenda una consulta gratuita de 30 minutos</a>
-        <a class="eex-pdf" href="../EEX_Competencies_Book_ES.pdf" target="_blank" rel="noopener">&#128196; Libro de Competencias gratis (PDF)</a>
-        <a class="eex-pdf" href="../JC_Munguia_Menu_People_ES.pdf" target="_blank" rel="noopener">&#128196; Menú del programa (PDF)</a>
-      </div>
-      <p class="eex-fine">Edición de ejemplo gratuita, 27 páginas, hecha para una operación de servicio ficticia. Las certificaciones son internas y no son certificaciones acreditadas por terceros. Las áreas de competencia se basan en el PMCD Framework del PMI (3.ª ed.); los nombres y descripciones son obra original, sin afiliación ni aval del PMI.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CUSTOMERS · STANDARD 2 -->
-<section id="customers">
-  <span class="anchor-alias" id="methodology"></span>
-  <div class="section-inner">
-    <p class="section-label">Experiencia del cliente &middot; Estándar 2</p>
-    <h2 class="section-title std-title">Ingeniería de la Experiencia del Cliente <small class="en-name">Engineering the Customer Experience</small></h2>
-    <p class="std-sub">Menos esfuerzo, para los clientes y para los agentes que los atienden</p>
-    <p class="methodology-desc">
-      Mi marco original de consultoría — <em>Ingeniería de la Experiencia del Cliente</em> <small class="en-name-inline">(Engineering the Customer Experience)</small> — reduce el esfuerzo del cliente con 7 habilidades clave organizadas en cuatro partes. Desarrollado e impartido a <strong style="color:var(--teal);">más de 400 representantes de servicio al cliente y ventas</strong> en varias organizaciones y mercados, este modelo desarrolla la mentalidad y las conductas que crean interacciones de servicio memorables y sin esfuerzo.
-    </p>
-    <div class="cxe-framework">
-      <div class="cxe-wheel">
-        <img src="../cxe-framework-wheel.png" width="1023" height="1017" alt="Marco de Ingeniería de la Experiencia del Cliente: cuatro partes y siete habilidades alrededor de una meta, menos esfuerzo para clientes y agentes" loading="lazy" />
-      </div>
-      <div>
-        <p class="cxe-framework-kicker">El marco: cuatro partes, siete habilidades, una meta</p>
-        <h3>Menos esfuerzo, para el cliente y para el agente</h3>
-        <p class="cxe-framework-sub">
-          La mayor parte de la deslealtad nace del esfuerzo, no de la falta de cortesía. El marco da a los equipos de primera línea y a sus líderes una forma común y entrenable de guiar cada interacción, para que los clientes hagan menos trabajo y sientan más control, y para que los agentes gasten menos energía negociando y más tiempo resolviendo.
-        </p>
-        <ul class="cxe-parts">
-          <li style="--dot:#2F6FB0"><span><strong>Lo que escucho:</strong> 1. Escucha activa &middot; 2. Conversación con propósito. Capta lo que se dice y descubre lo que no.</span></li>
-          <li style="--dot:#4f7fc0"><span><strong>Cómo respondo:</strong> 3. Lenguaje positivo &middot; 4. Abogar por el cliente &middot; 5. Posicionamiento de alternativas. Presenta las soluciones de la mejor manera posible.</span></li>
-          <li style="--dot:#1B8A8F"><span><strong>Desarrollar el autoconocimiento:</strong> 6. Entender mi estilo dominante. Conoce tus fortalezas y tu respuesta al estrés.</span></li>
-          <li style="--dot:#6A3D9A"><span><strong>Mantener el autoconocimiento:</strong> 7. Adaptarme a otras personalidades. Ajusta tu estilo para que las habilidades se sostengan bajo presión.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cxe-why">
-      <h3>Por qué adoptarlo como el estándar de tu equipo de alto desempeño</h3>
-      <p class="cxe-why-intro">
-        Un estándar, usado en dos niveles. Los agentes lo usan con los clientes. Los líderes usan las mismas siete habilidades con sus agentes, porque los agentes tienden a tratar a los clientes como ellos son tratados. La certificación es interna y práctica: teoría, role plays e interacciones observadas en vivo, alineada al Estándar COPC CX R8.0 (2026).
-      </p>
-      <div class="cxe-why-grid">
-        <div class="cxe-why-card">
-          <h4>&#127919; Para tu operación</h4>
-          <ul>
-            <li><b>El esfuerzo predice la deslealtad.</b> El 96% de los clientes con una experiencia de alto esfuerzo se vuelve más desleal, contra el 9% tras una de bajo esfuerzo.</li>
-            <li><b>Resolver se paga solo.</b> Cada punto de mejora en resolución al primer contacto sube el NPS de la interacción en cerca de 1.4 puntos.</li>
-            <li><b>A las personas ahora les llegan los contactos más difíciles.</b> Solo el 14% de los problemas de servicio se resuelve por completo en autoservicio, así que la conversación humana es donde se gana o se pierde la lealtad.</li>
-            <li><b>Medible, no motivacional.</b> Los scorecards miden CES (índice de esfuerzo del cliente), FCR (resolución al primer contacto), contactos repetidos, transferencias y errores críticos antes y después.</li>
-          </ul>
-        </div>
-        <div class="cxe-why-card">
-          <h4>&#129517; Para tu equipo de liderazgo</h4>
-          <ul>
-            <li><b>Los líderes diseñan la mitad del esfuerzo.</b> La organización, no el agente, causa el 49% de las llamadas repetidas: políticas, herramientas y conocimiento son palancas del liderazgo.</li>
-            <li><b>Los gerentes marcan el tono.</b> El compromiso global de los gerentes es del 22%, y los gerentes explican cerca del 70% de la variación en el compromiso de los equipos.</li>
-            <li><b>Coaching que se queda.</b> Una conversación de coaching de 5 pasos, calibración trimestral y reglas de monitoreo alineadas a COPC R8.0.</li>
-            <li><b>Una cultura, no un curso.</b> Juntas diarias breves sobre esfuerzo, una "cacería de esfuerzo" mensual de las causas de contactos repetidos, y líderes certificados en el mismo estándar.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="cxe-sources">
-        Fuentes: CEB/Gartner Customer Loyalty Survey (n=54,166), <i>The Effortless Experience</i> (2013);
-        <a href="https://www.sqmgroup.com/resources/library/blog/call-center-fcr-benchmark-2024-results-by-industry" target="_blank" rel="noopener">SQM Group FCR Benchmark (Feb 2025)</a>;
-        <a href="https://www.gartner.com/en/newsroom/press-releases/2024-08-19-gartner-survey-finds-only-14-percent-of-customer-service-issues-are-fully-resolved-in-self-service" target="_blank" rel="noopener">Gartner (Aug 2024)</a>;
-        <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">Gallup State of the Global Workplace (2026)</a>;
-        COPC CX Standard for Contact Centers R8.0 (Jan 2026).
-      </p>
-    </div>
-
-    <p class="cx-sizes-h">Tres tamaños, para tu equipo</p>
-    <div class="svc-grid cx-grid">
-      <article class="svc-card svc-card--ca">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Equipo &middot; 2 meses &middot; hasta 30 personas</div>
-          <div class="svc-card__t">Programa Agentes Certificados</div>
-          <div class="svc-card__belt">Certificación de agentes</div>
-        </div>
-        <p class="svc-card__who">Un equipo o canal que necesita una forma común de reducir el esfuerzo del cliente.</p>
-        <ul>
-          <li>Línea base con tus propios datos: índice de esfuerzo, contactos repetidos, transferencias y errores críticos</li>
-          <li>Las 7 habilidades, entrenadas con role plays sobre tus contactos reales</li>
-          <li>Certificación interna de agentes: teoría, role plays e interacciones observadas en vivo</li>
-          <li>Líderes de equipo listos para conducir una junta diaria de 10 minutos sobre esfuerzo</li>
-          <li>Scorecard de antes y después</li>
-          <li>Una sesión semanal contigo</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--al">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Departamento &middot; 4 meses &middot; de 30 a 150 personas</div>
-          <div class="svc-card__t">Programa Agentes y Líderes</div>
-          <div class="svc-card__belt">Coaching y calibración</div>
-        </div>
-        <p class="svc-card__who">Un departamento, línea de negocio o programa de cliente.</p>
-        <ul>
-          <li>Todo lo del programa Agentes Certificados</li>
-          <li>Ruta de líderes: las mismas siete habilidades aplicadas al coaching de sus agentes</li>
-          <li>Una conversación de coaching de 5 pasos y calibración trimestral</li>
-          <li>Reglas de monitoreo alineadas al Estándar COPC CX</li>
-          <li>Certificación interna de líderes</li>
-          <li>Acompañamiento quincenal</li>
-        </ul>
-      </article>
-      <article class="svc-card svc-card--ec">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Empresa &middot; 6 meses &middot; más de 150 personas</div>
-          <div class="svc-card__t">Programa Cultura sin Esfuerzo</div>
-          <div class="svc-card__belt">Estándar para todo el sitio</div>
-        </div>
-        <p class="svc-card__who">Sitios, regiones o toda la operación, propia o entregada por un BPO.</p>
-        <ul>
-          <li>Todo lo anterior</li>
-          <li>Una &ldquo;cacería de esfuerzo&rdquo; mensual de las causas de contactos repetidos, con responsables de los ajustes en políticas, herramientas y conocimiento</li>
-          <li>Esfuerzo y resolución al primer contacto integrados al formato de calidad y al tablero</li>
-          <li>Capacitadores y certificadores internos, para que certifiques a los nuevos ingresos por tu cuenta</li>
-          <li>Programa de inducción actualizado con el estándar</li>
-          <li>Entrega documentada y cierre</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="cxe-cta">
-      <p class="cxe-slogan">Menos esfuerzo. <span>Más estándar.</span></p>
-      <p>
-        Veamos dónde se esconde el esfuerzo en tu operación y qué haría falta para certificar a tus agentes y líderes en un solo estándar. La primera conversación es gratis: 30 minutos, sin presentaciones, solo tus números y tus preguntas.
-      </p>
-      <div class="cxe-cta-buttons">
-        <a class="btn btn-gold" href="https://cal.com/jcmunguia/consulta" target="_blank" rel="noopener">Agenda una consulta gratuita de 30 minutos</a>
-        <a class="pdf-download-btn" href="../CXE_Participant_Manual_FREE_PREVIEW_ES.pdf" target="_blank" rel="noopener">&#128196; Vista previa gratis (PDF)</a>
-        <a class="pdf-download-btn" href="../JC_Munguia_Menu_Customers_ES.pdf" target="_blank" rel="noopener">&#128196; Menú del programa (PDF)</a>
-      </div>
-      <p class="cxe-note" style="margin-top:14px">Vista previa gratuita del Manual del Participante 2026: estructura completa, Módulo 1 y un primer vistazo a las rutas de agente y líder.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- BUSINESS · STANDARD 3 -->
-<section id="business">
-  <span class="anchor-alias" id="services"></span>
-  <div class="section-inner">
-    <p class="section-label">Excelencia del negocio &middot; Estándar 3</p>
-    <h2 class="section-title std-title">Ingeniería de la Experiencia del Negocio <small class="en-name">Engineering the Business Experience</small></h2>
-    <p class="std-sub">Cuando el equipo ya tiene las métricas, pero no los resultados</p>
-    <p class="svc-lead">
-      Quince años dirigiendo operaciones de servicio en fintech, movilidad y BPO a gran escala. Tres niveles de acompañamiento, a la medida de tu equipo: cada uno aplica buenas prácticas de Lean Six Sigma alineadas a COPC a tu operación real y certifica internamente a tu gente, para que la operación siga mejorando cuando yo me vaya.
-    </p>
-    <p class="svc-led"><span></span>Cada programa lo dirige un Lean Six Sigma Master Black Belt (PMP).</p>
-
-
-    <div class="svc-grid">
-      <article class="svc-card svc-card--yb">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Equipo &middot; 2 meses &middot; hasta 30 personas</div>
-          <div class="svc-card__t">Programa Yellow Belt</div>
-          <div class="svc-card__belt">Diagnóstico y hoja de ruta</div>
-        </div>
-        <p class="svc-card__who">Un equipo, un problema acotado: un KPI, un canal o un proceso.</p>
-        <ul>
-          <li>Diagnóstico con tus propios datos, más entrevistas con el equipo</li>
-          <li>Mapa de proceso, Pareto y causa raíz, aplicados a tu KPI</li>
-          <li>Plan priorizado de 90 días con responsables, y una victoria rápida entregada</li>
-          <li>Capacitación Yellow Belt para líderes de equipo y analistas, con guías de estudio con IA</li>
-          <li>Certificación Yellow Belt interna: examen, revisión del project charter y certificado</li>
-          <li>Una sesión semanal contigo</li>
-        </ul>
-        <a class="svc-kit" href="../LSS_Yellow_Belt_Toolkit_ES.png" target="_blank" rel="noopener" title="Abrir el resumen del kit Yellow Belt"><img src="../LSS_Yellow_Belt_Toolkit_ES.png" width="1600" height="1020" alt="Kit Yellow Belt: manual, guía de estudio con IA, examen, clave de respuestas, rúbrica del proyecto y certificado" loading="lazy" /><span>Lo que recibe tu equipo · clic para ampliar</span></a>
-        <a class="svc-card__btn" href="../LSS_Yellow_Belt_FREE_PREVIEW_ES.pdf" target="_blank" rel="noopener">&#128196; Vista previa Yellow Belt gratis (PDF)</a>
-      </article>
-
-      <article class="svc-card svc-card--gb">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Departamento &middot; 4 meses &middot; de 30 a 150 personas</div>
-          <div class="svc-card__t">Programa Green Belt</div>
-          <div class="svc-card__belt">Implementación</div>
-        </div>
-        <p class="svc-card__who">Un departamento, línea de negocio o programa de cliente. Uno o dos procesos, o un canal nuevo.</p>
-        <ul>
-          <li>Todo lo del programa Yellow Belt</li>
-          <li>Marco de calidad alineado a prácticas de COPC e ISO 9001</li>
-          <li>Medición confiable: calibración de calidad, capacidad y gráficos de control</li>
-          <li>Tablero de métricas y una rutina de revisión diaria y semanal</li>
-          <li>Capacitación Green Belt, con cada participante liderando un proyecto DMAIC (Definir, Medir, Analizar, Mejorar, Controlar)</li>
-          <li>Certificación Green Belt interna: examen, rúbrica del proyecto y beneficios validados por Finanzas</li>
-          <li>Acompañamiento quincenal durante la ejecución</li>
-        </ul>
-        <a class="svc-kit" href="../LSS_Green_Belt_Toolkit_ES.png" target="_blank" rel="noopener" title="Abrir el resumen del kit Green Belt"><img src="../LSS_Green_Belt_Toolkit_ES.png" width="1600" height="1020" alt="Kit Green Belt: manual, guía de estudio con IA, examen, clave de respuestas, rúbrica del proyecto y certificado" loading="lazy" /><span>Lo que recibe tu equipo · clic para ampliar</span></a>
-        <a class="svc-card__btn" href="../LSS_Green_Belt_FREE_PREVIEW_ES.pdf" target="_blank" rel="noopener">&#128196; Vista previa Green Belt gratis (PDF)</a>
-      </article>
-
-      <article class="svc-card svc-card--bb">
-        <div class="svc-card__top">
-          <div class="svc-card__m">Empresa &middot; 6 meses &middot; más de 150 personas</div>
-          <div class="svc-card__t">Programa Black Belt</div>
-          <div class="svc-card__belt">Escalar y sostener</div>
-        </div>
-        <p class="svc-card__who">Cuentas completas, sitios o regiones. Operaciones multicanal, torres de servicios compartidos o servicio entregado por un BPO.</p>
-        <ul>
-          <li>Todo lo anterior</li>
-          <li>Despliegue de la estrategia (una matriz X: una página que liga las metas anuales con proyectos, métricas y responsables)</li>
-          <li>Modelo operativo de punta a punta; calidad con speech analytics y automatización</li>
-          <li>Desarrollo de la capa gerencial y de tus propios coaches Green Belt</li>
-          <li>Capacitación Black Belt para líderes de mejora; certificación Black Belt interna</li>
-          <li>Entrega documentada, seguimiento de beneficios y cierre</li>
-        </ul>
-        <p class="svc-note">Si el sistema que ya tienes lleva más de 6 meses funcionando, el proyecto no se extiende. Si se necesita una herramienta o un proveedor nuevo, el contrato puede extenderse a 12 meses para cubrir la compra y la implementación.</p>
-        <a class="svc-kit" href="../LSS_Black_Belt_Toolkit_ES.png" target="_blank" rel="noopener" title="Abrir el resumen del kit Black Belt"><img src="../LSS_Black_Belt_Toolkit_ES.png" width="1600" height="1020" alt="Kit Black Belt: manual, guía de estudio con IA, examen, clave de respuestas, rúbrica del proyecto y certificado" loading="lazy" /><span>Lo que recibe tu equipo · clic para ampliar</span></a>
-        <a class="svc-card__btn" href="../LSS_Black_Belt_FREE_PREVIEW_ES.pdf" target="_blank" rel="noopener">&#128196; Vista previa Black Belt gratis (PDF)</a>
-      </article>
-    </div>
-
-    <div class="svc-steps">
-      <div class="svc-step">
-        <b>1. Una llamada de 30 minutos</b>
-        <span>Sin costo, para entender el problema.</span>
-      </div>
-      <div class="svc-step">
-        <b>2. Propuesta en 5 días hábiles</b>
-        <span>Alcance, entregables, calendario e inversión.</span>
-      </div>
-      <div class="svc-step">
-        <b>3. Empezamos</b>
-        <span>Con los datos y las herramientas que ya tienes. Si se necesita un sistema nuevo, incluye un mínimo de 3 a 6 meses de implementación, con mi transición de salida.</span>
-      </div>
-    </div>
-
-    <p class="svc-terms">
-      <b>Términos.</b> Contrato renovable de dos meses, con el paquete como horizonte y un máximo de doce meses por cliente. Remoto, con sesiones presenciales en la Ciudad de México y la opción de una semana en sitio al mes; viajes fuera de la Ciudad de México a solicitud y cargo del cliente. Confidencialidad por escrito: los datos de tu operación no salen ni se usan como ejemplo sin tu permiso. Trabajo en español e inglés.
-    </p>
-    <p class="svc-terms" style="font-size:.78rem;color:var(--muted)">
-      Las certificaciones son internas: certifican la competencia dentro de tu organización y no son certificaciones acreditadas por terceros. COPC® es una marca registrada de COPC Inc.; estos programas siguen prácticas alineadas a su Estándar CX publicado y no otorgan la certificación COPC.
-    </p>
-
-    <div class="svc-cta">
-      <a class="btn btn-gold" href="https://cal.com/jcmunguia/consulta" target="_blank" rel="noopener">Cuéntame el problema: agenda una llamada gratuita de 30 minutos</a>
-      <a class="menu-link" href="../JC_Munguia_Menu_Business_ES.pdf" target="_blank" rel="noopener">&#128196; Menú del programa (PDF)</a>
-    </div>
-  </div>
-</section>
-
-<!-- AI READINESS -->
-<section id="ai-readiness">
-  <div class="section-inner">
-    <p class="section-label">IA en CX</p>
-    <h2 class="section-title">Preparación de IA: exige a tu IA el mismo estándar que a tu gente</h2>
-    <p class="air-lead">El Estándar CX de COPC, Release 8.0, ahora gestiona la IA con la misma disciplina que a las personas. Uso siete disciplinas (métricas clave, gobernanza, calidad, escalamiento, supervisión, inducción y coaching) para encontrar dónde tu IA recibe menos rigor que tu colaborador más nuevo, y cerrar esa brecha.</p>
-    <div class="air-grid">
-      <article class="air-card air-card--main">
-        <span class="air-tag">Gratis &middot; 3 minutos &middot; Español e inglés</span>
-        <h3>Diagnóstico Rápido de IA</h3>
-        <p>Siete preguntas sobre cómo gestiona tu equipo su IA hoy. Obtienes un resultado por disciplina y tus dos siguientes pasos. No se guarda nada, a menos que decidas agregar tu resultado al benchmark anónimo.</p>
-        <a class="btn btn-gold" href="/es/diagnostico-ia/">Hacer el diagnóstico</a>
-      </article>
-      <article class="air-card">
-        <span class="air-tag">Para lectores del newsletter y a solicitud</span>
-        <h3>Auditoría Completa de IA</h3>
-        <ul>
-          <li>28 preguntas, calificadas como lo haría un auditor: definido, implementado, demostrado</li>
-          <li>Un plan a 30, 60 y 90 días hecho con tus respuestas</li>
-          <li>La evidencia que pediría un auditor, en un reporte PDF</li>
-        </ul>
-        <button class="btn air-btn-ghost" type="button" onclick="window.Intercom ? Intercom('showNewMessage', 'Me gustaría recibir la Auditoría Completa de IA, por favor.') : (location.href='#contact')">Solicitar la auditoría</button>
-      </article>
-      <article class="air-card">
-        <span class="air-tag">En vivo en este sitio</span>
-        <h3>Mi propia prueba: Fin, el agente de IA de Intercom</h3>
-        <p>El chat de la esquina inferior derecha responde preguntas sobre mis servicios de consultoría. Lo estoy midiendo con las mismas siete disciplinas y compartiré los resultados en la edición #28 de CX Hub Excellence Insights.</p>
-        <button class="btn air-btn-ghost" type="button" onclick="window.Intercom && Intercom('show')">Abrir el chat</button>
-      </article>
-    </div>
-    <p class="air-note">El Diagnóstico Rápido y la Auditoría Completa son herramientas independientes basadas en la versión publicada del Estándar CX de COPC, Release 8.0. No están afiliadas ni respaldadas por COPC Inc. y miden preparación, no certificación ni cumplimiento.</p>
   </div>
 </section>
 
@@ -2171,7 +1272,7 @@
     <p class="cw-lead">Un resultado por cada nivel de Belt: uno con un cliente de consultoría y dos de puestos internos, donde apliqué los mismos métodos. Cada imagen muestra el caso completo: el reto, lo que hicimos, el kit y los resultados.</p>
     <div class="cw-grid">
       <article class="cw-card cw-card--yb">
-        <a class="cw-img" href="../Case_Yellow_Belt_SME_ES.png" target="_blank" rel="noopener" title="Abrir el caso completo"><img src="../Case_Yellow_Belt_SME_ES.png" width="3200" height="1640" alt="Caso: 3x en ventas en una pyme familiar de servicios, cliente de consultoría, métodos Yellow Belt" loading="lazy" /><span>Caso completo y kit &middot; clic para ampliar</span></a>
+        <a class="cw-img" href="/Case_Yellow_Belt_SME_ES.png" target="_blank" rel="noopener" title="Abrir el caso completo"><img src="/Case_Yellow_Belt_SME_ES.png" width="3200" height="1640" alt="Caso: 3x en ventas en una pyme familiar de servicios, cliente de consultoría, métodos Yellow Belt" loading="lazy" /><span>Caso completo y kit &middot; clic para ampliar</span></a>
         <p class="cw-tag">Cliente de consultoría &middot; Métodos Yellow Belt &middot; 2023</p>
         <h3>3&times; en ventas en una pyme familiar de servicios, México</h3>
         <div class="cw-res"><div><b>3&times;</b><span>ventas vs. los mismos meses del año anterior</span></div><div><b>&minus;20%</b><span>rotación de personal</span></div><div><b>2026</b><span>el plan sostuvo una sucesión de liderazgo</span></div></div>
@@ -2184,7 +1285,7 @@
         <a class="cw-more" href="/es/resultados/yellow-belt-pyme/">Leer el caso completo &rarr;</a>
       </article>
       <article class="cw-card cw-card--gb">
-        <a class="cw-img" href="../Case_Green_Belt_CSAT_ES.png" target="_blank" rel="noopener" title="Abrir el caso completo"><img src="../Case_Green_Belt_CSAT_ES.png" width="3200" height="1640" alt="Caso: recuperación del CSAT en una división de contact center de 200 personas, puesto interno, nivel Green Belt con métodos Black Belt" loading="lazy" /><span>Caso completo y kit &middot; clic para ampliar</span></a>
+        <a class="cw-img" href="/Case_Green_Belt_CSAT_ES.png" target="_blank" rel="noopener" title="Abrir el caso completo"><img src="/Case_Green_Belt_CSAT_ES.png" width="3200" height="1640" alt="Caso: recuperación del CSAT en una división de contact center de 200 personas, puesto interno, nivel Green Belt con métodos Black Belt" loading="lazy" /><span>Caso completo y kit &middot; clic para ampliar</span></a>
         <p class="cw-tag">Puesto interno &middot; Nivel Green Belt, métodos Black Belt &middot; 2019</p>
         <h3>Recuperación del CSAT en una cuenta de energía de EE. UU.</h3>
         <div class="cw-res"><div><b>70%&rarr;90%</b><span>CSAT, promedio de 12 meses (73% al inicio) vs. meta de 78%</span></div><div><b>12+ meses</b><span>por encima de la nueva meta de 85%</span></div><div><b>2&times;</b><span>tasa de respuesta de la encuesta</span></div></div>
@@ -2197,7 +1298,7 @@
         <a class="cw-more" href="/es/resultados/green-belt-csat/">Leer el caso completo &rarr;</a>
       </article>
       <article class="cw-card cw-card--bb">
-        <a class="cw-img" href="../Case_Black_Belt_QA_ES.png" target="_blank" rel="noopener" title="Abrir el caso completo"><img src="../Case_Black_Belt_QA_ES.png" width="3200" height="1640" alt="Caso: un solo estándar de calidad en cinco socios BPO en nueve países, puesto interno, métodos Black Belt" loading="lazy" /><span>Caso completo y kit &middot; clic para ampliar</span></a>
+        <a class="cw-img" href="/Case_Black_Belt_QA_ES.png" target="_blank" rel="noopener" title="Abrir el caso completo"><img src="/Case_Black_Belt_QA_ES.png" width="3200" height="1640" alt="Caso: un solo estándar de calidad en cinco socios BPO en nueve países, puesto interno, métodos Black Belt" loading="lazy" /><span>Caso completo y kit &middot; clic para ampliar</span></a>
         <p class="cw-tag">Puesto interno &middot; Métodos Black Belt &middot; 2021&ndash;2022</p>
         <h3>Un solo estándar de calidad en cinco socios BPO, LatAm</h3>
         <div class="cw-res"><div><b>90%+</b><span>índice de calidad, desde poco más de 70</span></div><div><b>10%&rarr;90%</b><span>cobertura de calidad</span></div><div><b>+5&ndash;7 pts</b><span>CSAT, 3 verticales</span></div></div>
@@ -2216,63 +1317,20 @@
       <figure class="rv">
         <div class="rv-stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <blockquote>&ldquo;Exact words from the client.&rdquo;</blockquote>
-        <figcaption><a href="../LINKEDIN_PROFILE_URL" target="_blank" rel="noopener">Client name</a> &middot; Role, company</figcaption>
+        <figcaption><a href="/LINKEDIN_PROFILE_URL" target="_blank" rel="noopener">Client name</a> &middot; Role, company</figcaption>
       </figure>
     </div>
     -->
   </div>
 </section>
 
-<!-- INTERVIEWS -->
-<section id="interviews">
+<!-- INSIGHTS TEASER -->
+<section id="insights-teaser">
   <div class="section-inner">
-    <p class="section-label">En medios</p>
-    <h2 class="section-title">Entrevistas</h2>
-    <p class="iv-lead">Conversaciones sobre liderazgo, calidad y experiencia del cliente.</p>
-    <div class="iv-grid">
-      <article class="iv-card">
-        <div class="iv-media iv-video">
-          <a class="yt-facade" href="https://www.youtube.com/watch?v=HZEy0dNV-fo" target="_blank" rel="noopener" aria-label="Ver la entrevista de L&iacute;deres del Futuro en YouTube">
-            <img src="https://i.ytimg.com/vi/HZEy0dNV-fo/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HZEy0dNV-fo/hqdefault.jpg'">
-            <span class="yt-play" aria-hidden="true"></span><span class="yt-cta" aria-hidden="true">Ver en YouTube</span>
-          </a>
-        </div>
-        <div class="iv-body">
-          <span class="iv-tag">Video &middot; CX Leaders &middot; 2026</span>
-          <h3>L&iacute;deres del Futuro: liderar con conciencia en la era de la IA</h3>
-          <p>Una conversación con Tuyo Isaza sobre mi camino de instructor de meditación a líder de CX, el error que más me enseñó y cómo mantener a las personas al centro mientras la IA transforma el servicio.</p>
-          <p class="iv-quote">&ldquo;En un mundo inundado de inteligencia artificial, el l&iacute;der que verdaderamente va a poder triunfar es aquel que pueda integrar la tecnolog&iacute;a con prop&oacute;sito y los resultados con humanidad.&rdquo;</p>
-          <a class="iv-link" href="https://www.youtube.com/watch?v=HZEy0dNV-fo" target="_blank" rel="noopener">Ver en YouTube &rarr;</a>
-        </div>
-      </article>
-      <article class="iv-card">
-        <div class="iv-media iv-audio">
-          <iframe src="https://open.spotify.com/embed/episode/3cGCUayPCyleDSuWNcjYae" title="Masters de la Mejora: Evolucionando procesos de calidad en la industria de servicios" loading="lazy" allow="encrypted-media; clipboard-write"></iframe>
-        </div>
-        <div class="iv-body">
-          <span class="iv-tag">Podcast &middot; Masters de la Mejora &middot; marzo 2023 &middot; 15 min</span>
-          <h3>Evolucionando procesos de calidad en la industria de servicios</h3>
-          <p>Con Santiago Mayagoitia: los básicos, y los no tan básicos, de la calidad en operaciones de servicio, grabado cuando lideraba calidad y excelencia de procesos en los servicios globales de RR. HH. de Microsoft.</p>
-          <a class="iv-link" href="https://open.spotify.com/episode/3cGCUayPCyleDSuWNcjYae" target="_blank" rel="noopener">Escuchar en Spotify &rarr;</a>
-        </div>
-      </article>
-    </div>
-    <p style="margin:-6px 0 18px"><a href="/es/conferencias/" style="font-weight:600">Invítame a tu evento: conferencias, formatos y semblanza &rarr;</a></p>
-    <h3 class="iv-sub">Clips cortos</h3>
-    <div class="reel-row">
-      <article class="reel-card">
-        <a class="yt-facade yt-facade--short" href="https://www.youtube.com/shorts/S2b6VWEZgl8" target="_blank" rel="noopener" aria-label="Ver el Short &iquest;La IA puede reemplazar la empat&iacute;a? en YouTube">
-          <img src="https://i.ytimg.com/vi/S2b6VWEZgl8/oar2.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/S2b6VWEZgl8/hqdefault.jpg'">
-          <span class="yt-play" aria-hidden="true"></span><span class="yt-cta" aria-hidden="true">Ver en YouTube</span>
-        </a>
-        <div class="iv-body">
-          <span class="iv-tag">Short &middot; CX Leaders &middot; 2026 &middot; 57 s</span>
-          <h3>&iquest;La IA puede reemplazar la empat&iacute;a?</h3>
-          <p>Un clip de 57 segundos de mi entrevista en L&iacute;deres del Futuro.</p>
-          <a class="iv-link" href="https://www.youtube.com/shorts/S2b6VWEZgl8" target="_blank" rel="noopener">Ver en YouTube &rarr;</a>
-        </div>
-      </article>
-    </div>
+    <p class="section-label">Artículos</p>
+    <h2 class="section-title">Lo más reciente del newsletter</h2>
+    <div class="it-grid"><article class="it-card"><small>Edición 27</small><b>Exige a tu IA el mismo estándar que a tu gente</b><p>Tu agente de IA debe cumplir el mismo estándar de calidad que tu equipo humano. Con el COPC CX Standard R8.0 y datos de retrocesos, te da una lista de KPI para comparar IA y agentes.</p><a href="https://www.linkedin.com/pulse/hold-your-ai-same-standard-people-juan-carlos-munguia-u65ne/" target="_blank" rel="noopener">Leer en LinkedIn &rarr;</a></article><article class="it-card"><small>Edición 26</small><b>Liderar desde adentro en la era de la IA</b><p>La edición de regreso, basada en mi entrevista de CX Leaders "Líderes del Futuro": por qué la claridad interior y el criterio humano importan más conforme la IA asume más trabajo.</p><a href="https://www.linkedin.com/pulse/liderar-desde-adentro-en-la-era-de-ia-juan-carlos-munguia-gew2e/" target="_blank" rel="noopener">Leer en LinkedIn &rarr;</a></article><article class="it-card"><small>Edición 25</small><b>Escalar con inteligencia: excelencia operativa en fintech</b><p>Escalar una operación fintech es construir mejor, no solo más grande: bases de COPC, Lean Six Sigma y Agile, calidad de proveedores con análisis de causa raíz y gemelos digitales de CX.</p><a href="https://www.linkedin.com/pulse/scaling-smarter-practical-guide-operational-fintech-munguia-toxkf/" target="_blank" rel="noopener">Leer en LinkedIn &rarr;</a></article></div>
+    <a class="it-all" href="/es/articulos/">Las 27 ediciones &rarr;</a>
   </div>
 </section>
 
@@ -2345,5 +1403,6 @@ b.addEventListener('click',function(){set(!n.classList.contains('nav--open'));})
 n.querySelectorAll('#nav-menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
 </script>
+<script>(function(){var M={"hiring": "/es/sobre-mi/", "about": "/es/sobre-mi/", "capabilities": "/es/sobre-mi/", "experience": "/es/sobre-mi/", "credentials": "/es/sobre-mi/", "certifications": "/es/sobre-mi/", "tools": "/es/sobre-mi/", "consulting": "/es/consultoria/", "people": "/es/consultoria/", "eex": "/es/consultoria/", "customers": "/es/consultoria/", "methodology": "/es/consultoria/", "business": "/es/consultoria/", "services": "/es/consultoria/", "ai-readiness": "/es/consultoria/", "interviews": "/es/conferencias/"};var h=location.hash.slice(1);if(h&&!document.getElementById(h)&&M[h])location.replace(M[h]+'#'+h);})();</script>
 </body>
 </html>
