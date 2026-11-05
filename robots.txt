@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /ai-audit/
 Disallow: /es/auditoria-ia/
+Disallow: /downloads/
 
 Sitemap: https://jcmunguia.com/sitemap.xml
