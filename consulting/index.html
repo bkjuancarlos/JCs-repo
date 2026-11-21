@@ -1499,5 +1499,6 @@ if(!em.value||!em.checkValidity()){em.focus();return}if(!ck.checked){ck.focus();
 const a=f.dataset.action;if(!a){m.textContent=f.dataset.draft;return}
 const d=new FormData(f);d.append('ml-submit','1');d.append('anticsrf','true');
 try{const r=await fetch(a,{method:'POST',body:d});const j=await r.json().catch(()=>({}));if(r.ok&&j.success!==false){m.textContent=f.dataset.done;f.querySelectorAll('input,button').forEach(x=>x.disabled=true)}else m.textContent=f.dataset.err}catch(_){m.textContent=f.dataset.err}}))</script>
+<script src="/assets/jcbot-autoopen.js" defer></script>
 </body>
 </html>
